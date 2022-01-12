@@ -196,6 +196,20 @@
       <Version>1.23.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Phagocytosis.Elements\Phagocytosis.Elements.csproj">
+      <Project>{083184a4-4d8c-4d0c-abbd-64946163f6ce}</Project>
+      <Name>Phagocytosis.Elements</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phagocytosis.Sprites\Phagocytosis.Sprites.csproj">
+      <Project>{4eae5c95-7585-4532-b1e8-62b7d1666a0a}</Project>
+      <Name>Phagocytosis.Sprites</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phagocytosis.ViewModels\Phagocytosis.ViewModels.csproj">
+      <Project>{a22cb538-2e56-4bc4-9a06-2a5d303555fe}</Project>
+      <Name>Phagocytosis.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

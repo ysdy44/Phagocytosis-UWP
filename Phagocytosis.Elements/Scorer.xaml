@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="Phagocytosis.Elements.Scorer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Phagocytosis.Elements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="350" 
+    Height="22"
+    d:DesignHeight="50"
+    d:DesignWidth="400"
+    >
+
+
+    <UIElement.RenderTransformOrigin>
+        0.5,0.5
+    </UIElement.RenderTransformOrigin>
+    <UIElement.RenderTransform>
+        <SkewTransform AngleX="-18"/>
+    </UIElement.RenderTransform>
+
+    
+    <Grid>
+        <Rectangle x:Name="LeftRectangle" Height="5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Fill="#44FFFFFF" />
+        <Rectangle x:Name="RightRectangle" Margin="0,1" Height="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Fill="White"/>
+        <TextBlock Margin="4,0" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                   FontWeight="Bold" Foreground="White" 
+                   Text="{x:Bind LeftCount, Mode=OneWay}"/>
+        <TextBlock Margin="4,0" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                   FontWeight="Bold" Foreground="White" 
+                   Text="{x:Bind RightCount, Mode=OneWay}"/>
+    </Grid>
+
+</UserControl>

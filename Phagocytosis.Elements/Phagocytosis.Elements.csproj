@@ -127,6 +127,9 @@
     <Compile Include="ControllerVelocity.cs" />
     <Compile Include="PlayState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scorer.xaml.cs">
+      <DependentUpon>Scorer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TrackScrollViewer.cs" />
     <EmbeddedResource Include="Properties\Phagocytosis.Elements.rd.xml" />
   </ItemGroup>
@@ -140,6 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scorer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

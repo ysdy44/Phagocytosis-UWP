@@ -2,6 +2,22 @@
     x:Class="Phagocytosis.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Phagocytosis">
+    xmlns:local="using:Phagocytosis"
+    RequestedTheme="Dark"
+    >
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Merged-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Style/Brush.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Style/Converter.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Style/Resource.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Style/Style.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Style/Template.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Style/Transition.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 
 </Application>

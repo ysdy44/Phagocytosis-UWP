@@ -127,6 +127,9 @@
     <Compile Include="ControllerVelocity.cs" />
     <Compile Include="PlayState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recorder.xaml.cs">
+      <DependentUpon>Recorder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scorer.xaml.cs">
       <DependentUpon>Scorer.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recorder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

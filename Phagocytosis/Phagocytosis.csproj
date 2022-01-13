@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Controls\BaseCanvasControl.cs" />
     <Compile Include="Controls\EditType.cs" />
+    <Compile Include="Controls\RecordEventArgs.cs" />
     <Compile Include="Controls\ScoredEventArgs.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

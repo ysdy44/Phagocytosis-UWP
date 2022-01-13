@@ -1,0 +1,221 @@
+﻿<Page
+    x:Class="Phagocytosis.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Phagocytosis.Controls"
+    xmlns:elements="using:Phagocytosis.Elements"
+    mc:Ignorable="d"
+    NavigationCacheMode="Enabled"
+    Background="{ThemeResource AppLinearGradientBrush}"
+    >
+
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <Grid>
+
+        <!--Extension-->
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
+
+        <!--CanvasControl-->
+        <controls:BackgroundCanvasControl x:Name="CanvasControl" />
+
+
+        <ScrollViewer x:Name="ScrollViewer">
+            <TextBlock FontSize="22" Windows10FallCreatorsUpdate:HorizontalTextAlignment="Center">
+
+                <LineBreak />
+                <Run FontWeight="Bold">版本</Run>
+                <LineBreak />
+                <Run>1.0.0</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>-------</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">产品</Run>
+                <LineBreak />
+                <Run>我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">设计</Run>
+                <LineBreak />
+                <Run>我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">美术</Run>
+                <LineBreak />
+                <Run>我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">开发</Run>
+                <LineBreak />
+                <Run>我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">测试</Run>
+                <LineBreak />
+                <Run>我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>-------</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">管理</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">推广</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">法务</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">本地</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">出版</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">社区</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">致谢</Run>
+                <LineBreak />
+                <Run>无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>-------</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">开源</Run>
+                <LineBreak />
+                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                    <Hyperlink.NavigateUri>
+                        https://github.com/ysdy44/Phagocytosis-UWP
+                    </Hyperlink.NavigateUri>
+                    <Run>Phagocytosis-UWP</Run>
+                </Hyperlink>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">引用</Run>
+                <LineBreak />
+                <Run></Run>
+                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                    <Hyperlink.NavigateUri>
+                        https://github.com/Microsoft/Win2D-samples
+                    </Hyperlink.NavigateUri>
+                    <Run>Win2D</Run>
+                </Hyperlink>
+                <LineBreak />
+
+                <LineBreak />
+                <Run FontWeight="Bold">反馈</Run>
+                <LineBreak />
+                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                    <Hyperlink.NavigateUri>
+                        mailto:ysdy44@outlook.com
+                    </Hyperlink.NavigateUri>
+                    <Run>ysdy44@outlook.com</Run>
+                </Hyperlink>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>-------</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>木有更多了</Run>
+                <LineBreak />
+
+            </TextBlock>
+        </ScrollViewer>
+
+
+        <!--Developer-->
+        <Border HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Background="{StaticResource SystemAltLowColor}"
+                MinWidth="100"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <StackPanel Margin="22,0" VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource AppBoldTextBlockStyle}">
+                    开发者态
+                </TextBlock>
+                <TextBlock>
+                    <Run>点击</Run>                
+                    <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
+                    <Run>以编辑地图</Run>
+                </TextBlock>
+                <TextBlock>
+                    <Run>点击</Run>                
+                    <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
+                    <Run>以打开地图文件</Run>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+
+
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+
+
+        <!--Developer-->
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Grid>
+                <Button x:Name="DeveloperButton" Opacity="0.1" >
+                    <Viewbox Width="32" Height="32">
+                        <SymbolIcon Symbol="Emoji2" />
+                    </Viewbox>
+                </Button>
+                <Button x:Name="DeveloperButton2" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+                    <Viewbox Width="32" Height="32">
+                        <SymbolIcon Symbol="Emoji" />
+                    </Viewbox>
+                </Button>
+            </Grid>
+
+            <Button x:Name="LocalFolderButton" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+                <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+        </StackPanel>
+
+
+    </Grid>
+</Page>

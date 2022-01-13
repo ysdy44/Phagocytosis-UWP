@@ -130,6 +130,9 @@
     <Compile Include="Controls\RecordEventArgs.cs" />
     <Compile Include="Controls\ScoredEventArgs.cs" />
     <Compile Include="Controls\SpriteCanvasControl.cs" />
+    <Compile Include="DrawPage.xaml.cs">
+      <DependentUpon>DrawPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LibraryPage.xaml.cs">
       <DependentUpon>LibraryPage.xaml</DependentUpon>
     </Compile>
@@ -202,6 +205,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DrawPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

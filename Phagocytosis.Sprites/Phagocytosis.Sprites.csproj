@@ -139,6 +139,7 @@
     <Compile Include="Sprites\Sprite.cs" />
     <Compile Include="Sprites\SpriteState.cs" />
     <Compile Include="Sprites\SpriteType.cs" />
+    <Compile Include="XMLs\XML.Sprite.cs" />
     <EmbeddedResource Include="Properties\Phagocytosis.Sprites.rd.xml" />
   </ItemGroup>
   <ItemGroup>

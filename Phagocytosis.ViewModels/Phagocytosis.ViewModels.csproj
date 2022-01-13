@@ -123,6 +123,8 @@
     <Compile Include="Chapter.cs" />
     <Compile Include="ChapterViewItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLs\XML.Chapter.cs" />
+    <Compile Include="XMLs\XML.Chapters.cs" />
     <EmbeddedResource Include="Properties\Phagocytosis.ViewModels.rd.xml" />
   </ItemGroup>
   <ItemGroup>

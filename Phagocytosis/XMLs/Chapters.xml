@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Root>
+	<!--000-->
+	<Chapter Width="800" Height="400" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="600" Y="200" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="768" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--001-->
+	<Chapter Width="1600" Height="1600" MaximumFoods="64" IncreaseFoods="5">
+		<FriendSprites>
+			<Sprite X="1400" Y="1400" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="1536" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--002-->
+	<Chapter Width="1600" Height="1600" MaximumFoods="64" IncreaseFoods="5">
+		<Restricteds>
+			<Rect X="600" Y="600" Width="400" Height="400" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="1400" Y="1400" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="1536" Type="2" />
+			<Sprite X="200" Y="0" Level="1536" Type="2" />
+			<Sprite X="0" Y="200" Level="1536" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--003-->
+	<Chapter Width="1600" Height="1600" MaximumFoods="64" IncreaseFoods="5">
+		<Restricteds>
+			<Rect X="600" Y="-5" Width="400" Height="605" />
+			<Rect X="600" Y="1000" Width="400" Height="605" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="1400" Y="1400" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="1536" Type="2" />
+			<Sprite X="200" Y="800" Level="1536" Type="2" />
+			<Sprite X="200" Y="1400" Level="1536" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--004-->
+	<Chapter Width="1600" Height="1600" MaximumFoods="64" IncreaseFoods="5">
+		<Restricteds>
+			<Rect X="200" Y="200" Width="400" Height="400" />
+			<Rect X="1000" Y="200" Width="400" Height="400" />
+			<Rect X="200" Y="1000" Width="400" Height="400" />
+			<Rect X="1000" Y="1000" Width="400" Height="400" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="800" Y="800" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="1536" Type="2" />
+			<Sprite X="1400" Y="200" Level="1536" Type="2" />
+			<Sprite X="1400" Y="1400" Level="1536" Type="2" />
+			<Sprite X="200" Y="1400" Level="1536" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--005-->
+	<Chapter Width="1800" Height="1800" MaximumFoods="64" IncreaseFoods="5">
+		<Restricteds>
+			<Rect X="200" Y="200" Width="200" Height="200" />
+			<Rect X="600" Y="200" Width="400" Height="200" />
+			<Rect X="1400" Y="200" Width="200" Height="200" />
+
+			<Rect X="200" Y="600" Width="200" Height="400" />
+			<Rect X="600" Y="600" Width="400" Height="400" />
+			<Rect X="1400" Y="600" Width="200" Height="400" />
+			
+			<Rect X="200" Y="1400" Width="200" Height="200" />
+			<Rect X="600" Y="1400" Width="400" Height="200" />
+			<Rect X="1400" Y="1400" Width="200" Height="200" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="1400" Y="1400" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="1536" Type="2" />
+			<Sprite X="1400" Y="200" Level="1536" Type="2" />
+			<Sprite X="200" Y="1400" Level="1536" Type="2" />
+		</EnemySprites>
+	</Chapter>
+	<!--006-->
+	<Chapter Width="800" Height="400" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="600" Y="200" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="100" Y="100" Level="384" Type="3" />
+			<Sprite X="100" Y="300" Level="384" Type="3" />
+			<Sprite X="200" Y="200" Level="384" Type="3" />
+		</EnemySprites>
+	</Chapter>
+	<!--007-->
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="600" Y="200" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="100" Y="100" Level="384" Type="3" />
+			<Sprite X="100" Y="300" Level="384" Type="3" />
+			<Sprite X="200" Y="200" Level="384" Type="3" />
+		</EnemySprites>
+	</Chapter>
+	<!--008-->
+	<Chapter Width="800" Height="800" MaximumFoods="32" IncreaseFoods="3">
+		<FriendSprites>
+			<Sprite X="600" Y="200" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="100" Y="100" Level="384" Type="3" />
+			<Sprite X="100" Y="700" Level="384" Type="3" />
+			<Sprite X="700" Y="700" Level="384" Type="3" />
+			<Sprite X="700" Y="100" Level="384" Type="3" />
+		</EnemySprites>
+	</Chapter>
+	<!--009-->
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<Restricteds>
+			<Rect X="-5" Y="-5" Width="155" Height="155" />
+			<Rect X="655" Y="-5" Width="155" Height="155" />
+			<Rect X="655" Y="655" Width="155" Height="155" />
+			<Rect X="-5" Y="655" Width="155" Height="155" />
+			
+			<Rect X="300" Y="150" Width="200" Height="100" />
+			<Rect X="450" Y="300" Width="200" Height="200" />
+			<Rect X="300" Y="600" Width="200" Height="50" />
+			<Rect X="150" Y="300" Width="200" Height="200" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="600" Y="550" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="200" Level="384" Type="3" />
+			<Sprite X="600" Y="200" Level="384" Type="3" />
+			<Sprite X="200" Y="550" Level="384" Type="3" />
+		</EnemySprites>
+	</Chapter>
+	<!--010-->
+	<Chapter Width="800" Height="800" MaximumFoods="32" IncreaseFoods="6">
+		<FriendSprites>
+			<Sprite X="400" Y="400" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="519" Y="517" Level="128" Type="3" />
+			<Sprite X="677" Y="324" Level="64" Type="3" />
+			<Sprite X="650" Y="486" Level="288" Type="3" />
+			<Sprite X="385" Y="265" Level="384" Type="3" />
+			<Sprite X="279" Y="539.2" Level="128" Type="3" />
+			<Sprite X="69" Y="303" Level="128" Type="3" />
+			<Sprite X="164" Y="443" Level="384" Type="3" />
+			<Sprite X="416" Y="694" Level="384" Type="3" />
+			<Sprite X="603." Y="156" Level="320" Type="3" />
+			<Sprite X="245" Y="172" Level="384" Type="3" />
+			<Sprite X="143" Y="59" Level="384" Type="3" />
+			<Sprite X="474" Y="62" Level="384" Type="3" />
+			<Sprite X="89" Y="658" Level="384" Type="3" />
+			<Sprite X="758" Y="98" Level="384" Type="3" />
+			<Sprite X="699" Y="654" Level="384" Type="3" />
+		</EnemySprites>
+	</Chapter>
+	<!--011-->
+	<Chapter Width="800" Height="800" MaximumFoods="12" IncreaseFoods="2">
+		<FriendSprites>
+			<Sprite X="442" Y="63" Level="1504" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="293" Y="458" Level="12704" Type="4" />
+		</EnemySprites>
+	</Chapter>
+	<!--012-->
+	<Chapter Width="800" Height="800" MaximumFoods="12" IncreaseFoods="2">
+		<Restricteds>
+			<Rect X="-5" Y="-5" Width="205" Height="205" />
+			<Rect X="-5" Y="600" Width="205" Height="205" />
+			<Rect X="600" Y="600" Width="205" Height="205" />
+			<Rect X="600" Y="-5" Width="205" Height="205" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="442" Y="63" Level="1504" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="293" Y="458" Level="12704" Type="4" />
+		</EnemySprites>
+	</Chapter>
+	<!--013-->
+	<Chapter Width="1190" Height="1044" MaximumFoods="32" IncreaseFoods="6">
+		<FriendSprites>
+			<Sprite X="1011" Y="911" Level="864" Type="0" />
+			<Sprite X="127" Y="681" Level="704" Type="1" />
+			<Sprite X="483" Y="908" Level="320" Type="1" />
+			<Sprite X="153" Y="441" Level="448" Type="1" />
+			<Sprite X="264" Y="145" Level="768" Type="1" />
+			<Sprite X="587" Y="71" Level="448" Type="1" />
+			<Sprite X="895" Y="152" Level="736" Type="1" />
+			<Sprite X="1027" Y="404" Level="640" Type="1" />
+			<Sprite X="1064" Y="656" Level="704" Type="1" />
+			<Sprite X="795" Y="917" Level="480" Type="1" />
+			<Sprite X="216" Y="932" Level="768" Type="1" />
+			<Sprite X="57" Y="161" Level="768" Type="1" />
+			<Sprite X="1099" Y="217" Level="768" Type="1" />
+			<Sprite X="936" Y="560" Level="256" Type="1" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="591.0761" Y="477.437531" Level="6144" Type="4" />
+		</EnemySprites>
+	</Chapter>
+	<!--013-->
+	<Chapter Width="1190" Height="1044" MaximumFoods="32" IncreaseFoods="6">
+		<Restricteds>
+			<Rect X="91" Y="775" Width="242" Height="227" />
+			<Rect X="832" Y="750" Width="271" Height="256" />
+			<Rect X="877" Y="62" Width="229" Height="226" />
+			<Rect X="76" Y="68" Width="216" Height="208" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="1011" Y="911" Level="864" Type="0" />
+			<Sprite X="127" Y="681" Level="704" Type="1" />
+			<Sprite X="483" Y="908" Level="320" Type="1" />
+			<Sprite X="153" Y="441" Level="448" Type="1" />
+			<Sprite X="264" Y="145" Level="768" Type="1" />
+			<Sprite X="587" Y="71" Level="448" Type="1" />
+			<Sprite X="895" Y="152" Level="736" Type="1" />
+			<Sprite X="1027" Y="404" Level="640" Type="1" />
+			<Sprite X="1064" Y="656" Level="704" Type="1" />
+			<Sprite X="795" Y="917" Level="480" Type="1" />
+			<Sprite X="216" Y="932" Level="768" Type="1" />
+			<Sprite X="57" Y="161" Level="768" Type="1" />
+			<Sprite X="1099" Y="217" Level="768" Type="1" />
+			<Sprite X="936" Y="560" Level="256" Type="1" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="591.0761" Y="477.437531" Level="6144" Type="4" />
+		</EnemySprites>
+	</Chapter>
+	<!--015-->
+	<Chapter Width="1500" Height="650" MaximumFoods="9" IncreaseFoods="2">
+		<Restricteds>
+			<Rect X="150" Y="-5" Width="105" Height="105" />
+			<Rect X="450" Y="-5" Width="105" Height="105" />
+			<Rect X="850" Y="-5" Width="105" Height="105" />
+			<Rect X="1150" Y="-5" Width="105" Height="105" />
+			<Rect X="150" Y="555" Width="105" Height="105" />
+			<Rect X="450" Y="555" Width="105" Height="105" />
+			<Rect X="850" Y="555" Width="105" Height="105" />
+			<Rect X="1150" Y="555" Width="105" Height="105" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="750" Y="325" Level="960" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="300" Y="325" Level="6144" Type="4" />
+			<Sprite X="1200" Y="325" Level="6144" Type="4" />
+		</EnemySprites>
+	</Chapter>
+	<!--016-->
+	<Chapter Width="960" Height="450" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="740" Y="225" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="225" Level="3072" Type="5" />
+		</EnemySprites>
+	</Chapter>
+	<!--017-->
+	<Chapter Width="960" Height="450" MaximumFoods="6" IncreaseFoods="1">
+		<Restricteds>
+			<Rect X="440" Y="45" Width="100" Height="350" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="740" Y="225" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="200" Y="225" Level="3072" Type="5" />
+		</EnemySprites>
+	</Chapter>
+	<!--018-->
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<Restricteds>
+			<Rect X="77" Y="73" Width="451" Height="69" />
+			<Rect X="71" Y="223" Width="73" Height="468" />
+			<Rect X="228" Y="612" Width="470" Height="76" />
+			<Rect X="615" Y="76" Width="87" Height="450" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="740" Y="742" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="394" Y="379" Level="3072" Type="5" />
+		</EnemySprites>
+	</Chapter>
+	<!--019-->
+	<Chapter Width="900" Height="900" MaximumFoods="6" IncreaseFoods="1">
+		<Restricteds>
+			<Rect X="100" Y="100" Width="300" Height="100" />
+			<Rect X="500" Y="100" Width="300" Height="100" />
+			<Rect X="100" Y="100" Width="100" Height="300" />
+			<Rect X="300" Y="300" Width="100" Height="100" />
+			<Rect X="500" Y="300" Width="100" Height="100" />
+			<Rect X="700" Y="100" Width="100" Height="300" />
+			<Rect X="100" Y="500" Width="100" Height="300" />
+			<Rect X="300" Y="500" Width="100" Height="100" />
+			<Rect X="500" Y="500" Width="100" Height="100" />
+			<Rect X="700" Y="500" Width="100" Height="300" />
+			<Rect X="100" Y="700" Width="300" Height="100" />
+			<Rect X="500" Y="700" Width="300" Height="100" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="850" Y="850" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="450" Y="450" Level="3072" Type="5" />
+		</EnemySprites>
+	</Chapter>
+	<!--020-->
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<Restricteds>
+			<Rect X="83" Y="75" Width="211" Height="77" />
+			<Rect X="304" Y="73" Width="97" Height="174" />
+			<Rect X="9" Y="257" Width="213" Height="107" />
+			<Rect X="126" Y="526" Width="81" Height="267" />
+			<Rect X="499" Y="536" Width="87" Height="257" />
+			<Rect X="497" Y="432" Width="186" Height="95" />
+			<Rect X="304" Y="258" Width="408" Height="74" />
+			<Rect X="489" Y="11" Width="84" Height="147" />
+			<Rect X="584" Y="75" Width="127" Height="84" />
+			<Rect X="670" Y="624" Width="122" Height="61" />
+			<Rect X="306" Y="343" Width="95" Height="327" />
+		</Restricteds>
+		<FriendSprites>
+			<Sprite X="735" Y="745" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="218" Y="457" Level="3072" Type="5" />
+		</EnemySprites>
+	</Chapter>
+	
+	<!--021
+	<Chapter Width="1130" Height="521" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="975" Y="248" Level="1536" Type="0" />
+			<Sprite X="700" Y="391" Level="768" Type="1" />
+			<Sprite X="697" Y="104" Level="768" Type="1" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="172" Y="260" Level="1536" Type="6" />
+			<Sprite X="468" Y="100" Level="768" Type="6" />
+			<Sprite X="476" Y="380" Level="768" Type="6" />
+		</EnemySprites>
+	</Chapter>-->
+	<!--022
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="675" Y="703" Level="512" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="362" Y="342" Level="576" Type="6" />
+			<Sprite X="136" Y="562" Level="576" Type="6" />
+			<Sprite X="575" Y="109" Level="576" Type="6" />
+			<Sprite X="374" Y="122" Level="1280" Type="6" />
+			<Sprite X="147" Y="133" Level="2432" Type="6" />
+			<Sprite X="141" Y="351" Level="1280" Type="6" />
+		</EnemySprites>
+	</Chapter>-->
+	<!--023
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="446" Y="451" Level="512" Type="0" />
+			<Sprite X="231" Y="657" Level="512" Type="1" />
+			<Sprite X="691" Y="207" Level="512" Type="1" />
+			<Sprite X="428" Y="666" Level="1280" Type="1" />
+			<Sprite X="661" Y="392" Level="1280" Type="1" />
+			<Sprite X="657" Y="642" Level="2432" Type="1" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="362" Y="342" Level="576" Type="6" />
+			<Sprite X="136" Y="562" Level="576" Type="6" />
+			<Sprite X="575" Y="109" Level="576" Type="6" />
+			<Sprite X="374" Y="122" Level="1280" Type="6" />
+			<Sprite X="147" Y="133" Level="2432" Type="6" />
+			<Sprite X="141" Y="351" Level="1280" Type="6" />
+		</EnemySprites>
+	</Chapter>-->
+	<!--024
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="409" Y="405" Level="768" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="56" Y="729" Level="768" Type="6" />
+			<Sprite X="726" Y="725" Level="768" Type="6" />
+			<Sprite X="729" Y="67" Level="768" Type="6" />
+			<Sprite X="69" Y="73" Level="768" Type="6" />
+		</EnemySprites>
+	</Chapter>-->
+	<!--025
+	<Chapter Width="800" Height="800" MaximumFoods="6" IncreaseFoods="1">
+		<FriendSprites>
+			<Sprite X="409" Y="405" Level="768" Type="0" />
+			<Sprite X="238" Y="563" Level="768" Type="1" />
+			<Sprite X="567" Y="565" Level="768" Type="1" />
+			<Sprite X="237" Y="233" Level="768" Type="1" />
+			<Sprite X="567" Y="240" Level="768" Type="1" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="56" Y="729" Level="768" Type="6" />
+			<Sprite X="400" Y="730" Level="768" Type="6" />
+			<Sprite X="726" Y="725" Level="768" Type="6" />
+			<Sprite X="729" Y="67" Level="768" Type="6" />
+			<Sprite X="69" Y="73" Level="768" Type="6" />
+			<Sprite X="69" Y="396" Level="768" Type="6" />
+			<Sprite X="730" Y="394" Level="768" Type="6" />
+			<Sprite X="404" Y="72" Level="768" Type="6" />
+		</EnemySprites>
+	</Chapter>-->
+	<!--026
+	<Chapter Width="814" Height="516" MaximumFoods="16" IncreaseFoods="4">
+		<FriendSprites>
+			<Sprite X="627" Y="275" Level="1635" Type="0" />
+		</FriendSprites>
+		<EnemySprites>
+			<Sprite X="186" Y="248" Level="192" Type="7" />
+			<Sprite X="187" Y="349" Level="192" Type="7" />
+			<Sprite X="182" Y="136" Level="192" Type="7" />
+		</EnemySprites>
+	</Chapter>-->
+	
+</Root>

@@ -121,6 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bug.cs" />
+    <Compile Include="Extensions\CellRenderTarget.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Maps\BugMap.cs" />
     <Compile Include="Maps\FoodMap.cs" />

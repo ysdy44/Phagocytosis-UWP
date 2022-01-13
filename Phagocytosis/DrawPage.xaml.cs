@@ -130,7 +130,13 @@ namespace Phagocytosis
             };
 
 
-            this.Recorder.BackButtonClick += (s, e) => base.Frame.GoBack();
+            this.Recorder.BackButtonClick += (s, e) =>
+            {
+                if (base.Frame.CanGoBack)
+                {
+                    base.Frame.GoBack();
+                }
+            };
             this.Recorder.RestartButtonClick += (s, e) => this.Restart(null);
             this.Recorder.PlayButtonClick += (s, e) => this.Play();
             this.Recorder.NextButtonClick += (s, e) =>

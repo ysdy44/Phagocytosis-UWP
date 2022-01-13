@@ -125,7 +125,7 @@
                 <LineBreak />
                 <Run FontWeight="Bold">开源</Run>
                 <LineBreak />
-                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                       <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
                     <Hyperlink.NavigateUri>
                         https://github.com/ysdy44/Phagocytosis-UWP
                     </Hyperlink.NavigateUri>
@@ -211,6 +211,9 @@
                 </Button>
             </Grid>
 
+            <Button x:Name="EditButton" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+                <FontIcon Glyph="&#xE104;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
             <Button x:Name="LocalFolderButton" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
                 <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
             </Button>

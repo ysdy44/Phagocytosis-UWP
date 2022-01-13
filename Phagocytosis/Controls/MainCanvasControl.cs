@@ -9,6 +9,7 @@ using System.Linq;
 using System.Numerics;
 using Windows.UI;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Input;
 
 namespace Phagocytosis.Controls
 {
@@ -41,7 +42,7 @@ namespace Phagocytosis.Controls
         public PlayState State { get; private set; }
         private float Duration;
         private bool HasCreateResources;
-        private bool LoadingFromProject;
+        private bool LoadingFromProject = true;
         private Chapter Chapter;
         private readonly DispatcherTimer PausedTimer = new DispatcherTimer
         {
@@ -86,6 +87,7 @@ namespace Phagocytosis.Controls
         public MainCanvasControl() : base()
         {
             // Initialize
+            base.ManipulationMode = ManipulationModes.Scale | ManipulationModes.TranslateX | ManipulationModes.TranslateY;
             base.Content = this.CanvasControl;
             this.Pause();
 

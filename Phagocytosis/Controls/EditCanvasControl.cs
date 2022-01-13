@@ -6,6 +6,7 @@ using System.Linq;
 using System.Numerics;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 
 namespace Phagocytosis.Controls
 {
@@ -36,6 +37,7 @@ namespace Phagocytosis.Controls
         public EditCanvasControl() : base()
         {
             // Initialize
+            base.ManipulationMode = ManipulationModes.Scale | ManipulationModes.TranslateX | ManipulationModes.TranslateY;
             base.Content = new Grid
             {
                 Children =

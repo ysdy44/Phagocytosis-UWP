@@ -9,14 +9,8 @@
         Crop,
         Clear,
 
-        Cursor,
+        CursorCell,
         AddCell,
-        AddBacteria,
-        AddVirus,
-        AddParamecium,
-        AddLeukocyte,
-        AddPrion,
-        AddCancer,
 
         CursorRestricted,
         AddRestricted,

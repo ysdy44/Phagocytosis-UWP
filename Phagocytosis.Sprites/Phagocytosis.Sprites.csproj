@@ -123,6 +123,7 @@
     <Compile Include="Bug.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Maps\BugMap.cs" />
+    <Compile Include="Maps\FoodMap.cs" />
     <Compile Include="Maps\RectMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rect2.cs" />

@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using Phagocytosis.ViewModels;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Phagocytosis
@@ -20,8 +11,9 @@ namespace Phagocytosis
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : Application
+    public sealed partial class App : Application
     {
+        public static ViewModel ViewModel { get; } = new ViewModel();
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -30,7 +22,8 @@ namespace Phagocytosis
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            base.Suspending += this.OnSuspending;
+            base.Resuming += this.OnResuming;
         }
 
         /// <summary>
@@ -95,9 +88,16 @@ namespace Phagocytosis
         /// <param name="e">Details about the suspend request.</param>
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            var deferral = e.SuspendingOperation.GetDeferral();
+            App.ViewModel.Suspend();
 
+            SuspendingDeferral deferral = e.SuspendingOperation.GetDeferral();
+            //TODO: 保存应用程序状态并停止任何后台活动
             deferral.Complete();
         }
+        private void OnResuming(object sender, object e)
+        {
+            App.ViewModel.Resumed();
+        }
+
     }
 }

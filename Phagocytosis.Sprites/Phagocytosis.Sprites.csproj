@@ -121,6 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bug.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
     <Compile Include="Extensions\CanvasResourceCreatorExtensions.Brush.cs" />
     <Compile Include="Extensions\CanvasResourceCreatorExtensions.cs" />
     <Compile Include="Extensions\CellRenderTarget.cs" />

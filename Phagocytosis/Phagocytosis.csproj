@@ -133,6 +133,9 @@
     <Compile Include="DrawPage.xaml.cs">
       <DependentUpon>DrawPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LibraryPage.xaml.cs">
       <DependentUpon>LibraryPage.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="DrawPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

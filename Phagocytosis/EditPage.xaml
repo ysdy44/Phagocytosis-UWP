@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Phagocytosis.EditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Phagocytosis.Controls"
+    xmlns:elements="using:Phagocytosis.Elements"
+    xmlns:viewmodels="using:Phagocytosis.ViewModels"
+    mc:Ignorable="d"
+    NavigationCacheMode="Enabled"
+    Background="{ThemeResource AppLinearGradientBrush}"
+    >
+
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <Grid>
+
+        <!--Extension-->
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
+
+        <!--CanvasControl-->
+        <controls:EditCanvasControl x:Name="CanvasControl" />
+
+        <!--Developer-->
+        <ListView x:Name="ZoomListView" VerticalAlignment="Top"
+                  Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <ListView.Footer>
+                <Button x:Name="ExportButton" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <Button.Flyout>
+                        <Flyout Placement="Full">
+                            <TextBox x:Name="TextBox" TextWrapping="Wrap" AcceptsReturn="True"/>
+                        </Flyout>
+                    </Button.Flyout>
+                    <Viewbox Width="32" Height="32">
+                        <SymbolIcon Symbol="NewWindow" />
+                    </Viewbox>
+                </Button>
+            </ListView.Footer>
+            <SymbolIcon Symbol="ZoomIn" IsHitTestVisible="False"/>
+            <SymbolIcon Symbol="ZoomOut" IsHitTestVisible="False"/>
+            <SymbolIcon Symbol="ZoomIn"/>
+            <SymbolIcon Symbol="ZoomOut"/>
+        </ListView>
+
+        <!--Edit-->
+        <ListView x:Name="EditListView" SelectionMode="Single"  VerticalAlignment="Bottom">
+            <SymbolIcon Symbol="MapPin"/>
+            <SymbolIcon Symbol="Delete"/>
+
+            <SymbolIcon Symbol="World"/>
+            <SymbolIcon Symbol="Globe"/>
+            <SymbolIcon Symbol="Target"/>
+            <SymbolIcon Symbol="Account"/>
+            <SymbolIcon Symbol="Bold"/>
+            <SymbolIcon Symbol="Italic"/>
+            <SymbolIcon Symbol="Favorite"/>
+            <SymbolIcon Symbol="Crop"/>
+
+            <SymbolIcon Symbol="ZoomIn"/>
+            <SymbolIcon Symbol="ZoomOut"/>
+        </ListView>
+
+        
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+      
+        <Button x:Name="PlayButton" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE102;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+
+    </Grid>
+</Page>

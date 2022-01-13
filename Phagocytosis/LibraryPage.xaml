@@ -1,0 +1,316 @@
+﻿<Page
+    x:Class="Phagocytosis.LibraryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Phagocytosis.Controls"
+    xmlns:elements="using:Phagocytosis.Elements"
+    mc:Ignorable="d"
+    NavigationCacheMode="Enabled"
+    Background="{ThemeResource AppLinearGradientBrush}"
+    >
+
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <Grid>
+
+        <!--Extension-->
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
+
+        <!--CanvasControl-->
+        <controls:SpriteCanvasControl x:Name="CanvasControl" />
+
+
+        <FlipView x:Name="FlipView" Grid.Column="1" Background="Transparent">
+            <FlipViewItem Padding="{x:Bind CanvasControl.LibraryMargin, Mode=OneWay}" >
+                <TextBlock>
+                    <Run FontSize="122" FontWeight="Light">
+                        细胞
+                    </Run>       
+                    <LineBreak/>
+                    <Run>
+                       速度：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       体积：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       数量：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run TextDecorations="Underline">
+                        细胞并没有统一的定义，比较普遍的提法是：细胞是生物体基本的结构和功能单位。
+                    </Run>   
+                    <LineBreak/>
+                    <Run>
+                        它本来是普普通通的一个细胞，但不知道突然为什么有了吞噬其他细胞的能力。
+                    </Run>   
+                    <LineBreak/>
+                    <Run TextDecorations="Strikethrough">
+                        好吧其实我也想不出什么有趣的设定
+                    </Run>    
+                    <LineBreak/>
+                    <Run>
+                        “难道我就是传授中的 ”
+                    </Run>
+                    <Run FontWeight="Bold">
+                        鲲
+                    </Run>
+                    <Run>
+                        “ ？巨鲲吞噬进化！” ——— 细胞
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        “你只是主角” ——— 我
+                    </Run>
+                </TextBlock>
+            </FlipViewItem>
+
+            <FlipViewItem Padding="{x:Bind CanvasControl.LibraryMargin, Mode=OneWay}" >
+                <TextBlock>
+                    <Run FontSize="122" FontWeight="Light">
+                        细菌
+                    </Run>       
+                    <LineBreak/>
+                    <Run>
+                       速度：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       体积：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       数量：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run TextDecorations="Underline">
+                        细菌是生物的主要类群之一，属于细菌域。
+                        也是所有生物中数量最多的一类，据估计,其总数约有5×10^30个。
+                        细菌的形状相当多样，主要有球状、杆状,以及螺旋状。
+                    </Run>   
+                    <LineBreak/>
+                    <Run>
+                        细菌是最常见的敌人，请努力让主角变得比细菌大，然后吞噬它们！
+                    </Run>
+                    <LineBreak/>
+                    <Run TextDecorations="Strikethrough">
+                        怎么看都是换了个颜色的细胞而已
+                    </Run>    
+                    <LineBreak/>
+                    <Run>
+                        “这玩意可一点也不好吃” ——— 细胞
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        “毕竟是坨
+                    </Run>
+                    <Run FontWeight="Bold">
+                        蛋白质
+                    </Run>
+                    <Run>
+                       ，鸡屎味嘎嘣脆” ——— 贝爷
+                    </Run>
+                </TextBlock>
+            </FlipViewItem>
+
+            <FlipViewItem Padding="{x:Bind CanvasControl.LibraryMargin, Mode=OneWay}" >
+                <TextBlock>
+                    <Run FontSize="122" FontWeight="Light">
+                        病毒
+                    </Run>       
+                    <LineBreak/>
+                    <Run>
+                       速度：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       体积：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       数量：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run TextDecorations="Underline">
+                        病毒是一种个体微小，
+                        结构简单，只含一种核酸，
+                        必须在活细胞内寄生并以复制方式增殖的非细胞型生物。
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        吃下病毒的细胞会被感染，变成免疫系统的首要消灭对象。
+                    </Run>
+                    <LineBreak/>
+                    <Run TextDecorations="Strikethrough">
+                        有毒（生物学意义）
+                    </Run>    
+                    <LineBreak/>
+                    <Run>
+                        “这种东西吃了会闹肚子吧 ？！” ——— 细胞
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        “不，只是会死而已” ——— 免疫系统
+                    </Run>
+                </TextBlock>
+            </FlipViewItem>
+
+            <FlipViewItem Padding="{x:Bind CanvasControl.LibraryMargin, Mode=OneWay}" >
+                <TextBlock>
+                    <Run FontSize="122" FontWeight="Light">
+                        草履虫
+                    </Run>       
+                    <LineBreak/>
+                    <Run>
+                       速度：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       体积：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       数量：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run TextDecorations="Underline">
+                        草履虫是一种身体很小，圆筒形的原生动物，
+                        它只由一个细胞构成，
+                        是单细胞原生动物，雌雄同体。
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        草履虫 0.3 毫米的半径在微生物里简直是巨无霸！
+                    </Run>
+                    <LineBreak/>
+                    <Run TextDecorations="Strikethrough">
+                        明明是草履形却被做成了圆形
+                    </Run>    
+                    <LineBreak/>
+                    <Run>
+                        “好大只！” ——— 细胞
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        “众所周知，草履虫也叫作
+                    </Run>
+                    <Run FontWeight="Bold">
+                        K423
+                    </Run>
+                    <Run>
+                        ” ——— 火星鸽子
+                    </Run>
+                </TextBlock>
+            </FlipViewItem>
+
+            <FlipViewItem Padding="{x:Bind CanvasControl.LibraryMargin, Mode=OneWay}" >
+                <TextBlock>
+                    <Run FontSize="122" FontWeight="Light">
+                        白细胞
+                    </Run>       
+                    <LineBreak/>
+                    <Run>
+                       速度：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       体积：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run>
+                       数量：
+                    </Run>
+                    <Run Text="&#xE113;" FontSize="12" FontFamily="Segoe UI Symbol"/>
+                    <LineBreak/>
+                    <Run TextDecorations="Underline">
+                        白细胞是无色、球形、有核的血细胞。
+                        白细胞一般有活跃的移动能力，它们可以从血管内迁移到血管外，或从血管外组织迁移到血管内。
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        没有什么可以阻碍我移动！除了培养皿！
+                    </Run>
+                    <LineBreak/>
+                    <Run TextDecorations="Strikethrough">
+                        白细胞是友军哦（划掉）
+                    </Run>    
+                    <LineBreak/>
+                    <Run>
+                        “我是细胞，别吃我！” ——— 细胞
+                    </Run>
+                    <LineBreak/>
+                    <Run>
+                        “不好意思，无论细菌病毒还是
+                    </Run>
+                    <Run FontWeight="Bold">
+                        异体细胞
+                    </Run>
+                    <Run>
+                        都是我的敌人。” ——— 白细胞
+                    </Run>
+                </TextBlock>
+            </FlipViewItem>
+
+        </FlipView>
+
+
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+
+    </Grid>
+</Page>

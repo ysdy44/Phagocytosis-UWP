@@ -130,6 +130,7 @@
     <Compile Include="Maps\RectMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rect2.cs" />
+    <Compile Include="Sprites\SpriteType.cs" />
     <EmbeddedResource Include="Properties\Phagocytosis.Sprites.rd.xml" />
   </ItemGroup>
   <ItemGroup>

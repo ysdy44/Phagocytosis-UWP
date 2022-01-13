@@ -1,14 +1,220 @@
 ﻿<Page
     x:Class="Phagocytosis.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Phagocytosis"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Phagocytosis.Controls"
+    xmlns:elements="using:Phagocytosis.Elements"
+    xmlns:viewmodels="using:Phagocytosis.ViewModels"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    NavigationCacheMode="Enabled"
+    Background="{ThemeResource AppLinearGradientBrush}"
+    >
+
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
+        </TransitionCollection>
+    </Page.Transitions>
+    
 
     <Grid>
+
+        <!--VisualState-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+
+                <!--Phone-->
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-100.png"/>
+                        <Setter Target="LogoImage.Width" Value="240"/>
+                        <Setter Target="LogoImage.Height" Value="120"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--Pad-->
+                <VisualState x:Name="Pad">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-125.png"/>
+                        <Setter Target="LogoImage.Width" Value="300"/>
+                        <Setter Target="LogoImage.Height" Value="150"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--PC-->
+                <VisualState x:Name="PC">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-150.png"/>
+                        <Setter Target="LogoImage.Width" Value="360"/>
+                        <Setter Target="LogoImage.Height" Value="180"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!--Hub-->
+                <VisualState x:Name="Hub">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1100" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        
+        <!--Extension-->
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}"/>
+
+        <!--CanvasControl-->
+        <controls:BackgroundCanvasControl x:Name="CanvasControl"/>
+
+        <!--Logo-->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <!--Transitions-->
+            <UIElement.Transitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition />
+                </TransitionCollection>
+            </UIElement.Transitions>
+            <!--Transitions-->
+            <Panel.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition IsStaggeringEnabled="True"/>
+                </TransitionCollection>
+            </Panel.ChildrenTransitions>
+
+            <Image x:Name="LogoImage" Width="480" Height="240" Source="ms-appx:///Assets\SplashScreen.scale-200.png"/>
+
+            <Button x:Name="PlayButton" MaxWidth="200">
+                <Button.Flyout>
+                    <Flyout Placement="Full">
+                        <Flyout.FlyoutPresenterStyle>
+                            <Style TargetType="FlyoutPresenter">
+                                <Setter Property="Padding" Value="12"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="BorderBrush" Value="White"/>
+                                <Setter Property="MinWidth" Value="120"/>
+                                <Setter Property="MaxWidth" Value="626"/>
+                                <Setter Property="Width" Value="Auto"/>
+                                <Setter Property="Background" Value="{StaticResource AppAccentBrush}"/>
+                            </Style>
+                        </Flyout.FlyoutPresenterStyle>
+                        <ListView x:Name="ListView" 
+                                  IsItemClickEnabled="True"                    
+                                  SelectedIndex="{x:Bind ViewModel.SelectedIndex, Mode=TwoWay}"                    
+                                  ItemsSource="{x:Bind ViewModel.Chapters}"                    
+                                  FooterTemplate="{ThemeResource AppListViewBaseFooter}"
+                                  Style="{x:Null}">
+
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="5"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Padding" Value="6"/>
+                                    <Setter Property="Width" Value="120"/>
+                                    <Setter Property="Height" Value="80"/>
+                                    <Setter Property="FontSize" Value="32"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                    <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="viewmodels:ChapterViewItem">
+                                    <Border>
+                                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <FontIcon Glyph="&#xE003;" FontSize="48" FontFamily="Segoe MDL2 Assets"     
+                                                      Visibility="{x:Bind CurrentVisibility, Mode=OneWay}"/>
+                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                       Text="{x:Bind Index, Mode=OneWay}"
+                                                       Visibility="{x:Bind UnlockVisibility, Mode=OneWay}"/>
+                                            <FontIcon Glyph="&#x1F512;" FontSize="32" FontWeight="Bold" FontFamily="Segoe UI Symbol"
+                                                      Visibility="{x:Bind LockVisibility, Mode=OneWay}"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                            <ListView.Header>
+                                <Button x:Name="BackButton">
+                                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+                                </Button>
+                            </ListView.Header>
+
+                        </ListView>
+                    </Flyout>
+                </Button.Flyout>
+
+                <FontIcon Glyph="&#xE102;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+            
+        </StackPanel>
+
+        <!--Developer-->
+        <Border HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Background="{StaticResource SystemAltLowColor}"
+                MinWidth="100"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <StackPanel Margin="22,0" VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource AppBoldTextBlockStyle}">
+                    开发者态
+                </TextBlock>
+                <TextBlock>
+                    <Run>点击</Run>                
+                    <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
+                    <Run>以编辑地图</Run>
+                </TextBlock>
+                <TextBlock>
+                    <Run>点击</Run>                
+                    <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
+                    <Run>以打开地图文件</Run>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+		
+        
+		<Button x:Name="MuteButton" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+			<Viewbox Width="32" Height="32">
+				<SymbolIcon Symbol="{x:Bind BooleanToMuteConverter(ViewModel.IsMuted), Mode=OneWay}" />
+			</Viewbox>
+		</Button>
+
+		<Button x:Name="AboutButton" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <FontIcon Glyph="&#xE171;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+
+        <Button x:Name="LibraryButton" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <FontIcon Glyph="&#xE1D3;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+        </Button>
+
+
+        <!--Developer-->
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}">
+            <Button x:Name="EditButton">
+                <FontIcon Glyph="&#xE104;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+            <Button x:Name="LocalFolderButton">
+                <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+        </StackPanel>
+        
 
     </Grid>
 </Page>

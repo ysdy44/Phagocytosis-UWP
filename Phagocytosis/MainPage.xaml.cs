@@ -1,25 +1,101 @@
-﻿using System;
+﻿using Phagocytosis.ViewModels;
+using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Phagocytosis
 {
+    /// <summary>
+    /// Represents a page used to display chapter.
+    /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        //@ViewModel
+        ViewModel ViewModel => App.ViewModel;
+
+        //@Converter
+        private Symbol BooleanToMuteConverter(bool value) => value ? Symbol.Mute : Symbol.Volume;
+
+        //@Construct
+        /// <summary>
+        /// Initializes a MainPage. 
+        /// </summary>
         public MainPage()
         {
             this.InitializeComponent();
+            base.Loaded += async (s, e) =>
+            {
+                if (this.ViewModel.Chapters.Count != 0) return;
+                IEnumerable<Chapter> chapters = await XML.ConstructChaptersFile();
+                this.ViewModel.LoadFromProject(chapters);
+            };
+
+            this.BackButton.Click += (s, e) => this.PlayButton.Flyout.Hide();
+            this.MuteButton.Click += (s, e) => this.ViewModel.IsMuted = !this.ViewModel.IsMuted;
+            this.AboutButton.Click += (s, e) => base.Frame.Navigate(typeof(AboutPage));
+            this.LibraryButton.Click += (s, e) => base.Frame.Navigate(typeof(LibraryPage));
+            this.EditButton.Click += (s, e) => base.Frame.Navigate(typeof(EditPage));
+            this.LocalFolderButton.Click += async (s, e) =>
+            {
+                IStorageFolder folder = ApplicationData.Current.LocalFolder;
+                await Launcher.LaunchFolderAsync(folder);
+            };
+
+            this.ListView.ItemClick += (s, e) =>
+            {
+                if (e.ClickedItem is ChapterViewItem item)
+                {
+                    if (item.IsEnabled)
+                    {
+                        if (item.Index == this.ListView.SelectedIndex)
+                        {
+                            this.PlayButton.Flyout.Hide();
+                            base.Frame.Navigate(typeof(DrawPage), item.Chapter);
+                        }
+                    }
+                }
+            };
         }
+    }
+
+    public sealed partial class MainPage : Page
+    {
+
+        //@BackRequested
+        /// <summary> The current page no longer becomes an active page. </summary>
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            this.CanvasControl.Stop();
+
+            this.ViewModel.OnSuspending -= this.OnSuspending;
+            this.ViewModel.OnResuming -= this.OnResuming;
+        }
+        /// <summary> The current page becomes the active page. </summary>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.ViewModel.PlayForegroundBGM();
+
+            this.CanvasControl.Restart();
+
+            this.PlayButton.Focus(FocusState.Keyboard);
+
+            this.ViewModel.OnSuspending += this.OnSuspending;
+            this.ViewModel.OnResuming += this.OnResuming;
+        }
+
+        private void OnSuspending()
+        {
+            this.CanvasControl.Stop();
+        }
+        private void OnResuming()
+        {
+            this.CanvasControl.Play();
+        }
+
     }
 }

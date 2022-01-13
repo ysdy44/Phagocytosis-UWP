@@ -130,6 +130,10 @@
     <Compile Include="Maps\RectMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rect2.cs" />
+    <Compile Include="Spriter.cs" />
+    <Compile Include="Spriter.Math.cs" />
+    <Compile Include="Spriter.Method.cs" />
+    <Compile Include="Spriter.Update.cs" />
     <Compile Include="Sprites\ISprite.cs" />
     <Compile Include="Sprites\Sprite.cs" />
     <Compile Include="Sprites\SpriteState.cs" />

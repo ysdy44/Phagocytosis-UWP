@@ -3,8 +3,8 @@
 ![](ScreenShot/logo.png)
 
  
- In development, please look forward to......
-
+ Windows 10 app store address: 
+[Bug Phagocytosis - Microsoft Store](https://www.microsoft.com/store/productId/9PB1Q6NPWD1V)   
 
 <br/>
 

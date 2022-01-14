@@ -3,7 +3,8 @@
 ![](ScreenShot/logo.png)
 
  
- 正在开发，敬请期待......
+ Windows 10 应用商店地址: 
+[购置 胞吞 - 微软商店](https://www.microsoft.com/store/productId/9PB1Q6NPWD1V)   
 
 
 <br/>

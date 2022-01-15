@@ -192,13 +192,33 @@ namespace Phagocytosis.Elements
                     break;
 
                 case VirtualKey.A:
-                    this.VectorVelocity.IsLeft = false;
+                    switch (base.FlowDirection)
+                    {
+                        case FlowDirection.LeftToRight:
+                            this.VectorVelocity.IsLeft = false;
+                            break;
+                        case FlowDirection.RightToLeft:
+                            this.VectorVelocity.IsRight = false;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case VirtualKey.W:
                     this.VectorVelocity.IsTop = false;
                     break;
                 case VirtualKey.D:
-                    this.VectorVelocity.IsRight = false;
+                    switch (base.FlowDirection)
+                    {
+                        case FlowDirection.LeftToRight:
+                            this.VectorVelocity.IsRight = false;
+                            break;
+                        case FlowDirection.RightToLeft:
+                            this.VectorVelocity.IsLeft = false;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case VirtualKey.S:
                     this.VectorVelocity.IsBottom = false;
@@ -242,16 +262,38 @@ namespace Phagocytosis.Elements
                     break;
 
                 case VirtualKey.A:
-                    this.VectorVelocity.IsLeft = true;
-                    this.VectorVelocity.IsLeftFrist = true;
+                    switch (base.FlowDirection)
+                    {
+                        case FlowDirection.LeftToRight:
+                            this.VectorVelocity.IsLeft = true;
+                            this.VectorVelocity.IsLeftFrist = true;
+                            break;
+                        case FlowDirection.RightToLeft:
+                            this.VectorVelocity.IsRight = true;
+                            this.VectorVelocity.IsLeftFrist = false;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case VirtualKey.W:
                     this.VectorVelocity.IsTop = true;
                     this.VectorVelocity.IsTopFrist = true;
                     break;
                 case VirtualKey.D:
-                    this.VectorVelocity.IsRight = true;
-                    this.VectorVelocity.IsLeftFrist = false;
+                    switch (base.FlowDirection)
+                    {
+                        case FlowDirection.LeftToRight:
+                            this.VectorVelocity.IsRight = true;
+                            this.VectorVelocity.IsLeftFrist = false;
+                            break;
+                        case FlowDirection.RightToLeft:
+                            this.VectorVelocity.IsLeft = true;
+                            this.VectorVelocity.IsLeftFrist = true;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case VirtualKey.S:
                     this.VectorVelocity.IsBottom = true;

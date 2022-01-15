@@ -7,6 +7,7 @@ using System.Linq;
 using System.Numerics;
 using Windows.Foundation;
 using Windows.UI.Input;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Microsoft.Graphics.Canvas.UI.Xaml;
 
@@ -118,7 +119,19 @@ namespace Phagocytosis.Controls
         protected void ZoomDelta(ManipulationDelta cumulative)
         {
             this.Scale2 = this.Clamp(this.StartingScale * cumulative.Scale);
-            this.Position = this.StartingPosition + cumulative.Translation.ToVector2();
+
+            Vector2 translation = cumulative.Translation.ToVector2();
+            switch (base.FlowDirection)
+            {
+                case FlowDirection.LeftToRight:
+                    this.Position = this.StartingPosition + translation;
+                    break;
+                case FlowDirection.RightToLeft:
+                    this.Position = this.StartingPosition + new Vector2(-translation.X, translation.Y);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void ZoomSprite(bool isFriend, bool isZoomIn)

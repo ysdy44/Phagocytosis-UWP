@@ -33,43 +33,9 @@
             <TextBlock FontSize="22" Windows10FallCreatorsUpdate:HorizontalTextAlignment="Center">
 
                 <LineBreak />
-                <Run FontWeight="Bold">版本</Run>
+                <Run x:Name="VersionTipRun" FontWeight="Bold">版本</Run>
                 <LineBreak />
-                <Run>1.0.0</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run>-------</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">产品</Run>
-                <LineBreak />
-                <Run>我</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">设计</Run>
-                <LineBreak />
-                <Run>我</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">美术</Run>
-                <LineBreak />
-                <Run>我</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">开发</Run>
-                <LineBreak />
-                <Run>我</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">测试</Run>
-                <LineBreak />
-                <Run>我</Run>
+                <Run x:Name="VersionRun" >1.1.0</Run>
                 <LineBreak />
 
                 <LineBreak />
@@ -77,45 +43,33 @@
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">管理</Run>
+                <Run x:Name="ProductionRun" FontWeight="Bold">产品</Run>
                 <LineBreak />
-                <Run>无</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">推广</Run>
-                <LineBreak />
-                <Run>无</Run>
+                <Run x:Name="MeRun001">我</Run>
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">法务</Run>
+                <Run x:Name="DesignRun" FontWeight="Bold">设计</Run>
                 <LineBreak />
-                <Run>无</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">本地</Run>
-                <LineBreak />
-                <Run>无</Run>
+                <Run x:Name="MeRun002">我</Run>
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">出版</Run>
+                <Run x:Name="ArtRun" FontWeight="Bold">美术</Run>
                 <LineBreak />
-                <Run>无</Run>
-                <LineBreak />
-
-                <LineBreak />
-                <Run FontWeight="Bold">社区</Run>
-                <LineBreak />
-                <Run>无</Run>
+                <Run x:Name="MeRun003">我</Run>
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">致谢</Run>
+                <Run x:Name="DevelopmentRun" FontWeight="Bold">开发</Run>
                 <LineBreak />
-                <Run>无</Run>
+                <Run x:Name="MeRun004">我</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="TestRun" FontWeight="Bold">测试</Run>
+                <LineBreak />
+                <Run x:Name="MeRun005">我</Run>
                 <LineBreak />
 
                 <LineBreak />
@@ -123,9 +77,55 @@
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">开源</Run>
+                <Run x:Name="ManagementRun" FontWeight="Bold">管理</Run>
                 <LineBreak />
-                       <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                <Run x:Name="NoneRun001">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="PromoteRun" FontWeight="Bold">推广</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun002">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="LegalRun" FontWeight="Bold">法务</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun003">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="LocalRun" FontWeight="Bold">本地</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun004">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="PublishingRun" FontWeight="Bold">出版</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun005">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="CommunityRun" FontWeight="Bold">社区</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun006">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="ThanksRun" FontWeight="Bold">致谢</Run>
+                <LineBreak />
+                <Run x:Name="NoneRun007">无</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run>-------</Run>
+                <LineBreak />
+
+                <LineBreak />
+                <Run x:Name="OpenSourceRun" FontWeight="Bold">开源</Run>
+                <LineBreak />
+                <Hyperlink x:Name="OpenSourceHyperlink" Foreground="{ThemeResource AppAccentBrushLight}">
                     <Hyperlink.NavigateUri>
                         https://github.com/ysdy44/Phagocytosis-UWP
                     </Hyperlink.NavigateUri>
@@ -134,10 +134,10 @@
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">引用</Run>
+                <Run x:Name="ReferenceRun" FontWeight="Bold">引用</Run>
                 <LineBreak />
                 <Run></Run>
-                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                <Hyperlink x:Name="ReferenceHyperlink" Foreground="{ThemeResource AppAccentBrushLight}">
                     <Hyperlink.NavigateUri>
                         https://github.com/Microsoft/Win2D-samples
                     </Hyperlink.NavigateUri>
@@ -146,13 +146,13 @@
                 <LineBreak />
 
                 <LineBreak />
-                <Run FontWeight="Bold">反馈</Run>
+                <Run x:Name="FeedbackRun" FontWeight="Bold">反馈</Run>
                 <LineBreak />
-                <Hyperlink Foreground="{ThemeResource AppAccentBrushLight}">
+                <Hyperlink x:Name="FeedbackHyperlink" Foreground="{ThemeResource AppAccentBrushLight}">
                     <Hyperlink.NavigateUri>
                         mailto:ysdy44@outlook.com
                     </Hyperlink.NavigateUri>
-                    <Run>ysdy44@outlook.com</Run>
+                    <Run x:Name="FeedbackHyperlinkRun">ysdy44@outlook.com</Run>
                 </Hyperlink>
                 <LineBreak />
 
@@ -161,7 +161,7 @@
                 <LineBreak />
 
                 <LineBreak />
-                <Run>木有更多了</Run>
+                <Run x:Name="NoMoreRun">木有更多了</Run>
                 <LineBreak />
 
             </TextBlock>
@@ -172,20 +172,20 @@
         <Border HorizontalAlignment="Center" VerticalAlignment="Top" 
                 Background="{StaticResource SystemAltLowColor}"
                 MinWidth="100"
-                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}">
             <StackPanel Margin="22,0" VerticalAlignment="Center">
-                <TextBlock Style="{StaticResource AppBoldTextBlockStyle}">
+                <TextBlock x:Name="DeveloperModeTextBlock" Style="{StaticResource AppBoldTextBlockStyle}">
                     开发者态
                 </TextBlock>
                 <TextBlock>
-                    <Run>点击</Run>                
+                    <Run x:Name="Click001Run">点击</Run>                
                     <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以编辑地图</Run>
+                    <Run x:Name="ToEditRun">以编辑地图</Run>
                 </TextBlock>
                 <TextBlock>
-                    <Run>点击</Run>                
+                    <Run x:Name="Click002Run">点击</Run>                
                     <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以打开地图文件</Run>
+                    <Run x:Name="ToOpenRun">以打开地图文件</Run>
                 </TextBlock>
             </StackPanel>
         </Border>

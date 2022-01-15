@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -123,17 +124,17 @@ namespace Phagocytosis.Elements
         #endregion
 
 
-        int Level;
-        int LevelSpace;
-        int LevelIndex;
+        int MaxLevel;
+        int MaxLevelSpace;
+        int MaxLevelIndex;
 
-        int Count;
-        int CountSpace;
-        int CountIndex;
+        int MaxCount;
+        int MaxCountSpace;
+        int MaxCountIndex;
 
-        TimeSpan Time;
-        TimeSpan TimeSpace;
-        int TimeIndex;
+        TimeSpan Duration;
+        TimeSpan DurationSpace;
+        int DurationIndex;
 
         readonly DispatcherTimer Timer = new DispatcherTimer
         {
@@ -148,91 +149,122 @@ namespace Phagocytosis.Elements
         public Recorder()
         {
             this.InitializeComponent();
+            this.ConstructFlowDirection();
+            this.ConstructStrings();
             this.Timer.Tick += (s, e) =>
             {
-                if (this.LevelIndex <= 0)
+                if (this.MaxLevelIndex <= 0)
                 {
-                    if (this.CountIndex <= 0)
+                    if (this.MaxCountIndex <= 0)
                     {
-                        if (this.TimeIndex <= 0)
+                        if (this.DurationIndex <= 0)
                         {
                             this.Timer.Stop();
                         }
                         else
                         {
-                            this.TimeIndex--;
-                            TimeSpan time = this.Time - TimeSpan.FromSeconds(this.TimeIndex * this.TimeSpace.TotalSeconds);
-                            this.TimeTextBlock.Text = this.TimeSpanToTextConverter(time);
+                            this.DurationIndex--;
+                            TimeSpan time = this.Duration - TimeSpan.FromSeconds(this.DurationIndex * this.DurationSpace.TotalSeconds);
+                            this.DurationTextBlock.Text = this.TimeSpanToTextConverter(time);
                         }
                     }
                     else
                     {
-                        this.CountIndex--;
-                        int count = this.Count - this.CountIndex * this.CountSpace;
-                        this.CountTextBlock.Text = count.ToString();
+                        this.MaxCountIndex--;
+                        int count = this.MaxCount - this.MaxCountIndex * this.MaxCountSpace;
+                        this.MaxCountTextBlock.Text = count.ToString();
                     }
                 }
                 else
                 {
-                    this.LevelIndex--;
-                    int level = this.Level - this.LevelIndex * this.LevelSpace;
-                    this.LevelTextBlock.Text = level.ToString();
+                    this.MaxLevelIndex--;
+                    int level = this.MaxLevel - this.MaxLevelIndex * this.MaxLevelSpace;
+                    this.MaxLevelTextBlock.Text = level.ToString();
                 }
             };
         }
 
-        public void Record(int level, int count, TimeSpan time)
+        // FlowDirection
+        private void ConstructFlowDirection()
         {
-            if (this.Level < level) this.Level = level;
-            if (this.Count < count) this.Count = count;
-            if (this.Time < time) this.Time = time;
+            bool isRightToLeft = System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft;
+
+            base.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        }
+
+        // Strings
+        private void ConstructStrings()
+        {
+            ResourceLoader resource = ResourceLoader.GetForCurrentView();
+
+            this.WinnerTextBlock.Text = resource.GetString("Win");
+            this.LoserTextBlock.Text = resource.GetString("Lose");
+            this.PauserTextBlock.Text = resource.GetString("Pause");
+
+            this.MaxLevelTipTextBlock.Text = resource.GetString("MaxLevel");
+            this.MaxCountTipTextBlock.Text = resource.GetString("MaxCount");
+            this.DurationTipTextBlock.Text = resource.GetString("Duration");
+
+            this.Click001Run.Text = resource.GetString("Click");
+            this.ToRestart.Text = resource.GetString("ToRestart");
+            this.Click002Run.Text = resource.GetString("Click");
+            this.ToNext.Text = resource.GetString("ToNext");
+            this.Click003Run.Text = resource.GetString("Click");
+            this.ToPlay.Text = resource.GetString("ToPlay");
+        }
+
+        public void Record(int level, int count, TimeSpan startingTime)
+        {
+            if (this.MaxLevel < level) this.MaxLevel = level;
+            if (this.MaxCount < count) this.MaxCount = count;
+            this.Duration = DateTime.Now.TimeOfDay - startingTime;
         }
 
         public void Reset()
         {
-            this.Level = 0;
-            this.Count = 0;
-            this.Time = TimeSpan.Zero;
+            this.MaxLevel = 0;
+            this.MaxCount = 0;
+            this.Duration = TimeSpan.Zero;
         }
 
         private void Start()
         {
-            this.LevelTextBlock.Text = 0.ToString();
-            if (this.Level > 100 * 10)
+            this.MaxLevelTextBlock.Text = 0.ToString();
+            if (this.MaxLevel > 100 * 10)
             {
-                this.LevelSpace = this.Level / 10;
-                this.LevelIndex = 10;
+                this.MaxLevelSpace = this.MaxLevel / 10;
+                this.MaxLevelIndex = 10;
             }
             else
             {
-                this.LevelSpace = 100;
-                this.LevelIndex = this.Level / 100;
+                this.MaxLevelSpace = 100;
+                this.MaxLevelIndex = this.MaxLevel / 100;
             }
 
 
-            this.CountTextBlock.Text = 0.ToString();
-            if (this.Count > 1 * 10)
+            this.MaxCountTextBlock.Text = 0.ToString();
+            if (this.MaxCount > 1 * 10)
             {
-                this.CountSpace = this.Count / 10;
-                this.CountIndex = 10;
-            }
-            else
-            {
-                this.CountSpace = 1;
-                this.CountIndex = this.Count / 1;
-            }
-
-
-            this.TimeTextBlock.Text = this.TimeSpanToTextConverter();
-            if (this.Time > TimeSpan.FromSeconds(1 * 10))
-            {
-                this.TimeSpace = TimeSpan.FromSeconds(this.Time.TotalSeconds / 10);
-                this.TimeIndex = 10;
+                this.MaxCountSpace = this.MaxCount / 10;
+                this.MaxCountIndex = 10;
             }
             else
             {
-                this.TimeSpace = TimeSpan.FromSeconds(1);
-                this.TimeIndex = (int)(this.Time.TotalSeconds / 1);
+                this.MaxCountSpace = 1;
+                this.MaxCountIndex = this.MaxCount / 1;
+            }
+
+
+            this.DurationTextBlock.Text = this.TimeSpanToTextConverter();
+            if (this.Duration > TimeSpan.FromSeconds(1 * 10))
+            {
+                this.DurationSpace = TimeSpan.FromSeconds(this.Duration.TotalSeconds / 10);
+                this.DurationIndex = 10;
+            }
+            else
+            {
+                this.DurationSpace = TimeSpan.FromSeconds(1);
+                this.DurationIndex = (int)(this.Duration.TotalSeconds / 1);
             }
 
 

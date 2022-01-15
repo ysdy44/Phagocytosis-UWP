@@ -51,47 +51,47 @@
             </Grid>
 
             <Grid x:Name="LevelGrid" Margin="0,2" Background="{x:Bind Background, Mode=OneWay}" >
-                <TextBlock HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                <TextBlock x:Name="MaxLevelTipTextBlock" HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     最大体积
                 </TextBlock>
-                <TextBlock x:Name="LevelTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                <TextBlock x:Name="MaxLevelTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     0
                 </TextBlock>
             </Grid>
 
             <Grid x:Name="CountGrid" Margin="0,2" Background="{x:Bind Background, Mode=OneWay}" >
-                <TextBlock HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                <TextBlock x:Name="MaxCountTipTextBlock" HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     最大数量
-                </TextBlock>                         
-                <TextBlock x:Name="CountTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                </TextBlock>
+                <TextBlock x:Name="MaxCountTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     0
                 </TextBlock>
             </Grid>
 
             <Grid x:Name="TimeGrid" Margin="0,2" Background="{x:Bind Background, Mode=OneWay}" >
-                <TextBlock HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                <TextBlock x:Name="DurationTipTextBlock" HorizontalAlignment="Left" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     时间
-                </TextBlock>                          
-                <TextBlock x:Name="TimeTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
+                </TextBlock>
+                <TextBlock x:Name="DurationTextBlock" HorizontalAlignment="Right" Style="{StaticResource AppBoldTextBlockStyle}" >            
                     00:00:00
                 </TextBlock>
             </Grid>
 
             <Grid Margin="2" HorizontalAlignment="Center">
                 <TextBlock x:Name="LoserTipTextBlock" >
-                    <Run>点击</Run>                
+                    <Run x:Name="Click001Run">点击</Run>                
                     <Run Text="&#xE149;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以重来</Run>
+                    <Run x:Name="ToRestart">以重来</Run>
                 </TextBlock>
                 <TextBlock x:Name="WinnerTipTextBlock" >
-                    <Run>点击</Run>
+                    <Run x:Name="Click002Run">点击</Run>               
                     <Run Text="&#xE111;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以跳转下一关</Run>
+                    <Run x:Name="ToNext">以跳转下一关</Run>
                 </TextBlock>
                 <TextBlock x:Name="PauserTipTextBlock" >
-                    <Run>点击</Run>     
+                    <Run x:Name="Click003Run">点击</Run>               
                     <Run Text="&#xE102;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以继续</Run>
+                    <Run x:Name="ToPlay">以继续</Run>
                 </TextBlock>
             </Grid>
 

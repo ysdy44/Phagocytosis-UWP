@@ -2,6 +2,8 @@
 using Phagocytosis.Sprites;
 using Phagocytosis.ViewModels;
 using System.Xml.Linq;
+using Windows.ApplicationModel.Resources;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -23,6 +25,8 @@ namespace Phagocytosis
         public EditPage()
         {
             this.InitializeComponent();
+            this.ConstructFlowDirection();
+            this.ConstructStrings();
             this.BackButton.Click += (s, e) =>
             {
                 if (base.Frame.CanGoBack)
@@ -108,6 +112,30 @@ namespace Phagocytosis
             this.ZoomInButton.Click += (s, e) => this.CanvasControl.ZoomIn2();
             this.ZoomOutButton.Click += (s, e) => this.CanvasControl.ZoomOut2();
             this.DeleteButton.Click += (s, e) => this.CanvasControl.Delete();
+        }
+
+        // FlowDirection
+        private void ConstructFlowDirection()
+        {
+            bool isRightToLeft = System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft;
+
+            base.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        }
+
+        // Strings
+        private void ConstructStrings()
+        {
+            ResourceLoader resource = ResourceLoader.GetForCurrentView();
+
+            this.BacteriaTextBlock.Text = resource.GetString("Bacteria");
+            this.VirusTextBlock.Text = resource.GetString("Virus");
+            this.ParameciumTextBlock.Text = resource.GetString("Paramecium");
+            this.LeukocyteTextBlock.Text = resource.GetString("Leukocyte");
+
+            this.MoveTextBlock.Text = resource.GetString("Move");
+            this.AddRestrictedTextBlock.Text = resource.GetString("AddRestricted");
+            this.AddFriendTextBlock.Text = resource.GetString("AddFriend");
+            this.AddEnemyTextBlock.Text = resource.GetString("AddEnemy");
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

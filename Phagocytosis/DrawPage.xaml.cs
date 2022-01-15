@@ -27,6 +27,7 @@ namespace Phagocytosis
         public DrawPage()
         {
             this.InitializeComponent();
+            this.ConstructFlowDirection();
             this.CanvasControl.GameOver += (s, value) =>
             {
                 this.ViewModel.PlayForegroundBGM();
@@ -157,6 +158,16 @@ namespace Phagocytosis
             };
         }
 
+        // FlowDirection
+        private void ConstructFlowDirection()
+        {
+            bool isRightToLeft = System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft;
+
+            base.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+
+            this.CanvasControl.Direction = base.FlowDirection;
+        }
+
         private void Restart(Chapter chapter)
         {
             this.Recorder.Reset();
@@ -191,7 +202,7 @@ namespace Phagocytosis
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.ViewModel.OnSuspending -= this.OnSuspending;
-            this.CanvasControl.Start();
+            this.CanvasControl.Stop();
         }
         /// <summary> The current page becomes the active page. </summary>
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -210,7 +221,7 @@ namespace Phagocytosis
             }
 
             this.ViewModel.OnSuspending += this.OnSuspending;
-            this.Recorder.Pause();
+            this.CanvasControl.Start();
         }
 
         private void OnSuspending()

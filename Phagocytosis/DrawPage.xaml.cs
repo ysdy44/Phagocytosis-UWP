@@ -52,40 +52,43 @@ namespace Phagocytosis
 
             this.Controller.GamepadBChanged += (s, value) =>
             {
+                if (value == false) return;
                 if (this.CanvasControl.Player == null) return;
-                if (value) this.CanvasControl.Player.Dividing();
+                this.CanvasControl.Player.Dividing();
             };
-            this.Controller.KeyChanged += (s, value) =>
+            this.Controller.Paused += (s, value) =>
             {
+                if (value == false) return;
                 if (this.CanvasControl.Player == null) return;
 
-                switch (value)
+                switch (this.CanvasControl.State)
                 {
-                    case VirtualKey.Escape:
-                    case VirtualKey.P:
-                        switch (this.CanvasControl.State)
-                        {
-                            case PlayState.Playing:
-                                this.Pause();
-                                break;
-                            case PlayState.Paused:
-                                this.Play();
-                                break;
-                        }
+                    case PlayState.Playing:
+                        this.Pause();
                         break;
-                    case VirtualKey.Q:
-                        if (this.CanvasControl.Player == null) return;
-                        this.CanvasControl.Player.Dividing();
+                    case PlayState.Paused:
+                        this.Play();
                         break;
-                    case (VirtualKey)187: // +
-                        if (this.CanvasControl.Player == null) return;
-                        this.CanvasControl.ZoomIn();
-                        break;
-                    case (VirtualKey)189: // _
-                        if (this.CanvasControl.Player == null) return;
+                }
+            };
+            this.Controller.Divided += (s, value) =>
+            {
+                if (value == false) return;
+                if (this.CanvasControl.Player == null) return;
+                this.CanvasControl.Player.Dividing();
+            };
+            this.Controller.Zoom += (s, value) =>
+            {
+                if (value == null) return;
+                if (this.CanvasControl.Player == null) return;
+
+                switch (value.Value)
+                {
+                    case false:
                         this.CanvasControl.ZoomOut();
                         break;
-                    default:
+                    case true:
+                        this.CanvasControl.ZoomIn();
                         break;
                 }
             };

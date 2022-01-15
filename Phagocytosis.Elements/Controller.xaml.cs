@@ -18,8 +18,12 @@ namespace Phagocytosis.Elements
         public event EventHandler<Vector2> VectorChanged;
         /// <summary> Occurs when moved. </summary>
         public event EventHandler<Vector2> Moved;
-        /// <summary> Occurs when virtual key changed. </summary>
-        public event EventHandler<VirtualKey> KeyChanged;
+        /// <summary> Occurs when zoom. </summary>
+        public event EventHandler<bool?> Zoom;
+        /// <summary> Occurs when paused. </summary>
+        public event EventHandler<bool> Paused;
+        /// <summary> Occurs when divided. </summary>
+        public event EventHandler<bool> Divided;
         /// <summary> Occurs when gamepad key B changed. </summary>
         public event EventHandler<bool> GamepadBChanged;
 
@@ -28,24 +32,6 @@ namespace Phagocytosis.Elements
         private double TopConverter(Vector2 value) => (value.Y + 1) * 100 - 25;
 
         #region DependencyProperty
-
-
-        /// <summary> Gets or sets Key of <see cref = "Controller" />. </summary>
-        public VirtualKey Key
-        {
-            get => (VirtualKey)base.GetValue(KeyProperty);
-            set => base.SetValue(KeyProperty, value);
-        }
-        /// <summary> Identifies the <see cref = "Controller.Key" /> dependency property. </summary>
-        public static readonly DependencyProperty KeyProperty = DependencyProperty.Register(nameof(Key), typeof(VirtualKey), typeof(Controller), new PropertyMetadata(VirtualKey.None, (sender, e) =>
-        {
-            Controller control = (Controller)sender;
-
-            if (e.NewValue is VirtualKey value)
-            {
-                control.KeyChanged?.Invoke(control, value); // Delegate
-            }
-        }));
 
 
         /// <summary> Gets or sets vector of <see cref = "Controller" />. </summary>
@@ -189,6 +175,22 @@ namespace Phagocytosis.Elements
         {
             switch (args.VirtualKey)
             {
+                case (VirtualKey)187: // +
+                    this.Zoom?.Invoke(this, null); // Delegate
+                    break;
+                case (VirtualKey)189: // _
+                    this.Zoom?.Invoke(this, null); // Delegate
+                    break;
+
+                case VirtualKey.Escape:
+                case VirtualKey.P:
+                    this.Paused?.Invoke(this, false); // Delegate
+                    break;
+
+                case VirtualKey.Q:
+                    this.Divided?.Invoke(this, false); // Delegate
+                    break;
+
                 case VirtualKey.A:
                     this.VectorVelocity.IsLeft = false;
                     break;
@@ -214,13 +216,6 @@ namespace Phagocytosis.Elements
                 case VirtualKey.Down:
                     this.MoveVelocity.IsBottom = false;
                     break;
-
-                default:
-                    if (this.Key == args.VirtualKey)
-                    {
-                        this.Key = VirtualKey.None;
-                    }
-                    break;
             }
 
             this.Vector = this.VectorCore = this.VectorVelocity.GetVector();
@@ -230,6 +225,22 @@ namespace Phagocytosis.Elements
         {
             switch (args.VirtualKey)
             {
+                case (VirtualKey)187: // +
+                    this.Zoom?.Invoke(this, true); // Delegate
+                    break;
+                case (VirtualKey)189: // _
+                    this.Zoom?.Invoke(this, false); // Delegate
+                    break;
+
+                case VirtualKey.Escape:
+                case VirtualKey.P:
+                    this.Paused?.Invoke(this, true); // Delegate
+                    break;
+
+                case VirtualKey.Q:
+                    this.Divided?.Invoke(this, true); // Delegate
+                    break;
+
                 case VirtualKey.A:
                     this.VectorVelocity.IsLeft = true;
                     this.VectorVelocity.IsLeftFrist = true;
@@ -262,10 +273,6 @@ namespace Phagocytosis.Elements
                 case VirtualKey.Down:
                     this.MoveVelocity.IsBottom = true;
                     this.MoveVelocity.IsTopFrist = false;
-                    break;
-
-                default:
-                    this.Key = args.VirtualKey;
                     break;
             }
 

@@ -61,5 +61,86 @@
 
 
 <data name='$DisplayName' xml:space='preserve'><value>胞吞</value></data>
+<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
+<data name='$GithubLink' xml:space='preserve'><value>https://gitee.com/ysdy44/phagocytosis-uwp</value></data>
+<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
+<data name='Cell' xml:space='preserve'><value>细胞 </value></data>
+<data name='Bacteria' xml:space='preserve'><value>细菌 </value></data>
+<data name='Virus' xml:space='preserve'><value>病毒 </value></data>
+<data name='Paramecium' xml:space='preserve'><value>草履虫 </value></data>
+<data name='Leukocyte' xml:space='preserve'><value>白细胞 </value></data>
+<data name='Prion' xml:space='preserve'><value>朊病毒</value></data>
+<data name='Cancer' xml:space='preserve'><value>癌细胞</value></data>
+<data name='StaphylococcusAureus' xml:space='preserve'><value>金色葡萄球菌</value></data>
+<data name='DeveloperMode' xml:space='preserve'><value>开发者态</value></data>
+<data name='Click' xml:space='preserve'><value>点击</value></data>
+<data name='ToEdit' xml:space='preserve'><value>以编辑地图</value></data>
+<data name='ToOpen' xml:space='preserve'><value>以打开地图文件</value></data>
+<data name='Me' xml:space='preserve'><value>我</value></data>
+<data name='None' xml:space='preserve'><value>无</value></data>
+<data name='Version' xml:space='preserve'><value>版本</value></data>
+<data name='Production' xml:space='preserve'><value>产品</value></data>
+<data name='Design' xml:space='preserve'><value>设计</value></data>
+<data name='Art' xml:space='preserve'><value>美术</value></data>
+<data name='Development' xml:space='preserve'><value>开发</value></data>
+<data name='Test' xml:space='preserve'><value>测试</value></data>
+<data name='Management' xml:space='preserve'><value>管理</value></data>
+<data name='Promote' xml:space='preserve'><value>推广</value></data>
+<data name='Legal' xml:space='preserve'><value>法务</value></data>
+<data name='Local' xml:space='preserve'><value>本地</value></data>
+<data name='Publishing' xml:space='preserve'><value>出版</value></data>
+<data name='Community' xml:space='preserve'><value>社区</value></data>
+<data name='Thanks' xml:space='preserve'><value>致谢</value></data>
+<data name='OpenSource' xml:space='preserve'><value>开源</value></data>
+<data name='Reference' xml:space='preserve'><value>引用</value></data>
+<data name='Feedback' xml:space='preserve'><value>反馈</value></data>
+<data name='NoMore' xml:space='preserve'><value>木有更多了</value></data>
+<data name='Move' xml:space='preserve'><value>移动镜头</value></data>
+<data name='AddRestricted' xml:space='preserve'><value>加入墙</value></data>
+<data name='AddFriend' xml:space='preserve'><value>加入友军</value></data>
+<data name='AddEnemy' xml:space='preserve'><value>加入敌人</value></data>
+<data name='Guider001' xml:space='preserve'><value>操控摇杆 或按下 WASD 键以移动细胞</value></data>
+<data name='Guider002' xml:space='preserve'><value>双指捏合 或按下 - + 键以缩放镜头</value></data>
+<data name='Guider003' xml:space='preserve'><value>滑动屏幕 或按下 ↑←↓→ 键以移动镜头</value></data>
+<data name='Guider004' xml:space='preserve'><value>或按下 Q 键以分裂成两个细胞</value></data>
+<data name='Guider005' xml:space='preserve'><value>寻觅食物让细胞变大，大细胞可以吃掉小细胞</value></data>
+<data name='Guider006' xml:space='preserve'><value>吃掉所有的细菌，为赖以生存的身体而战吧！！！</value></data>
+<data name='Lose' xml:space='preserve'><value>胜利</value></data>
+<data name='Win' xml:space='preserve'><value>失败</value></data>
+<data name='Pause' xml:space='preserve'><value>暂停</value></data>
+<data name='MaxLevel' xml:space='preserve'><value>最大体积</value></data>
+<data name='MaxCount' xml:space='preserve'><value>最大数量</value></data>
+<data name='Duration' xml:space='preserve'><value>时间</value></data>
+<data name='ToRestart' xml:space='preserve'><value>以重来</value></data>
+<data name='ToNext' xml:space='preserve'><value>以跳转下一关</value></data>
+<data name='ToPlay' xml:space='preserve'><value>以继续</value></data>
+<data name='Speed' xml:space='preserve'><value>速度</value></data>
+<data name='Level' xml:space='preserve'><value>体积</value></data>
+<data name='Count' xml:space='preserve'><value>数量</value></data>
+<data name='Cell001' xml:space='preserve'><value>细胞并没有统一的定义，比较普遍的提法是：细胞是生物体基本的结构和功能单位。</value></data>
+<data name='Cell002' xml:space='preserve'><value>它本来是普普通通的一个细胞，但不知道突然为什么有了吞噬其他细胞的能力。</value></data>
+<data name='Cell003' xml:space='preserve'><value>好吧其实我也想不出什么有趣的设定</value></data>
+<data name='Cell004' xml:space='preserve'><value>“难道我就是传说中的 ’鲲‘？巨鲲吞噬进化！” ——— 细胞</value></data>
+<data name='Cell005' xml:space='preserve'><value>“你只是主角” ——— 我</value></data>
+<data name='Bacteria001' xml:space='preserve'><value>细菌是生物的主要类群之一，属于细菌域。也是所有生物中数量最多的一类，据估计,其总数约有 5×10^30 个。细菌的形状相当多样，主要有球状、杆状,以及螺旋状。</value></data>
+<data name='Bacteria002' xml:space='preserve'><value>细菌是最常见的敌人，请努力让主角变得比细菌大，然后吞噬它们！</value></data>
+<data name='Bacteria003' xml:space='preserve'><value>怎么看都是换了个颜色的细胞而已</value></data>
+<data name='Bacteria004' xml:space='preserve'><value>“这玩意可一点也不好吃” ——— 细胞</value></data>
+<data name='Bacteria005' xml:space='preserve'><value>“毕竟是坨蛋白质，鸡肉味嘎嘣脆” ——— 贝爷</value></data>
+<data name='Virus001' xml:space='preserve'><value>病毒是一种个体微小，结构简单，只含一种核酸，必须在活细胞内寄生并以复制方式增殖的非细胞型生物。</value></data>
+<data name='Virus002' xml:space='preserve'><value>吃下病毒的细胞会被感染，变成免疫系统的首要消灭对象。</value></data>
+<data name='Virus003' xml:space='preserve'><value>有毒（在生物学意义上）</value></data>
+<data name='Virus004' xml:space='preserve'><value>“这种东西吃了会闹肚子吧 ？！” ——— 细胞</value></data>
+<data name='Virus005' xml:space='preserve'><value>“甚至会死” ——— 免疫系统</value></data>
+<data name='Paramecium001' xml:space='preserve'><value>草履虫是一种身体很小，圆筒形的原生动物，它只由一个细胞构成，是单细胞原生动物，雌雄同体。</value></data>
+<data name='Paramecium002' xml:space='preserve'><value>草履虫 0.3 毫米的半径在微生物里简直是巨无霸！</value></data>
+<data name='Paramecium003' xml:space='preserve'><value>明明是草履形却被做成了圆形</value></data>
+<data name='Paramecium004' xml:space='preserve'><value>“好大只！” ——— 细胞</value></data>
+<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
+<data name='Leukocyte001' xml:space='preserve'><value>白细胞是无色、球形、有核的血细胞。白细胞一般有活跃的移动能力，它们可以从血管内迁移到血管外，或从血管外组织迁移到血管内。</value></data>
+<data name='Leukocyte002' xml:space='preserve'><value>没有什么可以阻碍我移动！除了培养皿！</value></data>
+<data name='Leukocyte003' xml:space='preserve'><value>白细胞是友军哦（不是）</value></data>
+<data name='Leukocyte004' xml:space='preserve'><value>“我是细胞，别吃我！” ——— 细胞</value></data>
+<data name='Leukocyte005' xml:space='preserve'><value>“不好意思，无论细菌病毒还是异体细胞都是我的敌人。” ——— 白细胞</value></data>
 
  </root>

@@ -61,5 +61,86 @@
 
 
 <data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
+<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
+<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
+<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
+<data name='Cell' xml:space='preserve'><value>세포 </value></data>
+<data name='Bacteria' xml:space='preserve'><value>박테리아 </value></data>
+<data name='Virus' xml:space='preserve'><value>바이러스 </value></data>
+<data name='Paramecium' xml:space='preserve'><value>풀벌레 </value></data>
+<data name='Leukocyte' xml:space='preserve'><value>백혈구 </value></data>
+<data name='Prion' xml:space='preserve'><value>프리온</value></data>
+<data name='Cancer' xml:space='preserve'><value>암세포</value></data>
+<data name='StaphylococcusAureus' xml:space='preserve'><value>황금 포도상 구균</value></data>
+<data name='DeveloperMode' xml:space='preserve'><value>개발자 상태</value></data>
+<data name='Click' xml:space='preserve'><value>클릭합니다</value></data>
+<data name='ToEdit' xml:space='preserve'><value>클릭하여 맵을 편집합니다</value></data>
+<data name='ToOpen' xml:space='preserve'><value>클릭하여 맵 파일을 엽니다</value></data>
+<data name='Me' xml:space='preserve'><value>나</value></data>
+<data name='None' xml:space='preserve'><value>아니요, 없습니다</value></data>
+<data name='Version' xml:space='preserve'><value>버전입니다</value></data>
+<data name='Production' xml:space='preserve'><value>제품</value></data>
+<data name='Design' xml:space='preserve'><value>디자인</value></data>
+<data name='Art' xml:space='preserve'><value>미술</value></data>
+<data name='Development' xml:space='preserve'><value>개발</value></data>
+<data name='Test' xml:space='preserve'><value>테스트</value></data>
+<data name='Management' xml:space='preserve'><value>관리</value></data>
+<data name='Promote' xml:space='preserve'><value>홍보</value></data>
+<data name='Legal' xml:space='preserve'><value>법무</value></data>
+<data name='Local' xml:space='preserve'><value>로컬입니다</value></data>
+<data name='Publishing' xml:space='preserve'><value>출판</value></data>
+<data name='Community' xml:space='preserve'><value>커뮤니티</value></data>
+<data name='Thanks' xml:space='preserve'><value>감사합니다</value></data>
+<data name='OpenSource' xml:space='preserve'><value>오픈 소스</value></data>
+<data name='Reference' xml:space='preserve'><value>참조입니다</value></data>
+<data name='Feedback' xml:space='preserve'><value>피드백</value></data>
+<data name='NoMore' xml:space='preserve'><value>나무가 더 있습니다</value></data>
+<data name='Move' xml:space='preserve'><value>렌즈를 이동합니다</value></data>
+<data name='AddRestricted' xml:space='preserve'><value>벽에 추가합니다</value></data>
+<data name='AddFriend' xml:space='preserve'><value>아군에 합류하다</value></data>
+<data name='AddEnemy' xml:space='preserve'><value>적과 합류하십시오</value></data>
+<data name='Guider001' xml:space='preserve'><value>조이스틱을 조작하거나 WASD 키를 눌러 셀을 이동합니다</value></data>
+<data name='Guider002' xml:space='preserve'><value>두 손가락을 꼬집거나 - + 키를 눌러 렌즈의 배율을 조정합니다</value></data>
+<data name='Guider003' xml:space='preserve'><value>화면을 스와이프하거나 [←] → 키를 눌러 렌즈를 이동합니다</value></data>
+<data name='Guider004' xml:space='preserve'><value>클릭하거나 Q 키를 눌러 두 개의 셀로 분할합니다</value></data>
+<data name='Guider005' xml:space='preserve'><value>음식을 찾는 것은 세포를 더 크게 만들고 큰 세포는 작은 세포를 먹을 수 있습니다</value></data>
+<data name='Guider006' xml:space='preserve'><value>모든 박테리아를 먹고 살아남은 몸을 위해 싸우십시오!!!</value></data>
+<data name='Lose' xml:space='preserve'><value>승리</value></data>
+<data name='Win' xml:space='preserve'><value>실패했습니다</value></data>
+<data name='Pause' xml:space='preserve'><value>일시 중지합니다</value></data>
+<data name='MaxLevel' xml:space='preserve'><value>최대 볼륨입니다</value></data>
+<data name='MaxCount' xml:space='preserve'><value>최대 수량입니다</value></data>
+<data name='Duration' xml:space='preserve'><value>시간</value></data>
+<data name='ToRestart' xml:space='preserve'><value>클릭하여 돌아갑니다</value></data>
+<data name='ToNext' xml:space='preserve'><value>클릭하여 다음 레벨로 이동합니다</value></data>
+<data name='ToPlay' xml:space='preserve'><value>다음 레벨로 점프하기 위해</value></data>
+<data name='Speed' xml:space='preserve'><value>속도</value></data>
+<data name='Level' xml:space='preserve'><value>볼륨입니다</value></data>
+<data name='Count' xml:space='preserve'><value>수량입니다</value></data>
+<data name='Cell001' xml:space='preserve'><value>세포는 균일 한 정의를 가지고 있지 않으며, 더 일반적인 참조는 세포가 유기체의 기본 구조 및 기능 단위라는 것입니다.</value></data>
+<data name='Cell002' xml:space='preserve'><value>그것은 일반적인 세포로 사용 되었습니다., 하지만 갑자기 다른 세포를 삼킬 수 있는 능력을 가지고 이유를 모르겠어요.</value></data>
+<data name='Cell003' xml:space='preserve'><value>글쎄, 난 정말 흥미로운 설정을 생각할 수 없다</value></data>
+<data name='Cell004' xml:space='preserve'><value>나는 전설적인 첩인가? 거대한 삼켜진 진화! • ——— 세포</value></data>
+<data name='Cell005' xml:space='preserve'><value>넌 그냥 주인공이야 ——— 나</value></data>
+<data name='Bacteria001' xml:space='preserve'><value>박테리아는 유기체의 주요 그룹 중 하나이며 박테리아 도메인에 속합니다. 또한 모든 생물 중 가장 많은 수의 생물이며, 총 수는 약 5×10^30으로 추정됩니다. 박테리아는 주로 구형, 막대 및 나선형으로 매우 다양한 모양을 가지고 있습니다.</value></data>
+<data name='Bacteria002' xml:space='preserve'><value>박테리아는 가장 일반적인 적이다, 주인공이 박테리아보다 더 큰 만들 수 있도록 노력하시기 바랍니다, 다음 그들을 삼켜!</value></data>
+<data name='Bacteria003' xml:space='preserve'><value>아무리 봐도 색깔이 바뀐 세포일 뿐이에요</value></data>
+<data name='Bacteria004' xml:space='preserve'><value>이 물건은 전혀 맛이 없다, ——— 세포</value></data>
+<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
+<data name='Virus001' xml:space='preserve'><value>바이러스는 살아있는 세포에서 기생하고 복제되어야 하는 핵산을 포함하는 작은 개별, 간단한 구조, 비세포 유기체입니다.</value></data>
+<data name='Virus002' xml:space='preserve'><value>바이러스를 먹는 세포는 감염되어 면역 체계의 첫 번째 박멸 대상이됩니다.</value></data>
+<data name='Virus003' xml:space='preserve'><value>독성 (생물학적 의미에서)</value></data>
+<data name='Virus004' xml:space='preserve'><value>이런 거 먹으면 배탈나죠?! ——— 세포</value></data>
+<data name='Virus005' xml:space='preserve'><value>심지어 죽을 수 있습니다 면역 체계를 ———</value></data>
+<data name='Paramecium001' xml:space='preserve'><value>잔디 벌레는 하나의 세포로 구성된 작고 원통형 원생 동물이며, 단세포 원생 동물, 암컷 및 수컷 동체입니다.</value></data>
+<data name='Paramecium002' xml:space='preserve'><value>잔디 벌레 0.3 mm의 반지름은 미생물에 대 한 거 대 한!</value></data>
+<data name='Paramecium003' xml:space='preserve'><value>분명히 풀 모양인데 둥글게 만들어졌다</value></data>
+<data name='Paramecium004' xml:space='preserve'><value>너무 크다! ——— 세포</value></data>
+<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
+<data name='Leukocyte001' xml:space='preserve'><value>백혈구는 무색, 구형, 핵 혈액 세포입니다. 백혈구는 일반적으로 혈관에서 혈관 외부로 또는 혈관 외부 조직에서 혈관으로 이동할 수있는 활성 이동성을 가지고 있습니다.</value></data>
+<data name='Leukocyte002' xml:space='preserve'><value>아무것도 내 움직임을 막을 수 없다! 페트리 접시를 제외하고!</value></data>
+<data name='Leukocyte003' xml:space='preserve'><value>백혈구는 아군입니다.</value></data>
+<data name='Leukocyte004' xml:space='preserve'><value>나는 세포야, 날 먹지 마! ——— 세포</value></data>
+<data name='Leukocyte005' xml:space='preserve'><value>죄송합니다, 세균성 바이러스든 이종 세포든 내 적이다. ——— 백혈구</value></data>
 
  </root>

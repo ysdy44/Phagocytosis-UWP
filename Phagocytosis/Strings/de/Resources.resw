@@ -61,5 +61,86 @@
 
 
 <data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
+<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
+<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
+<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
+<data name='Cell' xml:space='preserve'><value>Zelle </value></data>
+<data name='Bacteria' xml:space='preserve'><value>Bakterien </value></data>
+<data name='Virus' xml:space='preserve'><value>Virus </value></data>
+<data name='Paramecium' xml:space='preserve'><value>Pantoffeltierchen </value></data>
+<data name='Leukocyte' xml:space='preserve'><value>weiße Blutkörperchen </value></data>
+<data name='Prion' xml:space='preserve'><value>Prion</value></data>
+<data name='Cancer' xml:space='preserve'><value>Krebszelle</value></data>
+<data name='StaphylococcusAureus' xml:space='preserve'><value>Staphylococcus aureus</value></data>
+<data name='DeveloperMode' xml:space='preserve'><value>Entwicklerstatus</value></data>
+<data name='Click' xml:space='preserve'><value>klicken</value></data>
+<data name='ToEdit' xml:space='preserve'><value>Gehen Sie folgendermaßen vor, um die Karte zu bearbeiten</value></data>
+<data name='ToOpen' xml:space='preserve'><value>Gehen Sie folgendermaßen vor, um die Kartendatei zu öffnen</value></data>
+<data name='Me' xml:space='preserve'><value>Ich</value></data>
+<data name='None' xml:space='preserve'><value>nicht</value></data>
+<data name='Version' xml:space='preserve'><value>Version</value></data>
+<data name='Production' xml:space='preserve'><value>Produkte</value></data>
+<data name='Design' xml:space='preserve'><value>entwickeln</value></data>
+<data name='Art' xml:space='preserve'><value>schöne Künste</value></data>
+<data name='Development' xml:space='preserve'><value>Ausbeutung</value></data>
+<data name='Test' xml:space='preserve'><value>Test</value></data>
+<data name='Management' xml:space='preserve'><value>verwalten</value></data>
+<data name='Promote' xml:space='preserve'><value>popularisieren</value></data>
+<data name='Legal' xml:space='preserve'><value>Rechtlich</value></data>
+<data name='Local' xml:space='preserve'><value>lokal</value></data>
+<data name='Publishing' xml:space='preserve'><value>Veröffentlichung</value></data>
+<data name='Community' xml:space='preserve'><value>Gemeinschaft</value></data>
+<data name='Thanks' xml:space='preserve'><value>Danke</value></data>
+<data name='OpenSource' xml:space='preserve'><value>quelloffen</value></data>
+<data name='Reference' xml:space='preserve'><value>zitieren</value></data>
+<data name='Feedback' xml:space='preserve'><value>Feedback</value></data>
+<data name='NoMore' xml:space='preserve'><value>Holz hat mehr</value></data>
+<data name='Move' xml:space='preserve'><value>Bewegen Sie das Objektiv</value></data>
+<data name='AddRestricted' xml:space='preserve'><value>Schließen Sie sich der Wand an</value></data>
+<data name='AddFriend' xml:space='preserve'><value>Schließe dich Verbündeten an</value></data>
+<data name='AddEnemy' xml:space='preserve'><value>Schließe dich dem Feind an</value></data>
+<data name='Guider001' xml:space='preserve'><value>Manipulieren Sie den Joystick oder drücken Sie die WASD-Taste, um die Zelle zu bewegen</value></data>
+<data name='Guider002' xml:space='preserve'><value>Drücken Sie mit zwei Fingern oder drücken Sie die Taste - +, um das Objektiv zu vergrößern</value></data>
+<data name='Guider003' xml:space='preserve'><value>Wischen Sie über den Bildschirm oder drücken Sie die Taste ↑←↓→, um das Objektiv zu bewegen</value></data>
+<data name='Guider004' xml:space='preserve'><value>Oder drücken Sie die Q-Taste, um sie in zwei Zellen zu teilen</value></data>
+<data name='Guider005' xml:space='preserve'><value>Die Nahrungssuche macht die Zellen größer, und die großen Zellen können die kleinen Zellen essen</value></data>
+<data name='Guider006' xml:space='preserve'><value>Iss alle Bakterien und kämpfe für den Körper, von dem er abhängt!!!</value></data>
+<data name='Lose' xml:space='preserve'><value>Sieg</value></data>
+<data name='Win' xml:space='preserve'><value>Fehler</value></data>
+<data name='Pause' xml:space='preserve'><value>Auszeit</value></data>
+<data name='MaxLevel' xml:space='preserve'><value>Maximale Lautstärke</value></data>
+<data name='MaxCount' xml:space='preserve'><value>Maximale Menge</value></data>
+<data name='Duration' xml:space='preserve'><value>Zeit</value></data>
+<data name='ToRestart' xml:space='preserve'><value>Nimm alles noch einmal von vorne</value></data>
+<data name='ToNext' xml:space='preserve'><value>um zum nächsten Level zu springen</value></data>
+<data name='ToPlay' xml:space='preserve'><value>weiter geht's</value></data>
+<data name='Speed' xml:space='preserve'><value>Geschwindigkeit</value></data>
+<data name='Level' xml:space='preserve'><value>Volumen</value></data>
+<data name='Count' xml:space='preserve'><value>Menge</value></data>
+<data name='Cell001' xml:space='preserve'><value>Es gibt keine einheitliche Definition der Zelle, und die gebräuchlichere Formulierung ist, dass die Zelle die grundlegende strukturelle und funktionelle Einheit des Organismus ist.</value></data>
+<data name='Cell002' xml:space='preserve'><value>Es war ursprünglich eine gewöhnliche Zelle, aber es war nicht bekannt, warum sie plötzlich die Fähigkeit hatte, andere Zellen zu verschlingen.</value></data>
+<data name='Cell003' xml:space='preserve'><value>Nun, mir fallen keine interessanten Einstellungen ein</value></data>
+<data name='Cell004' xml:space='preserve'><value>Bin ich der legendäre 'Kun'? Giant Quay verschlingt Evolution! ——— Zellen</value></data>
+<data name='Cell005' xml:space='preserve'><value>Du bist nur der Protagonist ——— mich</value></data>
+<data name='Bacteria001' xml:space='preserve'><value>Bakterien sind eines der Haupttaxa von Organismen und gehören zur bakteriellen Domäne. Es ist auch das häufigste aller Lebewesen, mit einer geschätzten Gesamtzahl von etwa 5×10 ^ 30. Die Form von Bakterien ist sehr vielfältig, hauptsächlich kugelförmig, stäbchenförmig und spiralförmig.</value></data>
+<data name='Bacteria002' xml:space='preserve'><value>Bakterien sind der häufigste Feind, bitte machen Sie den Protagonisten größer als die Bakterien und verschlingen Sie sie dann!</value></data>
+<data name='Bacteria003' xml:space='preserve'><value>Wie man es betrachtet, ist nur eine Zelle einer anderen Farbe</value></data>
+<data name='Bacteria004' xml:space='preserve'><value>Es ist überhaupt nicht lecker, ——— Zellen</value></data>
+<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
+<data name='Virus001' xml:space='preserve'><value>Avilus Iss asmol, Simple Listruk Tured, Non-Sel-Teipu Oganism Tat Contansion Ioninuk Achidtatt Mast Parastez und Andra Prik Cartwy Wying Livensels.</value></data>
+<data name='Virus002' xml:space='preserve'><value>Selstadt itt verus Becom Infikt de AndeBecommite Fujitt Tajit Bente Imonsistam.</value></data>
+<data name='Virus003' xml:space='preserve'><value>An (Biologi Calisciny Ficante)</value></data>
+<data name='Virus004' xml:space='preserve'><value>Siskind Bentinwell Mark hat SiktoUsto Mark Win hat Iteit?! ——— Searle</value></data>
+<data name='Virus005' xml:space='preserve'><value>Nein, Itt' Stastgonto Butterfly ——— Imon Sistem</value></data>
+<data name='Paramecium001' xml:space='preserve'><value>Parametheus Aresmore, Cirindri Karl Protozo Avis Abodit Konsiszben Ion Leonesel Andez Asingo Sele de Protozoa, Hema Frodet.</value></data>
+<data name='Paramecium002' xml:space='preserve'><value>Tepalamesius 'S 0. 3 Mladius Issimpri Agios Ante InmiKrugganis!</value></data>
+<data name='Paramecium003' xml:space='preserve'><value>Obviusli, Iteisparameshühbait Itt Ismaid Intoackirk</value></data>
+<data name='Paramecium004' xml:space='preserve'><value>Sobig! ——— Searle</value></data>
+<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
+<data name='Leukocyte001' xml:space='preserve'><value>Weißblüter sind Alecrolis, Sferical, Nuuklit de Brudsells. Whiteblood Sels Ginalarli Hav An aktif Abili Titomo, Ander Western Cuisine Migrat From WessinBlud Fesselstow Ecclavallars, Oforum Exestravarlar Tisuto Interlavascular.</value></data>
+<data name='Leukocyte002' xml:space='preserve'><value>Notting Meal Stoop Morphome Movin! Exepterfor Petritish!</value></data>
+<data name='Leukocyte003' xml:space='preserve'><value>Weißblut Arefrey Endley (Nott)</value></data>
+<data name='Leukocyte004' xml:space='preserve'><value>I'M' Muasser, Don't'Eit! ——— Searle</value></data>
+<data name='Leukocyte005' xml:space='preserve'><value>I'Mesori, Bad Bosbacht Rial Verruses Ande AlognekneXels Arémeyenmes. ——— Weißblut-Sears</value></data>
 
  </root>

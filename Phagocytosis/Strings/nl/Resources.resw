@@ -61,5 +61,86 @@
 
 
 <data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
+<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
+<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
+<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
+<data name='Cell' xml:space='preserve'><value>cel </value></data>
+<data name='Bacteria' xml:space='preserve'><value>bacteriën </value></data>
+<data name='Virus' xml:space='preserve'><value>virus </value></data>
+<data name='Paramecium' xml:space='preserve'><value>pantoffeldiertje </value></data>
+<data name='Leukocyte' xml:space='preserve'><value>witte bloedcel </value></data>
+<data name='Prion' xml:space='preserve'><value>Prion</value></data>
+<data name='Cancer' xml:space='preserve'><value>kankercel</value></data>
+<data name='StaphylococcusAureus' xml:space='preserve'><value>Staphylococcus aureus</value></data>
+<data name='DeveloperMode' xml:space='preserve'><value>Ontwikkelaarsstatus</value></data>
+<data name='Click' xml:space='preserve'><value>klikken</value></data>
+<data name='ToEdit' xml:space='preserve'><value>om de kaart te bewerken</value></data>
+<data name='ToOpen' xml:space='preserve'><value>om het kaartbestand te openen</value></data>
+<data name='Me' xml:space='preserve'><value>Ik</value></data>
+<data name='None' xml:space='preserve'><value>niet</value></data>
+<data name='Version' xml:space='preserve'><value>Versie</value></data>
+<data name='Production' xml:space='preserve'><value>Producten</value></data>
+<data name='Design' xml:space='preserve'><value>beramen</value></data>
+<data name='Art' xml:space='preserve'><value>schone kunsten</value></data>
+<data name='Development' xml:space='preserve'><value>exploitatie</value></data>
+<data name='Test' xml:space='preserve'><value>Test</value></data>
+<data name='Management' xml:space='preserve'><value>beheren</value></data>
+<data name='Promote' xml:space='preserve'><value>Populariseren</value></data>
+<data name='Legal' xml:space='preserve'><value>Legaal</value></data>
+<data name='Local' xml:space='preserve'><value>lokaal</value></data>
+<data name='Publishing' xml:space='preserve'><value>publicatie</value></data>
+<data name='Community' xml:space='preserve'><value>gemeenschap</value></data>
+<data name='Thanks' xml:space='preserve'><value>Bedankt</value></data>
+<data name='OpenSource' xml:space='preserve'><value>open source</value></data>
+<data name='Reference' xml:space='preserve'><value>citeren</value></data>
+<data name='Feedback' xml:space='preserve'><value>terugkoppeling</value></data>
+<data name='NoMore' xml:space='preserve'><value>Hout heeft meer</value></data>
+<data name='Move' xml:space='preserve'><value>Beweeg de lens</value></data>
+<data name='AddRestricted' xml:space='preserve'><value>Sluit je aan bij de muur</value></data>
+<data name='AddFriend' xml:space='preserve'><value>Sluit je aan bij bondgenoten</value></data>
+<data name='AddEnemy' xml:space='preserve'><value>Sluit je aan bij de vijand</value></data>
+<data name='Guider001' xml:space='preserve'><value>Manipuleer de joystick of druk op de WASD-toets om de cel te verplaatsen</value></data>
+<data name='Guider002' xml:space='preserve'><value>Knijp met twee vingers of druk op de - + toets om in te zoomen op de lens</value></data>
+<data name='Guider003' xml:space='preserve'><value>Veeg over het scherm of druk op de toets ↑←↓ → om de lens te verplaatsen</value></data>
+<data name='Guider004' xml:space='preserve'><value>Of druk op de Q-toets om in twee cellen te delen</value></data>
+<data name='Guider005' xml:space='preserve'><value>Foerageren naar voedsel maakt de cellen groter en de grote cellen kunnen de kleine cellen eten</value></data>
+<data name='Guider006' xml:space='preserve'><value>Eet alle bacteriën op en vecht voor het lichaam waarvan het afhankelijk is!!!</value></data>
+<data name='Lose' xml:space='preserve'><value>overwinning</value></data>
+<data name='Win' xml:space='preserve'><value>mislukken</value></data>
+<data name='Pause' xml:space='preserve'><value>Time-out</value></data>
+<data name='MaxLevel' xml:space='preserve'><value>Maximaal volume</value></data>
+<data name='MaxCount' xml:space='preserve'><value>Maximale hoeveelheid</value></data>
+<data name='Duration' xml:space='preserve'><value>Tijd</value></data>
+<data name='ToRestart' xml:space='preserve'><value>Neem het allemaal opnieuw</value></data>
+<data name='ToNext' xml:space='preserve'><value>om naar het volgende niveau te springen</value></data>
+<data name='ToPlay' xml:space='preserve'><value>om verder te gaan</value></data>
+<data name='Speed' xml:space='preserve'><value>snelheid</value></data>
+<data name='Level' xml:space='preserve'><value>volume</value></data>
+<data name='Count' xml:space='preserve'><value>hoeveelheid</value></data>
+<data name='Cell001' xml:space='preserve'><value>Er is geen uniforme definitie van de cel en de meest voorkomende formulering is dat de cel de fundamentele structurele en functionele eenheid van het organisme is.</value></data>
+<data name='Cell002' xml:space='preserve'><value>Het was oorspronkelijk een gewone cel, maar het was niet bekend waarom het plotseling het vermogen had om andere cellen te overspoelen.</value></data>
+<data name='Cell003' xml:space='preserve'><value>Nou, ik kan geen interessante instellingen bedenken</value></data>
+<data name='Cell004' xml:space='preserve'><value>Ben ik de legendarische 'Kun'? Giant Quay verslindt evolutie! ——— cellen</value></data>
+<data name='Cell005' xml:space='preserve'><value>Jij bent gewoon de hoofdpersoon ——— me</value></data>
+<data name='Bacteria001' xml:space='preserve'><value>Bacteriën zijn een van de belangrijkste taxa van organismen en behoren tot het bacteriële domein. Het is ook de meest voorkomende van alle levende wezens, met een geschat totaal van ongeveer 5×10 ^ 30. De vorm van bacteriën is vrij divers, voornamelijk bolvormig, staafvormig en spiraalvormig.</value></data>
+<data name='Bacteria002' xml:space='preserve'><value>Bacteriën zijn de meest voorkomende vijand, maak de protagonist groter dan de bacteriën en verslind ze dan!</value></data>
+<data name='Bacteria003' xml:space='preserve'><value>Hoe ernaar te kijken is gewoon een cel van een andere kleur</value></data>
+<data name='Bacteria004' xml:space='preserve'><value>Het is helemaal niet lekker, ——— cellen</value></data>
+<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
+<data name='Virus001' xml:space='preserve'><value>Een virus is een klein, eenvoudig gestructureerd, niet-celtype organisme dat slechts één nucleïnezuur bevat dat moet parasiteren en repliceren in levende cellen.</value></data>
+<data name='Virus002' xml:space='preserve'><value>Cellen die het virus eten raken geïnfecteerd en worden het eerste doelwit van het immuunsysteem.</value></data>
+<data name='Virus003' xml:space='preserve'><value>Giftig (in biologische zin)</value></data>
+<data name='Virus004' xml:space='preserve'><value>Van dit soort dingen word je misselijk als je het eet?! ——— cellen</value></data>
+<data name='Virus005' xml:space='preserve'><value>Zelfs sterven ——— immuunsysteem</value></data>
+<data name='Paramecium001' xml:space='preserve'><value>Sprinkhanen zijn kleine, cilindrische protozoa met een lichaam dat uit slechts één cel bestaat en een eencellige protozoa is, hermafrodiet.</value></data>
+<data name='Paramecium002' xml:space='preserve'><value>De straal van 0,3 mm van de sprinkhaan is gewoon een reus in micro-organismen!</value></data>
+<data name='Paramecium003' xml:space='preserve'><value>Uiteraard zijn het grasschoenen, maar er wordt een cirkel van gemaakt</value></data>
+<data name='Paramecium004' xml:space='preserve'><value>Zo groot! ——— cellen</value></data>
+<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
+<data name='Leukocyte001' xml:space='preserve'><value>Witte bloedcellen zijn kleurloze, bolvormige, nucleaire bloedcellen. Witte bloedcellen hebben over het algemeen een actief vermogen om te bewegen en ze kunnen migreren van binnen bloedvaten naar extravasculaire stoffen, of van extravasculair weefsel naar intravasculair.</value></data>
+<data name='Leukocyte002' xml:space='preserve'><value>Niets kan me tegenhouden om te bewegen! Behalve petrischaaltjes!</value></data>
+<data name='Leukocyte003' xml:space='preserve'><value>Witte bloedcellen zijn vriendelijk (niet)</value></data>
+<data name='Leukocyte004' xml:space='preserve'><value>Ik ben een cel, eet me niet op! ——— cellen</value></data>
+<data name='Leukocyte005' xml:space='preserve'><value>Het spijt me, maar zowel bacteriële virussen als allogene cellen zijn mijn vijanden. ——— Witte bloedcellen</value></data>
 
  </root>

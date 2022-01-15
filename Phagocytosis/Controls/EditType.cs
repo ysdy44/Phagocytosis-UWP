@@ -5,17 +5,17 @@
     /// </summary>
     public enum EditType
     {
-        View,
-        Crop,
-        Clear,
-
-        CursorCell,
-        AddCell,
-
-        CursorRestricted,
+        Move,
         AddRestricted,
-
-        ZoomIn,
-        ZoomOut,
+        AddFriend,
+        AddEnemy,
     }
+    public enum EditMoveType
+    {
+        Move,
+        MoveMap,
+        MoveRestricted,
+        MoveSprite,
+    }
+
 }

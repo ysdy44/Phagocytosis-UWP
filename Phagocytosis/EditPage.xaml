@@ -50,29 +50,39 @@
         </ListView>
 
         <!--Edit-->
+        <ListView x:Name="SpriteListView" Height="32" Margin="0,0,0,74" SelectionMode="Single"  VerticalAlignment="Bottom">
+            <TextBlock x:Name="BacteriaTextBlock">细菌</TextBlock>
+            <TextBlock x:Name="VirusTextBlock">病毒</TextBlock>
+            <TextBlock x:Name="ParameciumTextBlock">草履虫</TextBlock>
+            <TextBlock x:Name="LeukocyteTextBlock">白细胞</TextBlock>
+        </ListView>
         <ListView x:Name="EditListView" SelectionMode="Single"  VerticalAlignment="Bottom">
-            <SymbolIcon Symbol="MapPin"/>
-            <SymbolIcon Symbol="Delete"/>
+            <ListView.Footer>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="ZoomInButton">
+                        <SymbolIcon Symbol="ZoomIn"/>
+                    </Button>
+                    <Button x:Name="ZoomOutButton">
+                        <SymbolIcon Symbol="ZoomOut"/>
+                    </Button>
+                    <Button x:Name="DeleteButton">
+                        <SymbolIcon Symbol="Delete"/>
+                    </Button>
+                </StackPanel>
+            </ListView.Footer>
 
-            <SymbolIcon Symbol="World"/>
-            <SymbolIcon Symbol="Globe"/>
-            <SymbolIcon Symbol="Target"/>
-            <SymbolIcon Symbol="Account"/>
-            <SymbolIcon Symbol="Bold"/>
-            <SymbolIcon Symbol="Italic"/>
-            <SymbolIcon Symbol="Favorite"/>
-            <SymbolIcon Symbol="Crop"/>
-
-            <SymbolIcon Symbol="ZoomIn"/>
-            <SymbolIcon Symbol="ZoomOut"/>
+            <TextBlock x:Name="MoveTextBlock">移动镜头</TextBlock>
+            <TextBlock x:Name="AddRestrictedTextBlock">加入墙</TextBlock>
+            <TextBlock x:Name="AddFriendTextBlock">加入友军</TextBlock>
+            <TextBlock x:Name="AddEnemyTextBlock">加入敌人</TextBlock>
         </ListView>
 
-        
+
         <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
             <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
         </Button>
-      
+
         <Button x:Name="PlayButton" HorizontalAlignment="Right" VerticalAlignment="Top">
             <FontIcon Glyph="&#xE102;" FontSize="32" FontFamily="Segoe UI Symbol"/>
         </Button>

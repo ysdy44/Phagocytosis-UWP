@@ -58,62 +58,56 @@ namespace Phagocytosis
                 }
             };
 
-            this.EditListView.ItemClick += (s, e) =>
+            this.SpriteListView.ItemClick += (s, e) =>
             {
-                if (e.ClickedItem is SymbolIcon symbol)
+                if (e.ClickedItem is TextBlock textBlock)
                 {
-                    switch (symbol.Symbol)
+                    switch (textBlock.Name)
                     {
-                        case Symbol.MapPin:
-                            this.CanvasControl.EditType = EditType.View;
-                            break;
-                        case Symbol.Delete:
-                            this.CanvasControl.EditType = EditType.Clear;
-                            break;
-
-                        case Symbol.World:
-                            this.CanvasControl.EditType = EditType.AddCell;
-                            this.CanvasControl.SpriteType = SpriteType.Cell;
-                            break;
-                        case Symbol.Globe:
-                            this.CanvasControl.EditType = EditType.AddCell;
+                        case "BacteriaTextBlock":
                             this.CanvasControl.SpriteType = SpriteType.Bacteria;
                             break;
-                        case Symbol.Target:
-                            this.CanvasControl.EditType = EditType.AddCell;
+                        case "VirusTextBlock":
                             this.CanvasControl.SpriteType = SpriteType.Virus;
                             break;
-                        case Symbol.Account:
-                            this.CanvasControl.EditType = EditType.AddCell;
+                        case "ParameciumTextBlock":
                             this.CanvasControl.SpriteType = SpriteType.Paramecium;
                             break;
-                        case Symbol.Bold:
-                            this.CanvasControl.EditType = EditType.AddCell;
+                        case "LeukocyteTextBlock":
                             this.CanvasControl.SpriteType = SpriteType.Leukocyte;
-                            break;
-                        case Symbol.Italic:
-                            this.CanvasControl.EditType = EditType.AddCell;
-                            this.CanvasControl.SpriteType = SpriteType.Prion;
-                            break;
-                        case Symbol.Favorite:
-                            this.CanvasControl.EditType = EditType.AddCell;
-                            this.CanvasControl.SpriteType = SpriteType.Cancer;
-                            break;
-                        case Symbol.Crop:
-                            this.CanvasControl.EditType = EditType.CursorRestricted;
-                            break;
-
-                        case Symbol.ZoomIn:
-                            this.CanvasControl.EditType = EditType.ZoomIn;
-                            break;
-                        case Symbol.ZoomOut:
-                            this.CanvasControl.EditType = EditType.ZoomOut;
                             break;
                         default:
                             break;
                     }
                 }
             };
+            this.EditListView.ItemClick += (s, e) =>
+            {
+                if (e.ClickedItem is TextBlock textBlock)
+                {
+                    switch (textBlock.Name)
+                    {
+                        case "MoveTextBlock":
+                            this.CanvasControl.EditType = EditType.Move;
+                            break;
+                        case "AddRestrictedTextBlock":
+                            this.CanvasControl.EditType = EditType.AddRestricted;
+                            break;
+                        case "AddFriendTextBlock":
+                            this.CanvasControl.EditType = EditType.AddFriend;
+                            break;
+                        case "AddEnemyTextBlock":
+                            this.CanvasControl.EditType = EditType.AddEnemy;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            };
+
+            this.ZoomInButton.Click += (s, e) => this.CanvasControl.ZoomIn2();
+            this.ZoomOutButton.Click += (s, e) => this.CanvasControl.ZoomOut2();
+            this.DeleteButton.Click += (s, e) => this.CanvasControl.Delete();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

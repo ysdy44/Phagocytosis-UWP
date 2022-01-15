@@ -77,6 +77,9 @@
         </TextBlock>
 
 
+        <!--Guider-->
+        <elements:Guider x:Name="Guider" Margin="0,0,0,200" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
         <!--Scorer-->
         <elements:Scorer x:Name="Scorer" Margin="0,40" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
 

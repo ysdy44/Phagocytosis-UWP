@@ -100,6 +100,7 @@ namespace Phagocytosis.ViewModels
             {
                 ChapterViewItem chapter = this.Chapters[i];
                 chapter.Index = i;
+                chapter.Chapter.IsGuider = i == 0;
             }
 
             this.selectedIndex = 0;

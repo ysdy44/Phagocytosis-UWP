@@ -161,6 +161,7 @@ namespace Phagocytosis
         private void Restart(Chapter chapter)
         {
             this.Recorder.Reset();
+            if (chapter != null && chapter.IsGuider) this.Guider.Begin();
 
             this.Recorder.State = PlayState.Playing;
             this.CanvasControl.LoadFromProject(chapter);

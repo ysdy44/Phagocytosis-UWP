@@ -8,6 +8,7 @@ namespace Phagocytosis.ViewModels
     /// </summary>
     public class Chapter
     {
+        public bool IsGuider { set; get; }
         public int Width { set; get; }
         public int Height { set; get; }
         public int MaximumFoods { set; get; }

@@ -107,6 +107,54 @@ namespace Phagocytosis.Sprites
         public static bool CanFind(Spriter hunter, Spriter prey, float distance) => hunter.Radius + prey.Radius + 100 > distance;
 
         public static Vector2 GetVelocity(Vector2 vector) => vector / vector.Length();
+        public static Vector2 GetVelocity(Spriter player, Vector2 food, RectMap map, bool withRestricteds)
+        {
+            Vector2 velocity = player.Velocity;
+            Vector2 position = player.Position;
+            float radius = player.Radius;
+
+            // Straught
+            if (map.Contains(position + velocity * radius, withRestricteds))
+            {
+                return velocity;
+            }
+
+            // Left Turn
+            Vector2 velocityLeft = new Vector2(velocity.Y, -velocity.X);
+            Vector2 velocityLeft2 = Spriter.GetVelocity(velocityLeft + velocity);
+            if (map.Contains(position + velocityLeft2 * radius, withRestricteds))
+            {
+                return velocityLeft2;
+            }
+
+            // Right Turn
+            Vector2 velocityRight = new Vector2(-velocity.Y, velocity.X);
+            Vector2 velocityRight2 = Spriter.GetVelocity(velocityRight + velocity);
+            if (map.Contains(position + velocityRight2 * radius, withRestricteds))
+            {
+                return velocityRight2;
+            }
+
+            // Left Turn 2
+            if (map.Contains(position + velocityLeft * radius, withRestricteds))
+            {
+                return velocityLeft;
+            }
+
+            // Right Turn 2
+            if (map.Contains(position + velocityRight * radius, withRestricteds))
+            {
+                return velocityRight;
+            }
+
+            // Return
+            if (map.Contains(position - velocity * radius, withRestricteds))
+            {
+                return -velocity;
+            }
+
+            return -velocity;
+        }
         public static Vector2 GetVelocity(Spriter player, Spriter hunter, RectMap map, bool withRestricteds)
         {
             Vector2 velocity = player.Velocity;

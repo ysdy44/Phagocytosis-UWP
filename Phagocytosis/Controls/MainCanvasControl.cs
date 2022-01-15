@@ -74,6 +74,8 @@ namespace Phagocytosis.Controls
 
         #endregion
 
+        public FlowDirection Direction { private get; set; }
+        bool IsGamepadButtonsMenu;
         readonly CanvasStopwatch Stopwatch = new CanvasStopwatch();
         CanvasAnimatedControl CanvasControl = new CanvasAnimatedControl
         {
@@ -93,6 +95,14 @@ namespace Phagocytosis.Controls
 
             this.PausedTimer.Tick += (s, e) =>
             {
+                if (this.IsGamepadButtonsMenu)
+                {
+                    this.IsGamepadButtonsMenu = false;
+
+                    PlayState state = this.CanvasControl.Paused ? PlayState.Playing : PlayState.Paused;
+                    this.GameOver?.Invoke(this, state); // Delegate
+                }
+
                 switch (this.State)
                 {
                     case PlayState.Playing:
@@ -272,6 +282,43 @@ namespace Phagocytosis.Controls
             {
                 if (this.HasCreateResources == false) return;
                 if (this.LoadingFromProject) return;
+
+
+                // Gamepad
+                {
+                    if (Gamepad.Instance.IsGamepad)
+                    {
+                        Windows.Gaming.Input.GamepadReading reading = Gamepad.Instance.GetReading(this.Direction);
+                        switch (reading.Buttons)
+                        {
+                            case Windows.Gaming.Input.GamepadButtons.Menu:
+                                this.IsGamepadButtonsMenu = true;
+                                break;
+                            case Windows.Gaming.Input.GamepadButtons.X:
+                                this.Player.Dividing();
+                                break;
+                            default:
+                                break;
+                        }
+
+                        float lx = (float)reading.LeftThumbstickX;
+                        float ly = (float)reading.LeftThumbstickY;
+                        float rx = (float)reading.RightThumbstickX;
+                        float ry = (float)reading.RightThumbstickY;
+                        switch (this.Direction)
+                        {
+                            case FlowDirection.LeftToRight:
+                                this.Player.Velocity = new Vector2(lx, -ly);
+                                this.Move(new Vector2(-rx, ry));
+                                break;
+                            case FlowDirection.RightToLeft:
+                                this.Player.Velocity = new Vector2(-lx, -ly);
+                                this.Move(new Vector2(rx, ry));
+                                break;
+                        }
+                    }
+                }
+
 
                 TimeSpan totalTime = args.Timing.TotalTime;
                 float elapsedTime = (float)args.Timing.ElapsedTime.TotalMilliseconds;

@@ -126,6 +126,7 @@
       <DependentUpon>Controller.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControllerVelocity.cs" />
+    <Compile Include="Gamepad.cs" />
     <Compile Include="Guider.xaml.cs">
       <DependentUpon>Guider.xaml</DependentUpon>
     </Compile>

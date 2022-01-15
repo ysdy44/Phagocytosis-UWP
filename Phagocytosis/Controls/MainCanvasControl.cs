@@ -74,7 +74,7 @@ namespace Phagocytosis.Controls
 
         #endregion
 
-        TimeSpan TotalTime;
+        readonly CanvasStopwatch Stopwatch = new CanvasStopwatch();
         CanvasAnimatedControl CanvasControl = new CanvasAnimatedControl
         {
             Paused = false,
@@ -107,7 +107,7 @@ namespace Phagocytosis.Controls
                         {
                             FriendSpritesMaxLevel = this.FriendSprites.Max(a => a.Level),
                             FriendSpritesCount = this.FriendSprites.Count,
-                            TotalTime = this.TotalTime
+                            TotalTime = this.Stopwatch.TotalTime()
                         });
                         break;
                     case PlayState.Loser:
@@ -276,7 +276,7 @@ namespace Phagocytosis.Controls
                 TimeSpan totalTime = args.Timing.TotalTime;
                 float elapsedTime = (float)args.Timing.ElapsedTime.TotalMilliseconds;
 
-                this.TotalTime = totalTime;
+                this.Stopwatch.Update(totalTime);
                 this.Map.Restricteds.BugMap.Update(elapsedTime);
                 bool isAdd = this.Map.Update(totalTime);
 
@@ -442,19 +442,21 @@ namespace Phagocytosis.Controls
                 base.Load(chapter);
                 this.Player = this.FriendSprites.First(c => c.Type == SpriteType.Player).Rebirth();
 
-                this.CanvasControl.ResetElapsedTime();
+                this.Stopwatch.Restart();
                 this.Play();
             }
             this.LoadingFromProject = false;
         }
         public void Play()
         {
+            this.Stopwatch.Play();
             this.State = PlayState.Playing;
             this.Duration = 0;
             this.CanvasControl.Paused = false;
         }
         public void Pause()
         {
+            this.Stopwatch.Pause();
             this.State = PlayState.Paused;
             this.Duration = 0;
             this.CanvasControl.Paused = true;

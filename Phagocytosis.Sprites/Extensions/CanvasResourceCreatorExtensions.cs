@@ -13,21 +13,22 @@ namespace Phagocytosis.Sprites
     /// </summary>
     public static partial class CanvasResourceCreatorExtensions
     {
-        
+
         public static CellRenderTarget RenderCell(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin)
         {
+            float radius1 = radius - 1;
             float radius2 = 2 * (float)Math.Pow(level, 0.333333333333333333333333333333333f);
 
             CanvasRenderTarget nuvleus = new CanvasRenderTarget(resourceCreator, diameter, diameter);
             using (CanvasDrawingSession ds = nuvleus.CreateDrawingSession())
             {
-                ds.FillCircle(origin, radius, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellNuvleus)
+                ds.FillCircle(origin, radius1, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellNuvleus)
                 {
                     Center = origin,
-                    RadiusX = radius,
-                    RadiusY = radius,
+                    RadiusX = radius1,
+                    RadiusY = radius1,
                 });
-                ds.DrawCircle(origin, radius, Colors.White, 2);
+                ds.DrawCircle(origin, radius1, Colors.White, 2);
             }
 
             CanvasRenderTarget cytoplasm = new CanvasRenderTarget(resourceCreator, diameter, diameter);
@@ -159,24 +160,25 @@ namespace Phagocytosis.Sprites
 
         public static CellRenderTarget RenderLeukocyte(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin)
         {
+            float radius1 = radius - 1;
             float radius2 = 2 * (float)Math.Pow(level, 0.333333333333333333333333333333333f);
 
             CanvasRenderTarget nuvleus = new CanvasRenderTarget(resourceCreator, diameter, diameter);
             using (CanvasDrawingSession ds = nuvleus.CreateDrawingSession())
             {
-                ds.FillCircle(origin, radius, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellNuvleus)
+                ds.FillCircle(origin, radius1, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellNuvleus)
                 {
                     Center = origin,
-                    RadiusX = radius,
-                    RadiusY = radius,
+                    RadiusX = radius1,
+                    RadiusY = radius1,
                 });
 
-                ds.DrawCircle(origin, radius, Color.FromArgb(222, 255, 255, 255), 2);
+                ds.DrawCircle(origin, radius1, Color.FromArgb(222, 255, 255, 255), 2);
             }
 
             CanvasRenderTarget cytoplasm = new CanvasRenderTarget(resourceCreator, diameter, diameter);
             using (CanvasDrawingSession ds = cytoplasm.CreateDrawingSession())
-            using (CanvasGeometry geometry = CanvasGeometry.CreateCircle(resourceCreator, origin, radius))
+            using (CanvasGeometry geometry = CanvasGeometry.CreateCircle(resourceCreator, origin, radius1))
             using (ds.CreateLayer(1, geometry))
             {
                 ds.DrawImage(new InvertEffect

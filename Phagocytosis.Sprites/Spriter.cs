@@ -63,46 +63,40 @@ namespace Phagocytosis.Sprites
             this.Radius = Spriter.GetRadius(level);
             this.Speed = Spriter.GetSpeed(level, type);
 
-            this.Render();
+            CellRenderTarget render = this.RenderCore();
+            this.Nuvleus = render.Nuvleus;
+            this.Cytoplasm = render.Cytoplasm;
         }
 
         public void Render()
         {
-            CellRenderTarget render;
-
+            CellRenderTarget render = this.RenderCore();
+            this.Nuvleus.Dispose();
+            this.Nuvleus = render.Nuvleus;
+            this.Cytoplasm.Dispose();
+            this.Cytoplasm = render.Cytoplasm;
+        }
+        private CellRenderTarget RenderCore()
+        {
             Vector2 origin = new Vector2(this.Radius, this.Radius);
             float diameter = this.Radius + this.Radius;
             switch (this.Type)
             {
-                case SpriteType.Player:
-                case SpriteType.Cell:
-                    render = this.ResourceCreator.RenderCell(this.Level, this.Radius, diameter, origin);
-                    break;
                 case SpriteType.Bacteria:
-                    render = this.ResourceCreator.RenderBacteria(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderBacteria(this.Level, this.Radius, diameter, origin);
                 case SpriteType.Virus:
-                    render = this.ResourceCreator.RenderVirus(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderVirus(this.Level, this.Radius, diameter, origin);
                 case SpriteType.Paramecium:
-                    render = this.ResourceCreator.RenderParamecium(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderParamecium(this.Level, this.Radius, diameter, origin);
                 case SpriteType.Leukocyte:
-                    render = this.ResourceCreator.RenderLeukocyte(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderLeukocyte(this.Level, this.Radius, diameter, origin);
                 case SpriteType.Prion:
-                    render = this.ResourceCreator.RenderPrion(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderPrion(this.Level, this.Radius, diameter, origin);
                 case SpriteType.Cancer:
-                    render = this.ResourceCreator.RenderCancer(this.Level, this.Radius, diameter, origin);
-                    break;
+                    return this.ResourceCreator.RenderCancer(this.Level, this.Radius, diameter, origin);
                 default:
-                    render = default;
-                    break;
+                    return this.ResourceCreator.RenderCell(this.Level, this.Radius, diameter, origin);
             }
-
-            this.Nuvleus = render.Nuvleus;
-            this.Cytoplasm = render.Cytoplasm;
         }
 
         public void Update(IList<Spriter> enemyPlayers, FoodMap map, float elapsedTime)

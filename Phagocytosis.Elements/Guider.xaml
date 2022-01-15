@@ -1,0 +1,159 @@
+﻿<UserControl
+    x:Class="Phagocytosis.Elements.Guider"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="100"
+    d:DesignWidth="100"
+    >
+
+
+    <UserControl.Resources>
+        <!--Storyboard-->
+        <Storyboard x:Name="Storyboard">
+
+
+            <!--001-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:04" Storyboard.TargetName="TextBlock001" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <!--002-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:12" Storyboard.TargetName="TextBlock002" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <!--003-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:20" Storyboard.TargetName="TextBlock003" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <!--004-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:28" Storyboard.TargetName="TextBlock004" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <!--005-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:36" Storyboard.TargetName="TextBlock005" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <!--006-->
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:44" Storyboard.TargetName="TextBlock006" Storyboard.TargetProperty="Opacity">
+                <!--Show-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <!--Hide-->
+                <DiscreteDoubleKeyFrame KeyTime="00:00:07" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:08" Value="0" >
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+        </Storyboard>
+    </UserControl.Resources>
+
+
+    <Grid Padding="12,0">
+        <TextBlock x:Name="TextBlock001" Opacity="0">
+            操控摇杆 或按下 WASD 键以移动细胞
+        </TextBlock>
+        <TextBlock x:Name="TextBlock002" Opacity="0">
+            双指捏合 或按下 - + 键以缩放镜头
+        </TextBlock>
+        <TextBlock x:Name="TextBlock003" Opacity="0">
+            滑动屏幕 或按下 ↑←↓→ 键以移动镜头
+        </TextBlock>
+        <TextBlock x:Name="TextBlock004" Opacity="0">              
+            <Run x:Name="Click004Run">点击</Run>              
+            <Run Text="&#xE167;" FontFamily="Segoe UI Symbol"/>               
+            <Run x:Name="ToDivide">或按下 Q 键以分裂成两个细胞</Run>
+        </TextBlock>
+        <TextBlock x:Name="TextBlock005" Opacity="0">
+            寻觅食物让细胞变大，大细胞可以吃掉小细胞
+        </TextBlock>
+        <TextBlock x:Name="TextBlock006" Opacity="0">
+            吃掉所有的细菌，为赖以生存的身体而战吧！！！
+        </TextBlock>
+    </Grid>
+
+</UserControl>

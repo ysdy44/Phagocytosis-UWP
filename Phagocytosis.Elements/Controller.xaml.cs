@@ -24,8 +24,6 @@ namespace Phagocytosis.Elements
         public event EventHandler<bool> Paused;
         /// <summary> Occurs when divided. </summary>
         public event EventHandler<bool> Divided;
-        /// <summary> Occurs when gamepad key B changed. </summary>
-        public event EventHandler<bool> GamepadBChanged;
 
         //@Converter
         private double LeftConverter(Vector2 value) => (value.X + 1) * 100 - 25;
@@ -77,16 +75,11 @@ namespace Phagocytosis.Elements
             {
                 Window.Current.CoreWindow.KeyUp -= this.CoreWindow_KeyUp;
                 Window.Current.CoreWindow.KeyDown -= this.CoreWindow_KeyDown;
-                Windows.Gaming.Input.Gamepad.GamepadRemoved -= this.Gamepad_GamepadRemoved;
-                Windows.Gaming.Input.Gamepad.GamepadAdded -= this.Gamepad_GamepadAdded;
             };
             base.Loaded += (s, e) =>
             {
-                this.CheckGamepad();
                 Window.Current.CoreWindow.KeyUp += this.CoreWindow_KeyUp;
                 Window.Current.CoreWindow.KeyDown += this.CoreWindow_KeyDown;
-                Windows.Gaming.Input.Gamepad.GamepadRemoved += this.Gamepad_GamepadRemoved;
-                Windows.Gaming.Input.Gamepad.GamepadAdded += this.Gamepad_GamepadAdded;
             };
 
             this.Control.ManipulationStarted += (s, e) =>
@@ -114,59 +107,6 @@ namespace Phagocytosis.Elements
             };
         }
 
-        #region Gamepad
-
-
-        public void CheckGamepad()
-        {
-            this.IsGamepad = Windows.Gaming.Input.Gamepad.Gamepads.Count != 0;
-            base.Visibility = this.IsGamepad ? Visibility.Collapsed : Visibility.Visible;
-        }
-
-        private async void Gamepad_GamepadRemoved(object sender, Windows.Gaming.Input.Gamepad e)
-        {
-            if (this.IsGamepad == false) return;
-            this.IsGamepad = false;
-            await base.Dispatcher.RunIdleAsync((a) =>
-            {
-                base.Visibility = Visibility.Visible;
-            });
-        }
-        private async void Gamepad_GamepadAdded(object sender, Windows.Gaming.Input.Gamepad e)
-        {
-            if (this.IsGamepad == true) return;
-            this.IsGamepad = true;
-            await base.Dispatcher.RunIdleAsync((a) =>
-            {
-                base.Visibility = Visibility.Collapsed;
-            });
-        }
-
-        public Vector2 GetGamepadVector()
-        {
-            if (this.IsGamepad)
-            {
-                foreach (Windows.Gaming.Input.Gamepad item in Windows.Gaming.Input.Gamepad.Gamepads)
-                {
-                    Windows.Gaming.Input.GamepadReading read = item.GetCurrentReading();
-                    {
-                        bool isGamepadB = read.Buttons == Windows.Gaming.Input.GamepadButtons.B;
-                        if (this.IsGamepadB != isGamepadB)
-                        {
-                            this.IsGamepadB = isGamepadB;
-                            this.GamepadBChanged?.Invoke(this, isGamepadB); // Delegate
-                        }
-                    }
-                    return new Vector2((float)read.LeftThumbstickX, -(float)read.LeftThumbstickY);
-                }
-                this.Gamepad_GamepadRemoved(null, null);
-            }
-
-            return Vector2.Zero;
-        }
-
-
-        #endregion
 
         #region Key
 

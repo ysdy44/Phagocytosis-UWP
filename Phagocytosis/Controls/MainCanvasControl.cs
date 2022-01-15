@@ -447,6 +447,8 @@ namespace Phagocytosis.Controls
             }
             this.LoadingFromProject = false;
         }
+        public void Stop() => this.PausedTimer.Stop();
+        public void Start() => this.PausedTimer.Start();
         public void Play()
         {
             this.Stopwatch.Play();

@@ -37,6 +37,12 @@ namespace Phagocytosis
                     case PlayState.Winner:
                         this.ViewModel.Pass();
                         break;
+                    case PlayState.Playing:
+                        this.Play();
+                        break;
+                    case PlayState.Paused:
+                        this.Pause();
+                        break;
                 }
             };
             this.CanvasControl.Scored += (s, value) =>
@@ -50,12 +56,6 @@ namespace Phagocytosis
             };
 
 
-            this.Controller.GamepadBChanged += (s, value) =>
-            {
-                if (value == false) return;
-                if (this.CanvasControl.Player == null) return;
-                this.CanvasControl.Player.Dividing();
-            };
             this.Controller.Paused += (s, value) =>
             {
                 if (value == false) return;
@@ -122,7 +122,6 @@ namespace Phagocytosis
             };
 
 
-            this.GamepadButton.Click += (s, e) => this.Controller.CheckGamepad();
             this.PauseButton.Click += (s, e) => this.Pause();
             this.SplitButton.Click += (s, e) =>
             {
@@ -192,6 +191,7 @@ namespace Phagocytosis
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.ViewModel.OnSuspending -= this.OnSuspending;
+            this.CanvasControl.Start();
         }
         /// <summary> The current page becomes the active page. </summary>
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -210,6 +210,7 @@ namespace Phagocytosis
             }
 
             this.ViewModel.OnSuspending += this.OnSuspending;
+            this.Recorder.Pause();
         }
 
         private void OnSuspending()

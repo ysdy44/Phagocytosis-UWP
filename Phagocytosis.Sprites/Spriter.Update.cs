@@ -29,6 +29,8 @@ namespace Phagocytosis.Sprites
 
                             foreach (Spriter item in enemyPlayers)
                             {
+                                if (item.Type == SpriteType.Virus) continue;
+
                                 switch (item.State)
                                 {
                                     case SpriteState.Dead:
@@ -63,6 +65,7 @@ namespace Phagocytosis.Sprites
                             }
                         }
 
+                        if (this.Type != SpriteType.Virus)
                         {
                             bool isFind = false;
                             float minDistance = float.MaxValue;
@@ -276,7 +279,8 @@ namespace Phagocytosis.Sprites
                             }
                             else
                             {
-                                this.Velocity = Spriter.GetVelocity(this.FoodTarget.Position - this.Position);
+                                bool withRestricteds = Spriter.GetIsRestricteds(this.Type);
+                                this.Velocity = Spriter.GetVelocity(this, this.FoodTarget.Position, map, withRestricteds);
                             }
                             return;
                         }

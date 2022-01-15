@@ -294,6 +294,12 @@ namespace Phagocytosis.Controls
                                 break;
                             case SpriteState.Divided:
                                 this.AddFriendSprites.Add(item.Divided());
+                                switch (item.Type)
+                                {
+                                    case SpriteType.Player:
+                                        this.Position.X += item.Radius;
+                                        break;
+                                }
                                 break;
                         }
                     }
@@ -310,9 +316,18 @@ namespace Phagocytosis.Controls
                                     {
                                         case SpriteState.Dead:
                                         case SpriteState.Cancerous:
-                                            if (this.FriendSprites.FirstOrDefault(c => c.State != SpriteState.Dead && c.State != SpriteState.Cancerous) is Spriter sprite2)
+                                            foreach (Spriter item2 in this.FriendSprites)
                                             {
-                                                this.Player = sprite2.Rebirth();
+                                                switch (item2.State)
+                                                {
+                                                    case SpriteState.Dead:
+                                                    case SpriteState.Cancerous:
+                                                        break;
+                                                    default:
+                                                        this.NewCamera(this.Player.Position, item2.Position, item2.Radius);
+                                                        this.Player = item2.Rebirth();
+                                                        break;
+                                                }
                                             }
                                             break;
                                     }
@@ -449,6 +464,30 @@ namespace Phagocytosis.Controls
         {
             this.CanVelocity = velocity != Vector2.Zero;
             this.Velocity = velocity;
+        }
+
+        private void NewCamera(Vector2 position1, Vector2 position2, float radius2)
+        {
+            Vector2 screenPosition1 = Vector2.Transform(position1, this.Transform);
+            Vector2 screenPosition2 = Vector2.Transform(position2, this.Transform);
+            float screenRadius = radius2 * this.Scale2;
+
+            if (screenPosition2.X > screenRadius)
+            {
+                if (screenPosition2.Y > screenRadius)
+                {
+                    if (screenPosition2.X < this.Center.X * 2 - screenRadius)
+                    {
+                        if (screenPosition2.Y < this.Center.Y * 2 - screenRadius)
+                        {
+                            this.Position -= screenPosition1 - screenPosition2;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            this.Position = Vector2.Zero;
         }
 
         private Matrix3x2 GetTransform()

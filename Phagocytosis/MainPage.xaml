@@ -154,7 +154,8 @@
 
                             <ListView.Header>
                                 <Button x:Name="BackButton">
-                                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+                                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"
+                                              MirroredWhenRightToLeft="True"/>
                                 </Button>
                             </ListView.Header>
 
@@ -173,18 +174,18 @@
                 MinWidth="100"
                 Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
             <StackPanel Margin="22,0" VerticalAlignment="Center">
-                <TextBlock Style="{StaticResource AppBoldTextBlockStyle}">
+                <TextBlock x:Name="DeveloperModeTextBlock" Style="{StaticResource AppBoldTextBlockStyle}">
                     开发者态
                 </TextBlock>
                 <TextBlock>
-                    <Run>点击</Run>                
+                    <Run x:Name="Click001Run">点击</Run>                
                     <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以编辑地图</Run>
+                    <Run x:Name="ToEditRun">以编辑地图</Run>
                 </TextBlock>
                 <TextBlock>
-                    <Run>点击</Run>                
+                    <Run x:Name="Click002Run">点击</Run>                
                     <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
-                    <Run>以打开地图文件</Run>
+                    <Run x:Name="ToOpenRun">以打开地图文件</Run>
                 </TextBlock>
             </StackPanel>
         </Border>

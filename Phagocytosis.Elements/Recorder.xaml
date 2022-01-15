@@ -110,7 +110,8 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4">
                 <Button x:Name="BackButton" >
-                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"
+                              MirroredWhenRightToLeft="True"/>
                 </Button>
                 <Button x:Name="RestartButton" >
                     <FontIcon Glyph="&#xE149;" FontSize="32" FontFamily="Segoe UI Symbol"/>

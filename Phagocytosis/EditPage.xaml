@@ -80,7 +80,8 @@
 
         <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-            <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"
+                      MirroredWhenRightToLeft="True"/>
         </Button>
 
         <Button x:Name="PlayButton" HorizontalAlignment="Right" VerticalAlignment="Top">

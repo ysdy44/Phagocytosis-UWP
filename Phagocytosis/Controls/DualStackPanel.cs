@@ -18,27 +18,27 @@ namespace Phagocytosis.Controls
 
         protected override Size ArrangeOverride(Size finalSize)
         {
-            int i = 0;
+            int i = -1;
 
             foreach (FrameworkElement child in base.Children)
             {
-                child.Arrange(new Rect(i * X, i % 2 * Y, W, H));
                 i++;
+                child.Arrange(new Rect(i * X, i % 2 * Y, W, H));
             }
 
-            return new Size(i * X + X, Y + H);
+            return new Size(i * X + X + X, Y + H);
         }
         protected override Size MeasureOverride(Size availableSize)
         {
-            int i = 0;
+            int i = -1;
 
             foreach (FrameworkElement child in base.Children)
             {
-                child.Measure(new Size(W, H));
                 i++;
+                child.Measure(new Size(W, H));
             }
 
-            return new Size(i * X + X, Y + H);
+            return new Size(i * X + X + X, Y + H);
         }
     }
 }

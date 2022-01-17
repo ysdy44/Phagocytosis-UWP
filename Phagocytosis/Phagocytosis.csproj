@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="Controls\BackgroundCanvasControl.cs" />
     <Compile Include="Controls\BaseCanvasControl.cs" />
+    <Compile Include="Controls\DualStackPanel.cs" />
     <Compile Include="Controls\EditCanvasControl.cs" />
     <Compile Include="Controls\EditType.cs" />
     <Compile Include="Controls\MainCanvasControl.cs" />

@@ -9,7 +9,7 @@
   <Identity
     Name="43956ysdy44.Phagocytosis"
     Publisher="CN=9DF2B1A6-C2CE-481C-9997-A3B93DA91100"
-    Version="1.1.0.0" />
+    Version="1.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="fcee2c42-fe10-499d-83eb-88858f1d4c84" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

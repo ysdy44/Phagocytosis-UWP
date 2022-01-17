@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>Cell</value></data>
-<data name='Bacteria' xml:space='preserve'><value>Bacteria</value></data>
-<data name='Virus' xml:space='preserve'><value>Virus</value></data>
-<data name='Paramecium' xml:space='preserve'><value>Paramecium</value></data>
-<data name='Leukocyte' xml:space='preserve'><value>Leukocyte</value></data>
-<data name='Prion' xml:space='preserve'><value>Prion</value></data>
-<data name='Cancer' xml:space='preserve'><value>Cancer</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>StaphylococcusAureus</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>Developer Mode</value></data>
-<data name='Click' xml:space='preserve'><value>Click</value></data>
-<data name='ToEdit' xml:space='preserve'><value>to Edit the map</value></data>
-<data name='ToOpen' xml:space='preserve'><value>to Open the map file</value></data>
-<data name='Me' xml:space='preserve'><value>me</value></data>
-<data name='None' xml:space='preserve'><value>none</value></data>
-<data name='Version' xml:space='preserve'><value>Version</value></data>
-<data name='Production' xml:space='preserve'><value>Production</value></data>
-<data name='Design' xml:space='preserve'><value>Design</value></data>
-<data name='Art' xml:space='preserve'><value>Art</value></data>
-<data name='Development' xml:space='preserve'><value>Development</value></data>
-<data name='Test' xml:space='preserve'><value>Test</value></data>
-<data name='Management' xml:space='preserve'><value>Management</value></data>
-<data name='Promote' xml:space='preserve'><value>Promote</value></data>
-<data name='Legal' xml:space='preserve'><value>Legal</value></data>
-<data name='Local' xml:space='preserve'><value>Local</value></data>
-<data name='Publishing' xml:space='preserve'><value>Publishing</value></data>
-<data name='Community' xml:space='preserve'><value>Community</value></data>
-<data name='Thanks' xml:space='preserve'><value>Thanks</value></data>
-<data name='OpenSource' xml:space='preserve'><value>Open Source</value></data>
-<data name='Reference' xml:space='preserve'><value>Reference</value></data>
-<data name='Feedback' xml:space='preserve'><value>Feedback</value></data>
-<data name='NoMore' xml:space='preserve'><value>no more</value></data>
-<data name='Move' xml:space='preserve'><value>Move</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>Add Restricted</value></data>
-<data name='AddFriend' xml:space='preserve'><value>Add Friend</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>Add Enemy</value></data>
-<data name='Guider001' xml:space='preserve'><value>Move the joystick or press the WASD key to move the cell</value></data>
-<data name='Guider002' xml:space='preserve'><value>Pinch with two fingers or press - + keys to zoom the camera</value></data>
-<data name='Guider003' xml:space='preserve'><value>Swipe the screen or press the ↑←↓→ keys to move the camera</value></data>
-<data name='Guider004' xml:space='preserve'><value>or press the Q key to divide into two cells</value></data>
-<data name='Guider005' xml:space='preserve'><value>Foraging for food makes cells bigger, big cells can eat small cells</value></data>
-<data name='Guider006' xml:space='preserve'><value>Eat all the bacteria and fight for your body! ! !</value></data>
-<data name='Lose' xml:space='preserve'><value>Lose</value></data>
-<data name='Win' xml:space='preserve'><value>Win</value></data>
-<data name='Pause' xml:space='preserve'><value>Pause</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>Maximum Volume</value></data>
-<data name='MaxCount' xml:space='preserve'><value>Maximum Amount</value></data>
-<data name='Duration' xml:space='preserve'><value>Duration</value></data>
-<data name='ToRestart' xml:space='preserve'><value>to come back</value></data>
-<data name='ToNext' xml:space='preserve'><value>to jump to the next level</value></data>
-<data name='ToPlay' xml:space='preserve'><value>to continue</value></data>
-<data name='Speed' xml:space='preserve'><value>Speed</value></data>
-<data name='Level' xml:space='preserve'><value>Volume</value></data>
-<data name='Count' xml:space='preserve'><value>Amount</value></data>
-<data name='Cell001' xml:space='preserve'><value>There is no uniform definition of the cell, and the more common formulation is that the cell is the basic structural and functional unit of the organism.</value></data>
-<data name='Cell002' xml:space='preserve'><value>It was originally an ordinary cell, but it was not known why it suddenly had the ability to engulf other cells.</value></data>
-<data name='Cell003' xml:space='preserve'><value>Well, I can't think of any interesting settings</value></data>
-<data name='Cell004' xml:space='preserve'><value>Am I the legendary 'Kun'? Giant Quay Devours Evolution! ——— cell</value></data>
-<data name='Cell005' xml:space='preserve'><value>You're just the protagonist ——— me</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>Bacteria are one of the main taxa of organisms and belong to the bacterial domain. It is also the most abundant of all living things, with an estimated total of about 5×10^30. The shape of bacteria is quite diverse, mainly spherical, rod-shaped, and spiral-shaped.</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>Bacteria are the most common enemy, please make the protagonist bigger than the bacteria and then devour them!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>How to look at it is just a cell of a different color</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>It's not tasty at all, ——— cell</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>A virus is a small, simplely structured, non-cell-type organism that contains only one nucleic acid that must parasitize and replicate within living cells.</value></data>
-<data name='Virus002' xml:space='preserve'><value>Cells that eat the virus become infected and become the first target of the immune system.</value></data>
-<data name='Virus003' xml:space='preserve'><value>Toxic (biologically significant)</value></data>
-<data name='Virus004' xml:space='preserve'><value>This kind of thing will make you sick to your stomach when you eat it?! ——— cell</value></data>
-<data name='Virus005' xml:space='preserve'><value>No, it's just going to die ——— immune system</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>Paramecium are small, cylindrical protozoa with a body that consists of only one cell and is a single-celled protozoa, hermaphrodite.</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>The paramecium's 0.3 mm radius is simply a giant in microorganisms!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>Obviously, it is paramecium but it is made into a circle</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>So big! ——— cell</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>White blood cells are colorless, spherical, nucleated blood cells. White blood cells generally have an active ability to move, and they can migrate from within blood vessels to extravasculars, or from extravascular tissue to intravascular.</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>Nothing can stop me from moving! Except for Petri dishes!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>White blood cells are friendly (not)</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>I'm a cell, don't eat me! ——— cell</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>I'm sorry, but both bacterial viruses and allogeneic cells are my enemies. ——— White blood cells</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>Cell</value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>Bacteria</value> </data>
+<data name='Virus' xml:space='preserve'> <value>Virus</value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>Paramecium</value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>Leukocyte</value> </data>
+<data name='Prion' xml:space='preserve'> <value>Prion</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>Cancer</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>StaphylococcusAureus</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>Developer Mode</value> </data>
+<data name='Click' xml:space='preserve'> <value>Click</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>to Edit the map</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>to Open the map file</value> </data>
+<data name='Me' xml:space='preserve'> <value>me</value> </data>
+<data name='None' xml:space='preserve'> <value>none</value> </data>
+<data name='Version' xml:space='preserve'> <value>Version</value> </data>
+<data name='Production' xml:space='preserve'> <value>Production</value> </data>
+<data name='Design' xml:space='preserve'> <value>Design</value> </data>
+<data name='Art' xml:space='preserve'> <value>Art</value> </data>
+<data name='Development' xml:space='preserve'> <value>Development</value> </data>
+<data name='Test' xml:space='preserve'> <value>Test</value> </data>
+<data name='Management' xml:space='preserve'> <value>Management</value> </data>
+<data name='Promote' xml:space='preserve'> <value>Promote</value> </data>
+<data name='Legal' xml:space='preserve'> <value>Legal</value> </data>
+<data name='Local' xml:space='preserve'> <value>Local</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>Publishing</value> </data>
+<data name='Community' xml:space='preserve'> <value>Community</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>Thanks</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>Open Source</value> </data>
+<data name='Reference' xml:space='preserve'> <value>Reference</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>Feedback</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>no more</value> </data>
+<data name='Move' xml:space='preserve'> <value>Move</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>Add Restricted</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>Add Friend</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>Add Enemy</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>Move the joystick or press the WASD key to move the cell</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>Pinch with two fingers or press - + keys to zoom the camera</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>Swipe the screen or press the ↑←↓→ keys to move the camera</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>or press the Q key to divide into two cells</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>Foraging for food makes cells bigger, big cells can eat small cells</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>Eat all the bacteria and fight for your body! ! !</value> </data>
+<data name='Win' xml:space='preserve'> <value>Win</value> </data>
+<data name='Lose' xml:space='preserve'> <value>Lose</value> </data>
+<data name='Pause' xml:space='preserve'> <value>Pause</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>Maximum Volume</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>Maximum Amount</value> </data>
+<data name='Duration' xml:space='preserve'> <value>Duration</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>to come back</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>to jump to the next level</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>to continue</value> </data>
+<data name='Speed' xml:space='preserve'> <value>Speed</value> </data>
+<data name='Level' xml:space='preserve'> <value>Volume</value> </data>
+<data name='Count' xml:space='preserve'> <value>Amount</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>There is no uniform definition of the cell, and the more common formulation is that the cell is the basic structural and functional unit of the organism.</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>It was originally an ordinary cell, but it was not known why it suddenly had the ability to engulf other cells.</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>Well, I can't think of any interesting settings</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>Am I the legendary 'Kun'? Giant Quay Devours Evolution! ——— cell</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>You're just the protagonist ——— me</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>Bacteria are one of the main taxa of organisms and belong to the bacterial domain. It is also the most abundant of all living things, with an estimated total of about 5×10^30. The shape of bacteria is quite diverse, mainly spherical, rod-shaped, and spiral-shaped.</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>Bacteria are the most common enemy, please make the protagonist bigger than the bacteria and then devour them!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>How to look at it is just a cell of a different color</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>It's not tasty at all, ——— cell</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>A virus is a small, simplely structured, non-cell-type organism that contains only one nucleic acid that must parasitize and replicate within living cells.</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>Cells that eat the virus become infected and become the first target of the immune system.</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>Toxic (biologically significant)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>This kind of thing will make you sick to your stomach when you eat it?! ——— cell</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>No, it's just going to die ——— immune system</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>Paramecium are small, cylindrical protozoa with a body that consists of only one cell and is a single-celled protozoa, hermaphrodite.</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>The paramecium's 0.3 mm radius is simply a giant in microorganisms!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>Obviously, it is paramecium but it is made into a circle</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>So big! ——— cell</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>White blood cells are colorless, spherical, nucleated blood cells. White blood cells generally have an active ability to move, and they can migrate from within blood vessels to extravasculars, or from extravascular tissue to intravascular.</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>Nothing can stop me from moving! Except for Petri dishes!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>White blood cells are friendly (not)</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>I'm a cell, don't eat me! ——— cell</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>I'm sorry, but both bacterial viruses and allogeneic cells are my enemies. ——— White blood cells</value> </data>
 
  </root>

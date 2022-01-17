@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>клетки </value></data>
-<data name='Bacteria' xml:space='preserve'><value>Бактерии </value></data>
-<data name='Virus' xml:space='preserve'><value>Вирус </value></data>
-<data name='Paramecium' xml:space='preserve'><value>Травяные гусеницы </value></data>
-<data name='Leukocyte' xml:space='preserve'><value>Белые кровяные тельца </value></data>
-<data name='Prion' xml:space='preserve'><value>Вирус</value></data>
-<data name='Cancer' xml:space='preserve'><value>Раковые клетки</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>Золотой стафилококк</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>Состояние разработчика</value></data>
-<data name='Click' xml:space='preserve'><value>Нажмите</value></data>
-<data name='ToEdit' xml:space='preserve'><value>, чтобы отредактировать карту</value></data>
-<data name='ToOpen' xml:space='preserve'><value>, чтобы открыть файл карты</value></data>
-<data name='Me' xml:space='preserve'><value>Я</value></data>
-<data name='None' xml:space='preserve'><value>Нет, нет</value></data>
-<data name='Version' xml:space='preserve'><value>версии</value></data>
-<data name='Production' xml:space='preserve'><value>продукт</value></data>
-<data name='Design' xml:space='preserve'><value>Дизайн</value></data>
-<data name='Art' xml:space='preserve'><value>Изобразительное искусство</value></data>
-<data name='Development' xml:space='preserve'><value>развития</value></data>
-<data name='Test' xml:space='preserve'><value>тест</value></data>
-<data name='Management' xml:space='preserve'><value>Управление</value></data>
-<data name='Promote' xml:space='preserve'><value>Продвижение</value></data>
-<data name='Legal' xml:space='preserve'><value>Юридические вопросы</value></data>
-<data name='Local' xml:space='preserve'><value>Локально</value></data>
-<data name='Publishing' xml:space='preserve'><value>Опубликовано</value></data>
-<data name='Community' xml:space='preserve'><value>сообщества</value></data>
-<data name='Thanks' xml:space='preserve'><value>Спасибо</value></data>
-<data name='OpenSource' xml:space='preserve'><value>Открытый исходный код</value></data>
-<data name='Reference' xml:space='preserve'><value>Ссылка</value></data>
-<data name='Feedback' xml:space='preserve'><value>Обратная связь</value></data>
-<data name='NoMore' xml:space='preserve'><value>Древесины больше</value></data>
-<data name='Move' xml:space='preserve'><value>Переместите объектив</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>Добавьте к стене</value></data>
-<data name='AddFriend' xml:space='preserve'><value>Присоединяйтесь к союзникам</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>Присоединяйтесь к врагу</value></data>
-<data name='Guider001' xml:space='preserve'><value>Управляйте джойстиком или нажмите клавишу WASD, чтобы переместить клетки</value></data>
-<data name='Guider002' xml:space='preserve'><value>Сжать двумя пальцами или нажать - + клавиша для масштабирования объектива</value></data>
-<data name='Guider003' xml:space='preserve'><value>Проведите пальцем по экрану или нажмите клавишу |←|→, чтобы переместить объектив</value></data>
-<data name='Guider004' xml:space='preserve'><value>Или нажмите клавишу Q, чтобы разделить ее на две клетки</value></data>
-<data name='Guider005' xml:space='preserve'><value>Ищите пищу, чтобы сделать клетки больше, большие клетки могут съесть небольшие клетки</value></data>
-<data name='Guider006' xml:space='preserve'><value>Ешьте все бактерии и бороться за тело, от которого вы живете!!!</value></data>
-<data name='Lose' xml:space='preserve'><value>Победа</value></data>
-<data name='Win' xml:space='preserve'><value>Неудача</value></data>
-<data name='Pause' xml:space='preserve'><value>Пауза</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>Максимальный объем</value></data>
-<data name='MaxCount' xml:space='preserve'><value>Максимальное количество</value></data>
-<data name='Duration' xml:space='preserve'><value>Время</value></data>
-<data name='ToRestart' xml:space='preserve'><value>Приходите по-тяжело</value></data>
-<data name='ToNext' xml:space='preserve'><value>чтобы перейти к следующему уровню</value></data>
-<data name='ToPlay' xml:space='preserve'><value>чтобы продолжить</value></data>
-<data name='Speed' xml:space='preserve'><value>Скорость</value></data>
-<data name='Level' xml:space='preserve'><value>Объем</value></data>
-<data name='Count' xml:space='preserve'><value>количество</value></data>
-<data name='Cell001' xml:space='preserve'><value>Клетки не имеют единого определения, и более распространенное упоминание заключается в том, что клетки являются основными структурными и функциональными единицами организма.</value></data>
-<data name='Cell002' xml:space='preserve'><value>Это была бы обычная клетка, но я не знаю, почему вдруг появилась способность пожирать другие клетки.</value></data>
-<data name='Cell003' xml:space='preserve'><value>Ну, вообще-то, я не могу придумать ничего интересного</value></data>
-<data name='Cell004' xml:space='preserve'><value>Я легендарный Юй"? Гигантский пожирает эволюцию! ——— клетки</value></data>
-<data name='Cell005' xml:space='preserve'><value>Ты всего лишь главный герой ——— меня</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>Бактерии являются одной из основных групп организмов и относятся к бактериальному домену. Это также самая большая категория из всех живых существ, общее число которых оценивается примерно в 5×10х30. Бактерии имеют довольно разнообразные формы, в основном сферические, полюсообразные и спиральные.</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>Бактерии являются наиболее распространенными врагами, пожалуйста, постарайтесь, чтобы главный герой стал больше, чем бактерии, а затем поглотить их!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>Все, что вы думаете, это клетка, которая меняет цвет</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>Это не вкусно на всех ——— клетки</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>Вирус представляет собой крошечное, простое в структуре существо, содержащее только нуклеиновую кислоту, которая должна паразитировать в живых клетках и размножаться путем репликации.</value></data>
-<data name='Virus002' xml:space='preserve'><value>Клетки, которые едят вирус, заражаются и становятся главными объектами уничтожения иммунной системы.</value></data>
-<data name='Virus003' xml:space='preserve'><value>Токсичность (в биологическом смысле)</value></data>
-<data name='Virus004' xml:space='preserve'><value>Эта вещь может съесть живот?! ——— клетки</value></data>
-<data name='Virus005' xml:space='preserve'><value>Даже умереть ——— иммунной системы</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>Травяной гусеничный червь является родным животным с небольшим телом, цилиндрической формой, состоящей только из одной клетки, одноклеточной простейшей, самцов и самцов.</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>Радиус травяного гусеницы 0,3 мм в микробах просто биг Мак!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>Очевидно, что это трава, но она круглая</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>Какой большой! ——— клетки</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>Белые кровяные тельца являются бесцветными, сферическими, ядерными клетками крови. Белые кровяные тельца, как правило, имеют активную подвижность, и они могут мигрировать из кровеносных сосудов за пределы кровеносных сосудов или из внесосудистой ткани в кровеносные сосуды.</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>Ничто не мешает мне двигаться! Кроме чашки Петри!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>Белые кровяные тельца являются союзниками (нет)</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>Я клетка, не ешьте меня! ——— клетки</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>Извините, как бактериальные вирусы, так и инородные клетки являются моими врагами. ——— белые кровяные тельца</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>клетки </value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>Бактерии </value> </data>
+<data name='Virus' xml:space='preserve'> <value>Вирус </value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>Травяные гусеницы </value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>Белые кровяные тельца </value> </data>
+<data name='Prion' xml:space='preserve'> <value>Вирус</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>Раковые клетки</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>Золотой стафилококк</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>Состояние разработчика</value> </data>
+<data name='Click' xml:space='preserve'> <value>Нажмите</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>, чтобы отредактировать карту</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>, чтобы открыть файл карты</value> </data>
+<data name='Me' xml:space='preserve'> <value>Я</value> </data>
+<data name='None' xml:space='preserve'> <value>Нет, нет</value> </data>
+<data name='Version' xml:space='preserve'> <value>версии</value> </data>
+<data name='Production' xml:space='preserve'> <value>продукт</value> </data>
+<data name='Design' xml:space='preserve'> <value>Дизайн</value> </data>
+<data name='Art' xml:space='preserve'> <value>Изобразительное искусство</value> </data>
+<data name='Development' xml:space='preserve'> <value>развития</value> </data>
+<data name='Test' xml:space='preserve'> <value>тест</value> </data>
+<data name='Management' xml:space='preserve'> <value>Управление</value> </data>
+<data name='Promote' xml:space='preserve'> <value>Продвижение</value> </data>
+<data name='Legal' xml:space='preserve'> <value>Юридические вопросы</value> </data>
+<data name='Local' xml:space='preserve'> <value>Локально</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>Опубликовано</value> </data>
+<data name='Community' xml:space='preserve'> <value>сообщества</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>Спасибо</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>Открытый исходный код</value> </data>
+<data name='Reference' xml:space='preserve'> <value>Ссылка</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>Обратная связь</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>Древесины больше</value> </data>
+<data name='Move' xml:space='preserve'> <value>Переместите объектив</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>Добавьте к стене</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>Присоединяйтесь к союзникам</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>Присоединяйтесь к врагу</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>Управляйте джойстиком или нажмите клавишу WASD, чтобы переместить клетки</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>Сжать двумя пальцами или нажать - + клавиша для масштабирования объектива</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>Проведите пальцем по экрану или нажмите клавишу |←|→, чтобы переместить объектив</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Или нажмите клавишу Q, чтобы разделить ее на две клетки</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>Ищите пищу, чтобы сделать клетки больше, большие клетки могут съесть небольшие клетки</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>Ешьте все бактерии и бороться за тело, от которого вы живете!!!</value> </data>
+<data name='Win' xml:space='preserve'> <value>Победа</value> </data>
+<data name='Lose' xml:space='preserve'> <value>Неудача</value> </data>
+<data name='Pause' xml:space='preserve'> <value>Пауза</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>Максимальный объем</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>Максимальное количество</value> </data>
+<data name='Duration' xml:space='preserve'> <value>Время</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Приходите по-тяжело</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>чтобы перейти к следующему уровню</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>чтобы продолжить</value> </data>
+<data name='Speed' xml:space='preserve'> <value>Скорость</value> </data>
+<data name='Level' xml:space='preserve'> <value>Объем</value> </data>
+<data name='Count' xml:space='preserve'> <value>количество</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>Клетки не имеют единого определения, и более распространенное упоминание заключается в том, что клетки являются основными структурными и функциональными единицами организма.</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>Это была бы обычная клетка, но я не знаю, почему вдруг появилась способность пожирать другие клетки.</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>Ну, вообще-то, я не могу придумать ничего интересного</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>Я легендарный Юй"? Гигантский пожирает эволюцию! ——— клетки</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>Ты всего лишь главный герой ——— меня</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>Бактерии являются одной из основных групп организмов и относятся к бактериальному домену. Это также самая большая категория из всех живых существ, общее число которых оценивается примерно в 5×10х30. Бактерии имеют довольно разнообразные формы, в основном сферические, полюсообразные и спиральные.</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>Бактерии являются наиболее распространенными врагами, пожалуйста, постарайтесь, чтобы главный герой стал больше, чем бактерии, а затем поглотить их!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>Все, что вы думаете, это клетка, которая меняет цвет</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>Это не вкусно на всех ——— клетки</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>Вирус представляет собой крошечное, простое в структуре существо, содержащее только нуклеиновую кислоту, которая должна паразитировать в живых клетках и размножаться путем репликации.</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>Клетки, которые едят вирус, заражаются и становятся главными объектами уничтожения иммунной системы.</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>Токсичность (в биологическом смысле)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>Эта вещь может съесть живот?! ——— клетки</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>Даже умереть ——— иммунной системы</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>Травяной гусеничный червь является родным животным с небольшим телом, цилиндрической формой, состоящей только из одной клетки, одноклеточной простейшей, самцов и самцов.</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>Радиус травяного гусеницы 0,3 мм в микробах просто биг Мак!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>Очевидно, что это трава, но она круглая</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>Какой большой! ——— клетки</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>Белые кровяные тельца являются бесцветными, сферическими, ядерными клетками крови. Белые кровяные тельца, как правило, имеют активную подвижность, и они могут мигрировать из кровеносных сосудов за пределы кровеносных сосудов или из внесосудистой ткани в кровеносные сосуды.</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>Ничто не мешает мне двигаться! Кроме чашки Петри!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>Белые кровяные тельца являются союзниками (нет)</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>Я клетка, не ешьте меня! ——— клетки</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>Извините, как бактериальные вирусы, так и инородные клетки являются моими врагами. ——— белые кровяные тельца</value> </data>
 
  </root>

@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>細胞 </value></data>
-<data name='Bacteria' xml:space='preserve'><value>細菌 </value></data>
-<data name='Virus' xml:space='preserve'><value>ウイルス </value></data>
-<data name='Paramecium' xml:space='preserve'><value>草の虫 </value></data>
-<data name='Leukocyte' xml:space='preserve'><value>白血球 </value></data>
-<data name='Prion' xml:space='preserve'><value>ウイルス</value></data>
-<data name='Cancer' xml:space='preserve'><value>癌細胞</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>黄金のブドウ球菌</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>開発者の状態</value></data>
-<data name='Click' xml:space='preserve'><value>をクリックします</value></data>
-<data name='ToEdit' xml:space='preserve'><value>をタップしてマップを編集します</value></data>
-<data name='ToOpen' xml:space='preserve'><value>をタップしてマップ ファイルを開きます</value></data>
-<data name='Me' xml:space='preserve'><value>私</value></data>
-<data name='None' xml:space='preserve'><value>なし</value></data>
-<data name='Version' xml:space='preserve'><value>バージョン</value></data>
-<data name='Production' xml:space='preserve'><value>製品</value></data>
-<data name='Design' xml:space='preserve'><value>デザイン</value></data>
-<data name='Art' xml:space='preserve'><value>美術</value></data>
-<data name='Development' xml:space='preserve'><value>開発</value></data>
-<data name='Test' xml:space='preserve'><value>テストします</value></data>
-<data name='Management' xml:space='preserve'><value>管理</value></data>
-<data name='Promote' xml:space='preserve'><value>促進する</value></data>
-<data name='Legal' xml:space='preserve'><value>法務</value></data>
-<data name='Local' xml:space='preserve'><value>ローカル</value></data>
-<data name='Publishing' xml:space='preserve'><value>出版</value></data>
-<data name='Community' xml:space='preserve'><value>コミュニティ</value></data>
-<data name='Thanks' xml:space='preserve'><value>感謝の意を表します</value></data>
-<data name='OpenSource' xml:space='preserve'><value>オープンソース</value></data>
-<data name='Reference' xml:space='preserve'><value>参照</value></data>
-<data name='Feedback' xml:space='preserve'><value>フィードバック</value></data>
-<data name='NoMore' xml:space='preserve'><value>木はもっとある</value></data>
-<data name='Move' xml:space='preserve'><value>レンズを移動します</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>壁に参加します</value></data>
-<data name='AddFriend' xml:space='preserve'><value>友軍に入隊</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>敵に参加</value></data>
-<data name='Guider001' xml:space='preserve'><value>ロッカーを操作するか、WASD キーを押してセルを移動します</value></data>
-<data name='Guider002' xml:space='preserve'><value>二本指でピンチするか、または押します - + レンズをズームするキー</value></data>
-<data name='Guider003' xml:space='preserve'><value>画面をスライドさせるか、#←→キーを押してレンズを移動します</value></data>
-<data name='Guider004' xml:space='preserve'><value>をタップするか、Q キーを押して 2 つのセルに分割します</value></data>
-<data name='Guider005' xml:space='preserve'><value>食物を求めて細胞を大きくし、大きな細胞は小さな細胞を食べることができます</value></data>
-<data name='Guider006' xml:space='preserve'><value>すべての細菌を食べ、生き残るために体のために戦う!!!</value></data>
-<data name='Lose' xml:space='preserve'><value>勝利</value></data>
-<data name='Win' xml:space='preserve'><value>失敗</value></data>
-<data name='Pause' xml:space='preserve'><value>一時停止します</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>最大ボリューム</value></data>
-<data name='MaxCount' xml:space='preserve'><value>最大数</value></data>
-<data name='Duration' xml:space='preserve'><value>時間</value></data>
-<data name='ToRestart' xml:space='preserve'><value>をタップして戻ります</value></data>
-<data name='ToNext' xml:space='preserve'><value>次のレベルにジャンプする</value></data>
-<data name='ToPlay' xml:space='preserve'><value>をクリックして続行します</value></data>
-<data name='Speed' xml:space='preserve'><value>速度</value></data>
-<data name='Level' xml:space='preserve'><value>ボリューム</value></data>
-<data name='Count' xml:space='preserve'><value>数量</value></data>
-<data name='Cell001' xml:space='preserve'><value>細胞は統一された定義を持っていない、より一般的な参照は:細胞は生物の基本的な構造と機能単位です。</value></data>
-<data name='Cell002' xml:space='preserve'><value>これは、一般的な細胞だっただろうが、突然、他の細胞を食べる能力があった理由がわからない。</value></data>
-<data name='Cell003' xml:space='preserve'><value>[OK]を、実際には私は面白い設定を考えることはできません</value></data>
-<data name='Cell004' xml:space='preserve'><value>「私は伝説の「トンボ」ですか? 巨人は進化を食いつぶす! ———細胞</value></data>
-<data name='Cell005' xml:space='preserve'><value>君はただの主役だ ———私だ</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>細菌は、生物の主要な集団の1つであり、細菌ドメインに属しています。 また、すべての生物の中で最も多いカテゴリであり、その総数は約5×10〜30と推定されています。 細菌の形状は、主に球状、棒状、およびらせん状で、かなり多様です。</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>細菌は最も一般的な敵であり、主役が細菌よりも大きくなり、それらをむさぼり食うように努力してください!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>色を変えた細胞をどう思うか</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>全然美味しくない ———細胞</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>ウイルスは、生細胞内に寄生し、複製によって増殖しなければならない1つの核酸のみを含む小さな、単純な構造を持つ非細胞型生物です。</value></data>
-<data name='Virus002' xml:space='preserve'><value>ウイルスを食べる細胞は感染し、免疫系の主要な破壊者になります。</value></data>
-<data name='Virus003' xml:space='preserve'><value>毒性(生物学的意味で)</value></data>
-<data name='Virus004' xml:space='preserve'><value>こんなものを食べるとお腹が張るの?! 細胞———</value></data>
-<data name='Virus005' xml:space='preserve'><value>免疫系———「死ぬことさえある」</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>草履虫は、1つの細胞のみで構成される小さな円筒形の原生動物であり、単細胞原生動物であり、雌雄同体である。</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>草履虫 0.3 mm の半径は微生物で単にビッグマックです!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>明らかに草の形は丸く作られています</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>「大きい! 細胞———</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>白血球は無色、球形、核を有する血液細胞である。 白血球は、通常、血管内から血管外、または血管外組織から血管内に移動することができるアクティブな移動能力を有する。</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>何も私が移動するのを妨げることができます! ペトリ皿を除いて!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>白血球は友軍だ</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>「私は細胞です、私を食べないでください! 細胞———</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>「申し訳ありませんが、細菌ウイルスや同種細胞は私の敵です。 ———白血球</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>細胞 </value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>細菌 </value> </data>
+<data name='Virus' xml:space='preserve'> <value>ウイルス </value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>草の虫 </value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>白血球 </value> </data>
+<data name='Prion' xml:space='preserve'> <value>ウイルス</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>癌細胞</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>黄金のブドウ球菌</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>開発者の状態</value> </data>
+<data name='Click' xml:space='preserve'> <value>をクリックします</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>をタップしてマップを編集します</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>をタップしてマップ ファイルを開きます</value> </data>
+<data name='Me' xml:space='preserve'> <value>私</value> </data>
+<data name='None' xml:space='preserve'> <value>なし</value> </data>
+<data name='Version' xml:space='preserve'> <value>バージョン</value> </data>
+<data name='Production' xml:space='preserve'> <value>製品</value> </data>
+<data name='Design' xml:space='preserve'> <value>デザイン</value> </data>
+<data name='Art' xml:space='preserve'> <value>美術</value> </data>
+<data name='Development' xml:space='preserve'> <value>開発</value> </data>
+<data name='Test' xml:space='preserve'> <value>テストします</value> </data>
+<data name='Management' xml:space='preserve'> <value>管理</value> </data>
+<data name='Promote' xml:space='preserve'> <value>促進する</value> </data>
+<data name='Legal' xml:space='preserve'> <value>法務</value> </data>
+<data name='Local' xml:space='preserve'> <value>ローカル</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>出版</value> </data>
+<data name='Community' xml:space='preserve'> <value>コミュニティ</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>感謝の意を表します</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>オープンソース</value> </data>
+<data name='Reference' xml:space='preserve'> <value>参照</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>フィードバック</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>木はもっとある</value> </data>
+<data name='Move' xml:space='preserve'> <value>レンズを移動します</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>壁に参加します</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>友軍に入隊</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>敵に参加</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>ロッカーを操作するか、WASD キーを押してセルを移動します</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>二本指でピンチするか、または押します - + レンズをズームするキー</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>画面をスライドさせるか、#←→キーを押してレンズを移動します</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>をタップするか、Q キーを押して 2 つのセルに分割します</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>食物を求めて細胞を大きくし、大きな細胞は小さな細胞を食べることができます</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>すべての細菌を食べ、生き残るために体のために戦う!!!</value> </data>
+<data name='Win' xml:space='preserve'> <value>勝利</value> </data>
+<data name='Lose' xml:space='preserve'> <value>失敗</value> </data>
+<data name='Pause' xml:space='preserve'> <value>一時停止します</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>最大ボリューム</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>最大数</value> </data>
+<data name='Duration' xml:space='preserve'> <value>時間</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>をタップして戻ります</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>次のレベルにジャンプする</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>をクリックして続行します</value> </data>
+<data name='Speed' xml:space='preserve'> <value>速度</value> </data>
+<data name='Level' xml:space='preserve'> <value>ボリューム</value> </data>
+<data name='Count' xml:space='preserve'> <value>数量</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>細胞は統一された定義を持っていない、より一般的な参照は:細胞は生物の基本的な構造と機能単位です。</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>これは、一般的な細胞だっただろうが、突然、他の細胞を食べる能力があった理由がわからない。</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>[OK]を、実際には私は面白い設定を考えることはできません</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>「私は伝説の「トンボ」ですか? 巨人は進化を食いつぶす! ———細胞</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>君はただの主役だ ———私だ</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>細菌は、生物の主要な集団の1つであり、細菌ドメインに属しています。 また、すべての生物の中で最も多いカテゴリであり、その総数は約5×10〜30と推定されています。 細菌の形状は、主に球状、棒状、およびらせん状で、かなり多様です。</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>細菌は最も一般的な敵であり、主役が細菌よりも大きくなり、それらをむさぼり食うように努力してください!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>色を変えた細胞をどう思うか</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>全然美味しくない ———細胞</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>ウイルスは、生細胞内に寄生し、複製によって増殖しなければならない1つの核酸のみを含む小さな、単純な構造を持つ非細胞型生物です。</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>ウイルスを食べる細胞は感染し、免疫系の主要な破壊者になります。</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>毒性(生物学的意味で)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>こんなものを食べるとお腹が張るの?! 細胞———</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>免疫系———「死ぬことさえある」</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>草履虫は、1つの細胞のみで構成される小さな円筒形の原生動物であり、単細胞原生動物であり、雌雄同体である。</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>草履虫 0.3 mm の半径は微生物で単にビッグマックです!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>明らかに草の形は丸く作られています</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>「大きい! 細胞———</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>白血球は無色、球形、核を有する血液細胞である。 白血球は、通常、血管内から血管外、または血管外組織から血管内に移動することができるアクティブな移動能力を有する。</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>何も私が移動するのを妨げることができます! ペトリ皿を除いて!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>白血球は友軍だ</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>「私は細胞です、私を食べないでください! 細胞———</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>「申し訳ありませんが、細菌ウイルスや同種細胞は私の敵です。 ———白血球</value> </data>
 
  </root>

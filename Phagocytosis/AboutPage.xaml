@@ -35,7 +35,7 @@
                 <LineBreak />
                 <Run x:Name="VersionTipRun" FontWeight="Bold">版本</Run>
                 <LineBreak />
-                <Run x:Name="VersionRun" >1.1.0</Run>
+                <Run x:Name="VersionRun" >1.2.0</Run>
                 <LineBreak />
 
                 <LineBreak />

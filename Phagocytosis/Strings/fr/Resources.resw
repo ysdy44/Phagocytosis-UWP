@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>cellule </value></data>
-<data name='Bacteria' xml:space='preserve'><value>bactéries </value></data>
-<data name='Virus' xml:space='preserve'><value>virus </value></data>
-<data name='Paramecium' xml:space='preserve'><value>paramécie </value></data>
-<data name='Leukocyte' xml:space='preserve'><value>globules blancs </value></data>
-<data name='Prion' xml:space='preserve'><value>Prion</value></data>
-<data name='Cancer' xml:space='preserve'><value>cellule cancéreuse</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>Staphylococcus aureus</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>Statut de développeur</value></data>
-<data name='Click' xml:space='preserve'><value>cliquer</value></data>
-<data name='ToEdit' xml:space='preserve'><value>pour modifier la carte</value></data>
-<data name='ToOpen' xml:space='preserve'><value>pour ouvrir le fichier de carte</value></data>
-<data name='Me' xml:space='preserve'><value>Je</value></data>
-<data name='None' xml:space='preserve'><value>non</value></data>
-<data name='Version' xml:space='preserve'><value>Version</value></data>
-<data name='Production' xml:space='preserve'><value>Produits</value></data>
-<data name='Design' xml:space='preserve'><value>concevoir</value></data>
-<data name='Art' xml:space='preserve'><value>beaux-arts</value></data>
-<data name='Development' xml:space='preserve'><value>exploitation</value></data>
-<data name='Test' xml:space='preserve'><value>Test</value></data>
-<data name='Management' xml:space='preserve'><value>gérer</value></data>
-<data name='Promote' xml:space='preserve'><value>populariser</value></data>
-<data name='Legal' xml:space='preserve'><value>Légal</value></data>
-<data name='Local' xml:space='preserve'><value>local</value></data>
-<data name='Publishing' xml:space='preserve'><value>publication</value></data>
-<data name='Community' xml:space='preserve'><value>communauté</value></data>
-<data name='Thanks' xml:space='preserve'><value>Merci</value></data>
-<data name='OpenSource' xml:space='preserve'><value>libre</value></data>
-<data name='Reference' xml:space='preserve'><value>citer</value></data>
-<data name='Feedback' xml:space='preserve'><value>rétroaction</value></data>
-<data name='NoMore' xml:space='preserve'><value>Le bois a plus</value></data>
-<data name='Move' xml:space='preserve'><value>Déplacer l’objectif</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>Rejoignez le mur</value></data>
-<data name='AddFriend' xml:space='preserve'><value>Rejoignez des alliés</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>Rejoignez l’ennemi</value></data>
-<data name='Guider001' xml:space='preserve'><value>Manipulez le joystick ou appuyez sur la touche WASD pour déplacer la cellule</value></data>
-<data name='Guider002' xml:space='preserve'><value>Pincez avec deux doigts ou appuyez sur la touche - + pour zoomer sur l’objectif</value></data>
-<data name='Guider003' xml:space='preserve'><value>Faites glisser l’écran ou appuyez sur la touche ↑←↓→ pour déplacer l’objectif</value></data>
-<data name='Guider004' xml:space='preserve'><value>Ou appuyez sur la touche Q pour diviser en deux cellules</value></data>
-<data name='Guider005' xml:space='preserve'><value>La recherche de nourriture rend les cellules plus grandes, et les grandes cellules peuvent manger les petites cellules</value></data>
-<data name='Guider006' xml:space='preserve'><value>Mangez toutes les bactéries et battez-vous pour le corps dont cela dépend!!!</value></data>
-<data name='Lose' xml:space='preserve'><value>victoire</value></data>
-<data name='Win' xml:space='preserve'><value>échouer</value></data>
-<data name='Pause' xml:space='preserve'><value>Délai d’attente</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>Volume maximal</value></data>
-<data name='MaxCount' xml:space='preserve'><value>Quantité maximale</value></data>
-<data name='Duration' xml:space='preserve'><value>Heure</value></data>
-<data name='ToRestart' xml:space='preserve'><value>Reprenez tout cela</value></data>
-<data name='ToNext' xml:space='preserve'><value>pour passer au niveau suivant</value></data>
-<data name='ToPlay' xml:space='preserve'><value>pour continuer</value></data>
-<data name='Speed' xml:space='preserve'><value>vitesse</value></data>
-<data name='Level' xml:space='preserve'><value>volume</value></data>
-<data name='Count' xml:space='preserve'><value>quantité</value></data>
-<data name='Cell001' xml:space='preserve'><value>Il n’y a pas de définition uniforme de la cellule, et la formulation la plus courante est que la cellule est l’unité structurelle et fonctionnelle de base de l’organisme.</value></data>
-<data name='Cell002' xml:space='preserve'><value>C’était à l’origine une cellule ordinaire, mais on ne savait pas pourquoi elle avait soudainement la capacité d’engloutir d’autres cellules.</value></data>
-<data name='Cell003' xml:space='preserve'><value>Eh bien, je ne peux pas penser à des paramètres intéressants</value></data>
-<data name='Cell004' xml:space='preserve'><value>« Suis-je le légendaire 'Kun'? » Giant Quay dévore l’évolution ! cellules ———</value></data>
-<data name='Cell005' xml:space='preserve'><value>« Tu n’es que le protagoniste » m'———</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>Les bactéries sont l’un des principaux taxons d’organismes et appartiennent au domaine bactérien. C’est aussi le plus abondant de tous les êtres vivants, avec un total estimé à environ 5×10^30. La forme des bactéries est assez diverse, principalement sphérique, en forme de bâtonnet et en spirale.</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>Les bactéries sont l’ennemi le plus commun, s’il vous plaît rendre le protagoniste plus grand que les bactéries et ensuite les dévorer!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>Comment le regarder n’est qu’une cellule d’une couleur différente</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>« Ce n’est pas savoureux du tout », ——— cellules</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>Un virus est un petit organisme de type non cellulaire à structure simple qui ne contient qu’un seul acide nucléique qui doit parasiter et se répliquer dans les cellules vivantes.</value></data>
-<data name='Virus002' xml:space='preserve'><value>Les cellules qui mangent le virus s’infectent et deviennent la première cible du système immunitaire.</value></data>
-<data name='Virus003' xml:space='preserve'><value>Toxique (au sens biologique)</value></data>
-<data name='Virus004' xml:space='preserve'><value>« Ce genre de chose vous rendra malade à l’estomac quand vous le mangerez?! » cellules ———</value></data>
-<data name='Virus005' xml:space='preserve'><value>« Même mourir » ——— système immunitaire</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>Les sauterelles sont de petits protozoaires cylindriques dont le corps se compose d’une seule cellule et qui est un protozoaire unicellulaire hermaphrodite.</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>Le rayon de 0,3 mm de la sauterelle est tout simplement un géant en micro-organismes!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>Évidemment, ce sont des chaussures en herbe mais c’est fait en cercle</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>« Si grand! » cellules ———</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>Les globules blancs sont des cellules sanguines incolores, sphériques et nucléées. Les globules blancs ont généralement une capacité active à se déplacer, et ils peuvent migrer de l’intérieur des vaisseaux sanguins vers les extravasculaires, ou du tissu extravasculaire vers l’intravasculaire.</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>Rien ne peut m’empêcher de bouger ! Sauf pour les boîtes de Pétri!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>Les globules blancs sont amicaux (pas)</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>« Je suis une cellule, ne me mange pas! » cellules ———</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>« Je suis désolé, mais les virus bactériens et les cellules allogéniques sont mes ennemis. » ——— globules blancs</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>cellule </value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>bactéries </value> </data>
+<data name='Virus' xml:space='preserve'> <value>virus </value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>paramécie </value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>globules blancs </value> </data>
+<data name='Prion' xml:space='preserve'> <value>Prion</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>cellule cancéreuse</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>Staphylococcus aureus</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>Statut de développeur</value> </data>
+<data name='Click' xml:space='preserve'> <value>cliquer</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>pour modifier la carte</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>pour ouvrir le fichier de carte</value> </data>
+<data name='Me' xml:space='preserve'> <value>Je</value> </data>
+<data name='None' xml:space='preserve'> <value>non</value> </data>
+<data name='Version' xml:space='preserve'> <value>Version</value> </data>
+<data name='Production' xml:space='preserve'> <value>Produits</value> </data>
+<data name='Design' xml:space='preserve'> <value>concevoir</value> </data>
+<data name='Art' xml:space='preserve'> <value>beaux-arts</value> </data>
+<data name='Development' xml:space='preserve'> <value>exploitation</value> </data>
+<data name='Test' xml:space='preserve'> <value>Test</value> </data>
+<data name='Management' xml:space='preserve'> <value>gérer</value> </data>
+<data name='Promote' xml:space='preserve'> <value>populariser</value> </data>
+<data name='Legal' xml:space='preserve'> <value>Légal</value> </data>
+<data name='Local' xml:space='preserve'> <value>local</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>publication</value> </data>
+<data name='Community' xml:space='preserve'> <value>communauté</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>Merci</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>libre</value> </data>
+<data name='Reference' xml:space='preserve'> <value>citer</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>rétroaction</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>Le bois a plus</value> </data>
+<data name='Move' xml:space='preserve'> <value>Déplacer l’objectif</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>Rejoignez le mur</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>Rejoignez des alliés</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>Rejoignez l’ennemi</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>Manipulez le joystick ou appuyez sur la touche WASD pour déplacer la cellule</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>Pincez avec deux doigts ou appuyez sur la touche - + pour zoomer sur l’objectif</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>Faites glisser l’écran ou appuyez sur la touche ↑←↓→ pour déplacer l’objectif</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Ou appuyez sur la touche Q pour diviser en deux cellules</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>La recherche de nourriture rend les cellules plus grandes, et les grandes cellules peuvent manger les petites cellules</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>Mangez toutes les bactéries et battez-vous pour le corps dont cela dépend!!!</value> </data>
+<data name='Win' xml:space='preserve'> <value>victoire</value> </data>
+<data name='Lose' xml:space='preserve'> <value>échouer</value> </data>
+<data name='Pause' xml:space='preserve'> <value>Délai d’attente</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>Volume maximal</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>Quantité maximale</value> </data>
+<data name='Duration' xml:space='preserve'> <value>Heure</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Reprenez tout cela</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>pour passer au niveau suivant</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>pour continuer</value> </data>
+<data name='Speed' xml:space='preserve'> <value>vitesse</value> </data>
+<data name='Level' xml:space='preserve'> <value>volume</value> </data>
+<data name='Count' xml:space='preserve'> <value>quantité</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>Il n’y a pas de définition uniforme de la cellule, et la formulation la plus courante est que la cellule est l’unité structurelle et fonctionnelle de base de l’organisme.</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>C’était à l’origine une cellule ordinaire, mais on ne savait pas pourquoi elle avait soudainement la capacité d’engloutir d’autres cellules.</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>Eh bien, je ne peux pas penser à des paramètres intéressants</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>« Suis-je le légendaire 'Kun'? » Giant Quay dévore l’évolution ! cellules ———</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>« Tu n’es que le protagoniste » m'———</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>Les bactéries sont l’un des principaux taxons d’organismes et appartiennent au domaine bactérien. C’est aussi le plus abondant de tous les êtres vivants, avec un total estimé à environ 5×10^30. La forme des bactéries est assez diverse, principalement sphérique, en forme de bâtonnet et en spirale.</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>Les bactéries sont l’ennemi le plus commun, s’il vous plaît rendre le protagoniste plus grand que les bactéries et ensuite les dévorer!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>Comment le regarder n’est qu’une cellule d’une couleur différente</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>« Ce n’est pas savoureux du tout », ——— cellules</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>Un virus est un petit organisme de type non cellulaire à structure simple qui ne contient qu’un seul acide nucléique qui doit parasiter et se répliquer dans les cellules vivantes.</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>Les cellules qui mangent le virus s’infectent et deviennent la première cible du système immunitaire.</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>Toxique (au sens biologique)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>« Ce genre de chose vous rendra malade à l’estomac quand vous le mangerez?! » cellules ———</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>« Même mourir » ——— système immunitaire</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>Les sauterelles sont de petits protozoaires cylindriques dont le corps se compose d’une seule cellule et qui est un protozoaire unicellulaire hermaphrodite.</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>Le rayon de 0,3 mm de la sauterelle est tout simplement un géant en micro-organismes!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>Évidemment, ce sont des chaussures en herbe mais c’est fait en cercle</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>« Si grand! » cellules ———</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>Les globules blancs sont des cellules sanguines incolores, sphériques et nucléées. Les globules blancs ont généralement une capacité active à se déplacer, et ils peuvent migrer de l’intérieur des vaisseaux sanguins vers les extravasculaires, ou du tissu extravasculaire vers l’intravasculaire.</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>Rien ne peut m’empêcher de bouger ! Sauf pour les boîtes de Pétri!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>Les globules blancs sont amicaux (pas)</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>« Je suis une cellule, ne me mange pas! » cellules ———</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>« Je suis désolé, mais les virus bactériens et les cellules allogéniques sont mes ennemis. » ——— globules blancs</value> </data>
 
  </root>

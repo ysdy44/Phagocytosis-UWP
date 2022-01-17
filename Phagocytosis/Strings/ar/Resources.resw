@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>خلية </value></data>
-<data name='Bacteria' xml:space='preserve'><value>بكتيريا </value></data>
-<data name='Virus' xml:space='preserve'><value>فيروس </value></data>
-<data name='Paramecium' xml:space='preserve'><value>الباراميسيوم </value></data>
-<data name='Leukocyte' xml:space='preserve'><value>خلية الدم البيضاء </value></data>
-<data name='Prion' xml:space='preserve'><value>بريون</value></data>
-<data name='Cancer' xml:space='preserve'><value>الخلايا السرطانية</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>المكورات العنقودية أوريوس</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>حالة المطور</value></data>
-<data name='Click' xml:space='preserve'><value>نقر</value></data>
-<data name='ToEdit' xml:space='preserve'><value>لتحرير الخريطة</value></data>
-<data name='ToOpen' xml:space='preserve'><value>لفتح ملف الخريطة</value></data>
-<data name='Me' xml:space='preserve'><value>أنا</value></data>
-<data name='None' xml:space='preserve'><value>لا</value></data>
-<data name='Version' xml:space='preserve'><value>الإصدار</value></data>
-<data name='Production' xml:space='preserve'><value>منتجات</value></data>
-<data name='Design' xml:space='preserve'><value>اختط</value></data>
-<data name='Art' xml:space='preserve'><value>فنون جميلة</value></data>
-<data name='Development' xml:space='preserve'><value>استغلال</value></data>
-<data name='Test' xml:space='preserve'><value>اختبر</value></data>
-<data name='Management' xml:space='preserve'><value>أدار</value></data>
-<data name='Promote' xml:space='preserve'><value>تعميم</value></data>
-<data name='Legal' xml:space='preserve'><value>قانوني</value></data>
-<data name='Local' xml:space='preserve'><value>محلي</value></data>
-<data name='Publishing' xml:space='preserve'><value>نشر</value></data>
-<data name='Community' xml:space='preserve'><value>مجتمع</value></data>
-<data name='Thanks' xml:space='preserve'><value>شكرا</value></data>
-<data name='OpenSource' xml:space='preserve'><value>المصدر المفتوح</value></data>
-<data name='Reference' xml:space='preserve'><value>استشهد</value></data>
-<data name='Feedback' xml:space='preserve'><value>ردود الفعل</value></data>
-<data name='NoMore' xml:space='preserve'><value>الخشب لديه أكثر</value></data>
-<data name='Move' xml:space='preserve'><value>تحريك العدسة</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>انضم إلى الجدار</value></data>
-<data name='AddFriend' xml:space='preserve'><value>انضم إلى الحلفاء</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>انضم إلى العدو</value></data>
-<data name='Guider001' xml:space='preserve'><value>معالجة عصا التحكم أو الضغط على مفتاح WASD لتحريك الخلية</value></data>
-<data name='Guider002' xml:space='preserve'><value>قرصة بإصبعين أو اضغط على - + مفتاح لتكبير العدسة</value></data>
-<data name='Guider003' xml:space='preserve'><value>مرر الشاشة أو اضغط على مفتاح ↑←↓→ لتحريك العدسة</value></data>
-<data name='Guider004' xml:space='preserve'><value>أو اضغط على مفتاح Q لتقسيمه إلى خلية</value></data>
-<data name='Guider005' xml:space='preserve'><value>الأعلاف عن الطعام يجعل الخلايا أكبر، والخلايا الكبيرة يمكن أن تأكل الخلايا الصغيرة</value></data>
-<data name='Guider006' xml:space='preserve'><value>أكل جميع البكتيريا والكفاح من أجل الجسم الذي يعتمد عليه!!!</value></data>
-<data name='Lose' xml:space='preserve'><value>انتصار</value></data>
-<data name='Win' xml:space='preserve'><value>استعصى</value></data>
-<data name='Pause' xml:space='preserve'><value>المهلة</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>الحد الأقصى لحجم الصوت</value></data>
-<data name='MaxCount' xml:space='preserve'><value>الحد الأقصى للكمية</value></data>
-<data name='Duration' xml:space='preserve'><value>الوقت</value></data>
-<data name='ToRestart' xml:space='preserve'><value>أعتبر في كل مرة أخرى</value></data>
-<data name='ToNext' xml:space='preserve'><value>للقفز إلى المستوى التالي</value></data>
-<data name='ToPlay' xml:space='preserve'><value>للمتابعة</value></data>
-<data name='Speed' xml:space='preserve'><value>السرعه</value></data>
-<data name='Level' xml:space='preserve'><value>حجم</value></data>
-<data name='Count' xml:space='preserve'><value>كم</value></data>
-<data name='Cell001' xml:space='preserve'><value>تريسنوون يونيفوم دي فينتيون بنتسل، أندريت موركون مونفو موراتين إستاتسل إيست باسباستشيستروك تولار أنديفينك تيونال يونيت بينتو غارنيسيم.</value></data>
-<data name='Cell002' xml:space='preserve'><value>إيتفاس الأصلي أودينا ريسايل، باد إيتفاسنوت نورن وايت سادي هارتيت أبيليتي تون أطروحات.</value></data>
-<data name='Cell003' xml:space='preserve'><value>ويل، إليتسينك بن آني إنتريستين سيتينز</value></data>
-<data name='Cell004' xml:space='preserve'><value>هل أنا "كون" الأسطوري؟ رصيف عملاق يلتهم التطور! خلية ———</value></data>
-<data name='Cell005' xml:space='preserve'><value>أنت فقط بطل الرواية ——— لي</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>البكتيريا هي واحدة من التصنيف الرئيسي للكائنات الحية وتنتمي إلى المجال البكتيري. كما أنها الأكثر وفرة من بين جميع الكائنات الحية، مع ما يقدر بنحو 5×10 ^30. شكل البكتيريا متنوعة جدا، كروية أساسا، على شكل قضيب، ودوامة الشكل.</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>البكتيريا هي العدو الأكثر شيوعا، يرجى جعل بطل الرواية أكبر من البكتيريا ومن ثم تلتهم لهم!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>كيف ننظر إلى الأمر هو مجرد خلية من لون مختلف</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>انها ليست لذيذة على الإطلاق، ——— الخلايا</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>الفيروس هو كائن صغير بسيط التنظيم وغير خلايا يحتوي على حمض نواة واحد فقط يجب أن يتطفل ويتكاثر داخل الخلايا الحية.</value></data>
-<data name='Virus002' xml:space='preserve'><value>الخلايا التي تأكل الفيروس تصبح مصابة وتصبح الهدف الأول للجهاز المناعي.</value></data>
-<data name='Virus003' xml:space='preserve'><value>سامة (ذات أهمية بيولوجية)</value></data>
-<data name='Virus004' xml:space='preserve'><value>هذا النوع من الأشياء سوف تجعلك مريضا في معدتك عند أكله؟! خلايا ———</value></data>
-<data name='Virus005' xml:space='preserve'><value>لا، انها مجرد ستعمل يموت ——— الجهاز المناعي</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>الباراميسيوم صغير، بروتوزوا أسطواني مع جسم يتكون من خلية واحدة فقط وهو بروتوزوا وحيد الخلية، هيرمافروديت.</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>نصف قطر الباراميسيوم 0.3 ملم هو ببساطة عملاق في الكائنات الحية الدقيقة!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>من الواضح أنه باراميكيوم لكنه مصنوع في دائرة</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>كبير جدا! خلايا ———</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>وايتبلودس هي أليكروليس، سفيريكال، نووكليت دي برودسيلس. وايتبلود سيلز جينالارلي هاف أن أكتيف أبيلي تيتومو، أندر المطبخ الغربي الهجرة من ويسينبلو فيسيلستو إككلافالارس، أوفوروم إكسيسترافارلار تيسوتو إنترلا والأوعية الدموية.</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>نوتينغ وجبة ستوب مورفومي موفين! إكسيبترفور بيترييش!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>وايتبلودز أفري إندلي (نوت)</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>أنا (موزر)، لا تذيت! ——— تبيع</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>أنا مسوري، باد بوسباخت ريال فيروس أندي الونيكنكسيلز أريمينميس. ——— وايتبلود سيرز</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>خلية </value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>بكتيريا </value> </data>
+<data name='Virus' xml:space='preserve'> <value>فيروس </value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>الباراميسيوم </value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>خلية الدم البيضاء </value> </data>
+<data name='Prion' xml:space='preserve'> <value>بريون</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>الخلايا السرطانية</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>المكورات العنقودية أوريوس</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>حالة المطور</value> </data>
+<data name='Click' xml:space='preserve'> <value>نقر</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>لتحرير الخريطة</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>لفتح ملف الخريطة</value> </data>
+<data name='Me' xml:space='preserve'> <value>أنا</value> </data>
+<data name='None' xml:space='preserve'> <value>لا</value> </data>
+<data name='Version' xml:space='preserve'> <value>الإصدار</value> </data>
+<data name='Production' xml:space='preserve'> <value>منتجات</value> </data>
+<data name='Design' xml:space='preserve'> <value>اختط</value> </data>
+<data name='Art' xml:space='preserve'> <value>فنون جميلة</value> </data>
+<data name='Development' xml:space='preserve'> <value>استغلال</value> </data>
+<data name='Test' xml:space='preserve'> <value>اختبر</value> </data>
+<data name='Management' xml:space='preserve'> <value>أدار</value> </data>
+<data name='Promote' xml:space='preserve'> <value>تعميم</value> </data>
+<data name='Legal' xml:space='preserve'> <value>قانوني</value> </data>
+<data name='Local' xml:space='preserve'> <value>محلي</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>نشر</value> </data>
+<data name='Community' xml:space='preserve'> <value>مجتمع</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>شكرا</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>المصدر المفتوح</value> </data>
+<data name='Reference' xml:space='preserve'> <value>استشهد</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>ردود الفعل</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>الخشب لديه أكثر</value> </data>
+<data name='Move' xml:space='preserve'> <value>تحريك العدسة</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>انضم إلى الجدار</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>انضم إلى الحلفاء</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>انضم إلى العدو</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>معالجة عصا التحكم أو الضغط على مفتاح WASD لتحريك الخلية</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>قرصة بإصبعين أو اضغط على - + مفتاح لتكبير العدسة</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>مرر الشاشة أو اضغط على مفتاح ↑←↓→ لتحريك العدسة</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>أو اضغط على مفتاح Q لتقسيمه إلى خلية</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>الأعلاف عن الطعام يجعل الخلايا أكبر، والخلايا الكبيرة يمكن أن تأكل الخلايا الصغيرة</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>أكل جميع البكتيريا والكفاح من أجل الجسم الذي يعتمد عليه!!!</value> </data>
+<data name='Win' xml:space='preserve'> <value>انتصار</value> </data>
+<data name='Lose' xml:space='preserve'> <value>استعصى</value> </data>
+<data name='Pause' xml:space='preserve'> <value>المهلة</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>الحد الأقصى لحجم الصوت</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>الحد الأقصى للكمية</value> </data>
+<data name='Duration' xml:space='preserve'> <value>الوقت</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>أعتبر في كل مرة أخرى</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>للقفز إلى المستوى التالي</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>للمتابعة</value> </data>
+<data name='Speed' xml:space='preserve'> <value>السرعه</value> </data>
+<data name='Level' xml:space='preserve'> <value>حجم</value> </data>
+<data name='Count' xml:space='preserve'> <value>كم</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>تريسنوون يونيفوم دي فينتيون بنتسل، أندريت موركون مونفو موراتين إستاتسل إيست باسباستشيستروك تولار أنديفينك تيونال يونيت بينتو غارنيسيم.</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>إيتفاس الأصلي أودينا ريسايل، باد إيتفاسنوت نورن وايت سادي هارتيت أبيليتي تون أطروحات.</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>ويل، إليتسينك بن آني إنتريستين سيتينز</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>هل أنا "كون" الأسطوري؟ رصيف عملاق يلتهم التطور! خلية ———</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>أنت فقط بطل الرواية ——— لي</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>البكتيريا هي واحدة من التصنيف الرئيسي للكائنات الحية وتنتمي إلى المجال البكتيري. كما أنها الأكثر وفرة من بين جميع الكائنات الحية، مع ما يقدر بنحو 5×10 ^30. شكل البكتيريا متنوعة جدا، كروية أساسا، على شكل قضيب، ودوامة الشكل.</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>البكتيريا هي العدو الأكثر شيوعا، يرجى جعل بطل الرواية أكبر من البكتيريا ومن ثم تلتهم لهم!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>كيف ننظر إلى الأمر هو مجرد خلية من لون مختلف</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>انها ليست لذيذة على الإطلاق، ——— الخلايا</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>الفيروس هو كائن صغير بسيط التنظيم وغير خلايا يحتوي على حمض نواة واحد فقط يجب أن يتطفل ويتكاثر داخل الخلايا الحية.</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>الخلايا التي تأكل الفيروس تصبح مصابة وتصبح الهدف الأول للجهاز المناعي.</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>سامة (ذات أهمية بيولوجية)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>هذا النوع من الأشياء سوف تجعلك مريضا في معدتك عند أكله؟! خلايا ———</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>لا، انها مجرد ستعمل يموت ——— الجهاز المناعي</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>الباراميسيوم صغير، بروتوزوا أسطواني مع جسم يتكون من خلية واحدة فقط وهو بروتوزوا وحيد الخلية، هيرمافروديت.</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>نصف قطر الباراميسيوم 0.3 ملم هو ببساطة عملاق في الكائنات الحية الدقيقة!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>من الواضح أنه باراميكيوم لكنه مصنوع في دائرة</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>كبير جدا! خلايا ———</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>وايتبلودس هي أليكروليس، سفيريكال، نووكليت دي برودسيلس. وايتبلود سيلز جينالارلي هاف أن أكتيف أبيلي تيتومو، أندر المطبخ الغربي الهجرة من ويسينبلو فيسيلستو إككلافالارس، أوفوروم إكسيسترافارلار تيسوتو إنترلا والأوعية الدموية.</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>نوتينغ وجبة ستوب مورفومي موفين! إكسيبترفور بيترييش!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>وايتبلودز أفري إندلي (نوت)</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>أنا (موزر)، لا تذيت! ——— تبيع</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>أنا مسوري، باد بوسباخت ريال فيروس أندي الونيكنكسيلز أريمينميس. ——— وايتبلود سيرز</value> </data>
 
  </root>

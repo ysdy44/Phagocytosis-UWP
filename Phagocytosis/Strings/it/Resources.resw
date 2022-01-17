@@ -58,89 +58,87 @@
   <resheader name='writer'>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-
-
-<data name='$DisplayName' xml:space='preserve'><value>Phagocytosis</value></data>
-<data name='$Version' xml:space='preserve'><value>1.1.0</value></data>
-<data name='$GithubLink' xml:space='preserve'><value>https://github.com/ysdy44/Phagocytosis-UWP</value></data>
-<data name='$FeedbackLink' xml:space='preserve'><value>ysdy44@outlook.com</value></data>
-<data name='Cell' xml:space='preserve'><value>cellula </value></data>
-<data name='Bacteria' xml:space='preserve'><value>batteri </value></data>
-<data name='Virus' xml:space='preserve'><value>virus </value></data>
-<data name='Paramecium' xml:space='preserve'><value>paramecio </value></data>
-<data name='Leukocyte' xml:space='preserve'><value>globuli bianchi </value></data>
-<data name='Prion' xml:space='preserve'><value>Prione</value></data>
-<data name='Cancer' xml:space='preserve'><value>cellula tumorale</value></data>
-<data name='StaphylococcusAureus' xml:space='preserve'><value>Staphylococcus aureus</value></data>
-<data name='DeveloperMode' xml:space='preserve'><value>Stato di sviluppatore</value></data>
-<data name='Click' xml:space='preserve'><value>clic</value></data>
-<data name='ToEdit' xml:space='preserve'><value>per modificare la mappa</value></data>
-<data name='ToOpen' xml:space='preserve'><value>Per aprire il file della mappa</value></data>
-<data name='Me' xml:space='preserve'><value>Io</value></data>
-<data name='None' xml:space='preserve'><value>non</value></data>
-<data name='Version' xml:space='preserve'><value>Versione</value></data>
-<data name='Production' xml:space='preserve'><value>prodotti</value></data>
-<data name='Design' xml:space='preserve'><value>escogitare</value></data>
-<data name='Art' xml:space='preserve'><value>belle arti</value></data>
-<data name='Development' xml:space='preserve'><value>sfruttamento</value></data>
-<data name='Test' xml:space='preserve'><value>Test</value></data>
-<data name='Management' xml:space='preserve'><value>amministrare</value></data>
-<data name='Promote' xml:space='preserve'><value>popolarizzare</value></data>
-<data name='Legal' xml:space='preserve'><value>Legale</value></data>
-<data name='Local' xml:space='preserve'><value>locale</value></data>
-<data name='Publishing' xml:space='preserve'><value>pubblicazione</value></data>
-<data name='Community' xml:space='preserve'><value>comunità</value></data>
-<data name='Thanks' xml:space='preserve'><value>Grazie</value></data>
-<data name='OpenSource' xml:space='preserve'><value>open source</value></data>
-<data name='Reference' xml:space='preserve'><value>citare</value></data>
-<data name='Feedback' xml:space='preserve'><value>Valutazione</value></data>
-<data name='NoMore' xml:space='preserve'><value>Il legno ha di più</value></data>
-<data name='Move' xml:space='preserve'><value>Spostare l'obiettivo</value></data>
-<data name='AddRestricted' xml:space='preserve'><value>Unisciti al muro</value></data>
-<data name='AddFriend' xml:space='preserve'><value>Unisciti agli alleati</value></data>
-<data name='AddEnemy' xml:space='preserve'><value>Unisciti al nemico</value></data>
-<data name='Guider001' xml:space='preserve'><value>Manipolare il joystick o premere il tasto WASD per spostare la cella</value></data>
-<data name='Guider002' xml:space='preserve'><value>Pizzica con due dita o premi il tasto - + per ingrandire l'obiettivo</value></data>
-<data name='Guider003' xml:space='preserve'><value>Scorri lo schermo o premi il tasto ↑←↓→ per spostare l'obiettivo</value></data>
-<data name='Guider004' xml:space='preserve'><value>Oppure premi il tasto Q per dividere in due celle</value></data>
-<data name='Guider005' xml:space='preserve'><value>Il foraggiamento per il cibo rende le cellule più grandi e le cellule grandi possono mangiare le piccole cellule</value></data>
-<data name='Guider006' xml:space='preserve'><value>Mangia tutti i batteri e combatti per il corpo da cui dipende!!!</value></data>
-<data name='Lose' xml:space='preserve'><value>vittoria</value></data>
-<data name='Win' xml:space='preserve'><value>fallire</value></data>
-<data name='Pause' xml:space='preserve'><value>Time out</value></data>
-<data name='MaxLevel' xml:space='preserve'><value>Volume massimo</value></data>
-<data name='MaxCount' xml:space='preserve'><value>Quantità massima</value></data>
-<data name='Duration' xml:space='preserve'><value>Ore</value></data>
-<data name='ToRestart' xml:space='preserve'><value>Riprendi tutto da capo</value></data>
-<data name='ToNext' xml:space='preserve'><value>per passare al livello successivo</value></data>
-<data name='ToPlay' xml:space='preserve'><value>per continuare</value></data>
-<data name='Speed' xml:space='preserve'><value>velocità</value></data>
-<data name='Level' xml:space='preserve'><value>volume</value></data>
-<data name='Count' xml:space='preserve'><value>quantità</value></data>
-<data name='Cell001' xml:space='preserve'><value>Non esiste una definizione uniforme della cellula e la formulazione più comune è che la cellula è l'unità strutturale e funzionale di base dell'organismo.</value></data>
-<data name='Cell002' xml:space='preserve'><value>Originariamente era una cellula ordinaria, ma non si sapeva perché improvvisamente avesse la capacità di inghiottire altre cellule.</value></data>
-<data name='Cell003' xml:space='preserve'><value>Beh, non riesco a pensare a nessuna impostazione interessante</value></data>
-<data name='Cell004' xml:space='preserve'><value>Sono io il leggendario 'Kun'? Giant Quay divora l'evoluzione! celle ———</value></data>
-<data name='Cell005' xml:space='preserve'><value>Sei solo il protagonista mi ———</value></data>
-<data name='Bacteria001' xml:space='preserve'><value>I batteri sono uno dei principali taxa degli organismi e appartengono al dominio batterico. È anche il più abbondante di tutti gli esseri viventi, con un totale stimato di circa 5×10^30. La forma dei batteri è piuttosto varia, principalmente sferica, a forma di bastoncello e a forma di spirale.</value></data>
-<data name='Bacteria002' xml:space='preserve'><value>I batteri sono il nemico più comune, per favore rendi il protagonista più grande dei batteri e poi divorali!</value></data>
-<data name='Bacteria003' xml:space='preserve'><value>Come guardarlo è solo una cella di un colore diverso</value></data>
-<data name='Bacteria004' xml:space='preserve'><value>Non è affatto gustoso, ——— cellule</value></data>
-<data name='Bacteria005' xml:space='preserve'><value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value></data>
-<data name='Virus001' xml:space='preserve'><value>Un virus è un piccolo organismo non cellulare strutturato in modo semplice che contiene un solo acido nucleico che deve parassitarsi e replicarsi all'interno delle cellule viventi.</value></data>
-<data name='Virus002' xml:space='preserve'><value>Le cellule che mangiano il virus si infettano e diventano il primo bersaglio del sistema immunitario.</value></data>
-<data name='Virus003' xml:space='preserve'><value>Tossico (in senso biologico)</value></data>
-<data name='Virus004' xml:space='preserve'><value>Questo genere di cose ti farà star male allo stomaco quando lo mangi?! celle ———</value></data>
-<data name='Virus005' xml:space='preserve'><value>Anche morire ——— sistema immunitario</value></data>
-<data name='Paramecium001' xml:space='preserve'><value>Le cavallette sono piccoli protozoi cilindrici con un corpo costituito da una sola cellula ed è un protozoo unicellulare, ermafrodita.</value></data>
-<data name='Paramecium002' xml:space='preserve'><value>Il raggio di 0,3 mm della cavalletta è semplicemente un gigante nei microrganismi!</value></data>
-<data name='Paramecium003' xml:space='preserve'><value>Ovviamente, sono scarpe da erba ma è fatto in un cerchio</value></data>
-<data name='Paramecium004' xml:space='preserve'><value>Così grande! celle ———</value></data>
-<data name='Paramecium005' xml:space='preserve'><value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value></data>
-<data name='Leukocyte001' xml:space='preserve'><value>I globuli bianchi sono incolori, sferici, cellule del sangue nucleate. I globuli bianchi hanno generalmente una capacità attiva di muoversi e possono migrare dall'interno dei vasi sanguigni agli extravascolari o dal tessuto extravascolare all'intravascolare.</value></data>
-<data name='Leukocyte002' xml:space='preserve'><value>Niente può impedirmi di muovermi! Tranne che per le piastre di Petri!</value></data>
-<data name='Leukocyte003' xml:space='preserve'><value>I globuli bianchi sono amichevoli (non)</value></data>
-<data name='Leukocyte004' xml:space='preserve'><value>Sono una cellula, non mangiarmi! celle ———</value></data>
-<data name='Leukocyte005' xml:space='preserve'><value>Mi dispiace, ma sia i virus batterici che le cellule allogeniche sono i miei nemici. ——— Globuli bianchi</value></data>
+<data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
+<data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
+<data name='Cell' xml:space='preserve'> <value>cellula </value> </data>
+<data name='Bacteria' xml:space='preserve'> <value>batteri </value> </data>
+<data name='Virus' xml:space='preserve'> <value>virus </value> </data>
+<data name='Paramecium' xml:space='preserve'> <value>paramecio </value> </data>
+<data name='Leukocyte' xml:space='preserve'> <value>globuli bianchi </value> </data>
+<data name='Prion' xml:space='preserve'> <value>Prione</value> </data>
+<data name='Cancer' xml:space='preserve'> <value>cellula tumorale</value> </data>
+<data name='StaphylococcusAureus' xml:space='preserve'> <value>Staphylococcus aureus</value> </data>
+<data name='DeveloperMode' xml:space='preserve'> <value>Stato di sviluppatore</value> </data>
+<data name='Click' xml:space='preserve'> <value>clic</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>per modificare la mappa</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Per aprire il file della mappa</value> </data>
+<data name='Me' xml:space='preserve'> <value>Io</value> </data>
+<data name='None' xml:space='preserve'> <value>non</value> </data>
+<data name='Version' xml:space='preserve'> <value>Versione</value> </data>
+<data name='Production' xml:space='preserve'> <value>prodotti</value> </data>
+<data name='Design' xml:space='preserve'> <value>escogitare</value> </data>
+<data name='Art' xml:space='preserve'> <value>belle arti</value> </data>
+<data name='Development' xml:space='preserve'> <value>sfruttamento</value> </data>
+<data name='Test' xml:space='preserve'> <value>Test</value> </data>
+<data name='Management' xml:space='preserve'> <value>amministrare</value> </data>
+<data name='Promote' xml:space='preserve'> <value>popolarizzare</value> </data>
+<data name='Legal' xml:space='preserve'> <value>Legale</value> </data>
+<data name='Local' xml:space='preserve'> <value>locale</value> </data>
+<data name='Publishing' xml:space='preserve'> <value>pubblicazione</value> </data>
+<data name='Community' xml:space='preserve'> <value>comunità</value> </data>
+<data name='Thanks' xml:space='preserve'> <value>Grazie</value> </data>
+<data name='OpenSource' xml:space='preserve'> <value>open source</value> </data>
+<data name='Reference' xml:space='preserve'> <value>citare</value> </data>
+<data name='Feedback' xml:space='preserve'> <value>Valutazione</value> </data>
+<data name='NoMore' xml:space='preserve'> <value>Il legno ha di più</value> </data>
+<data name='Move' xml:space='preserve'> <value>Spostare l'obiettivo</value> </data>
+<data name='AddRestricted' xml:space='preserve'> <value>Unisciti al muro</value> </data>
+<data name='AddFriend' xml:space='preserve'> <value>Unisciti agli alleati</value> </data>
+<data name='AddEnemy' xml:space='preserve'> <value>Unisciti al nemico</value> </data>
+<data name='Guider001' xml:space='preserve'> <value>Manipolare il joystick o premere il tasto WASD per spostare la cella</value> </data>
+<data name='Guider002' xml:space='preserve'> <value>Pizzica con due dita o premi il tasto - + per ingrandire l'obiettivo</value> </data>
+<data name='Guider003' xml:space='preserve'> <value>Scorri lo schermo o premi il tasto ↑←↓→ per spostare l'obiettivo</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Oppure premi il tasto Q per dividere in due celle</value> </data>
+<data name='Guider005' xml:space='preserve'> <value>Il foraggiamento per il cibo rende le cellule più grandi e le cellule grandi possono mangiare le piccole cellule</value> </data>
+<data name='Guider006' xml:space='preserve'> <value>Mangia tutti i batteri e combatti per il corpo da cui dipende!!!</value> </data>
+<data name='Win' xml:space='preserve'> <value>vittoria</value> </data>
+<data name='Lose' xml:space='preserve'> <value>fallire</value> </data>
+<data name='Pause' xml:space='preserve'> <value>Time out</value> </data>
+<data name='MaxLevel' xml:space='preserve'> <value>Volume massimo</value> </data>
+<data name='MaxCount' xml:space='preserve'> <value>Quantità massima</value> </data>
+<data name='Duration' xml:space='preserve'> <value>Ore</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Riprendi tutto da capo</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>per passare al livello successivo</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>per continuare</value> </data>
+<data name='Speed' xml:space='preserve'> <value>velocità</value> </data>
+<data name='Level' xml:space='preserve'> <value>volume</value> </data>
+<data name='Count' xml:space='preserve'> <value>quantità</value> </data>
+<data name='Cell001' xml:space='preserve'> <value>Non esiste una definizione uniforme della cellula e la formulazione più comune è che la cellula è l'unità strutturale e funzionale di base dell'organismo.</value> </data>
+<data name='Cell002' xml:space='preserve'> <value>Originariamente era una cellula ordinaria, ma non si sapeva perché improvvisamente avesse la capacità di inghiottire altre cellule.</value> </data>
+<data name='Cell003' xml:space='preserve'> <value>Beh, non riesco a pensare a nessuna impostazione interessante</value> </data>
+<data name='Cell004' xml:space='preserve'> <value>Sono io il leggendario 'Kun'? Giant Quay divora l'evoluzione! celle ———</value> </data>
+<data name='Cell005' xml:space='preserve'> <value>Sei solo il protagonista mi ———</value> </data>
+<data name='Bacteria001' xml:space='preserve'> <value>I batteri sono uno dei principali taxa degli organismi e appartengono al dominio batterico. È anche il più abbondante di tutti gli esseri viventi, con un totale stimato di circa 5×10^30. La forma dei batteri è piuttosto varia, principalmente sferica, a forma di bastoncello e a forma di spirale.</value> </data>
+<data name='Bacteria002' xml:space='preserve'> <value>I batteri sono il nemico più comune, per favore rendi il protagonista più grande dei batteri e poi divorali!</value> </data>
+<data name='Bacteria003' xml:space='preserve'> <value>Come guardarlo è solo una cella di un colore diverso</value> </data>
+<data name='Bacteria004' xml:space='preserve'> <value>Non è affatto gustoso, ——— cellule</value> </data>
+<data name='Bacteria005' xml:space='preserve'> <value>"All I got was 6 calories in a nice crunch" ——— Bear Grylls</value> </data>
+<data name='Virus001' xml:space='preserve'> <value>Un virus è un piccolo organismo non cellulare strutturato in modo semplice che contiene un solo acido nucleico che deve parassitarsi e replicarsi all'interno delle cellule viventi.</value> </data>
+<data name='Virus002' xml:space='preserve'> <value>Le cellule che mangiano il virus si infettano e diventano il primo bersaglio del sistema immunitario.</value> </data>
+<data name='Virus003' xml:space='preserve'> <value>Tossico (in senso biologico)</value> </data>
+<data name='Virus004' xml:space='preserve'> <value>Questo genere di cose ti farà star male allo stomaco quando lo mangi?! celle ———</value> </data>
+<data name='Virus005' xml:space='preserve'> <value>Anche morire ——— sistema immunitario</value> </data>
+<data name='Paramecium001' xml:space='preserve'> <value>Le cavallette sono piccoli protozoi cilindrici con un corpo costituito da una sola cellula ed è un protozoo unicellulare, ermafrodita.</value> </data>
+<data name='Paramecium002' xml:space='preserve'> <value>Il raggio di 0,3 mm della cavalletta è semplicemente un gigante nei microrganismi!</value> </data>
+<data name='Paramecium003' xml:space='preserve'> <value>Ovviamente, sono scarpe da erba ma è fatto in un cerchio</value> </data>
+<data name='Paramecium004' xml:space='preserve'> <value>Così grande! celle ———</value> </data>
+<data name='Paramecium005' xml:space='preserve'> <value>“众所周知，草履虫也叫作K423” ——— 火星鸽子</value> </data>
+<data name='Leukocyte001' xml:space='preserve'> <value>I globuli bianchi sono incolori, sferici, cellule del sangue nucleate. I globuli bianchi hanno generalmente una capacità attiva di muoversi e possono migrare dall'interno dei vasi sanguigni agli extravascolari o dal tessuto extravascolare all'intravascolare.</value> </data>
+<data name='Leukocyte002' xml:space='preserve'> <value>Niente può impedirmi di muovermi! Tranne che per le piastre di Petri!</value> </data>
+<data name='Leukocyte003' xml:space='preserve'> <value>I globuli bianchi sono amichevoli (non)</value> </data>
+<data name='Leukocyte004' xml:space='preserve'> <value>Sono una cellula, non mangiarmi! celle ———</value> </data>
+<data name='Leukocyte005' xml:space='preserve'> <value>Mi dispiace, ma sia i virus batterici che le cellule allogeniche sono i miei nemici. ——— Globuli bianchi</value> </data>
 
  </root>

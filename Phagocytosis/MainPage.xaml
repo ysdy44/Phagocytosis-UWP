@@ -103,33 +103,76 @@
                     <Flyout Placement="Full">
                         <Flyout.FlyoutPresenterStyle>
                             <Style TargetType="FlyoutPresenter">
-                                <Setter Property="Padding" Value="12"/>
-                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="BorderThickness" Value="0,1"/>
                                 <Setter Property="BorderBrush" Value="White"/>
-                                <Setter Property="MinWidth" Value="120"/>
-                                <Setter Property="MaxWidth" Value="626"/>
-                                <Setter Property="Width" Value="Auto"/>
                                 <Setter Property="Background" Value="{StaticResource AppAccentBrush}"/>
+                                
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="Margin" Value="0"/>
+                                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+
+                                <Setter Property="MinHeight" Value="{ThemeResource FlyoutThemeMinWidth}" />
+                                <Setter Property="MaxHeight" Value="{ThemeResource FlyoutThemeMaxWidth}" />
+                                <Setter Property="MinWidth" Value="{ThemeResource FlyoutThemeMinHeight}" />
+                                <Setter Property="MaxWidth" Value="2000" />
+                 
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="FlyoutPresenter">
+                                            <Border
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                CornerRadius="{TemplateBinding CornerRadius}"
+                                                Padding="{ThemeResource FlyoutBorderThemePadding}">
+                                                <ContentPresenter Content="{TemplateBinding Content}"
+                                                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                                  ContentTransitions="{TemplateBinding ContentTransitions}"
+                                                                  Margin="{TemplateBinding Padding}"
+                                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
                             </Style>
                         </Flyout.FlyoutPresenterStyle>
                         <ListView x:Name="ListView" 
                                   IsItemClickEnabled="True"                    
                                   SelectedIndex="{x:Bind ViewModel.SelectedIndex, Mode=TwoWay}"                    
                                   ItemsSource="{x:Bind ViewModel.Chapters}"                    
-                                  FooterTemplate="{ThemeResource AppListViewBaseFooter}"
-                                  Style="{x:Null}">
+                                  >
 
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="5"/>
+                                    <controls:DualStackPanel/>
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
 
+                            <ListView.Style>
+                                <Style TargetType="ListView">
+                                    <Setter Property="Padding" Value="32"/>
+
+                                    <Setter Property="ScrollViewer.IsHorizontalRailEnabled" Value="True"/>
+                                    <Setter Property="ScrollViewer.IsVerticalRailEnabled" Value="False"/>
+                                    <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Enabled"/>
+                                    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+                                    <Setter Property="ScrollViewer.VerticalScrollMode" Value="Disabled"/>
+                                    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+                                    
+                                    <Setter Property="ScrollViewer.ZoomMode" Value="Disabled"/>
+                                    <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False"/>
+                                    <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True"/>
+                                </Style>
+                            </ListView.Style>
+
                             <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
-                                    <Setter Property="Padding" Value="6"/>
-                                    <Setter Property="Width" Value="120"/>
-                                    <Setter Property="Height" Value="80"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                    <Setter Property="Margin" Value="0"/>
+                                    <Setter Property="Width" Value="Auto"/>
+                                    <Setter Property="Height" Value="Auto"/>
                                     <Setter Property="FontSize" Value="32"/>
                                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                                     <Setter Property="VerticalContentAlignment" Value="Stretch"/>
@@ -137,28 +180,60 @@
                             </ListView.ItemContainerStyle>
 
                             <ListView.ItemTemplate>
-                                <DataTemplate x:DataType="viewmodels:ChapterViewItem">
-                                    <Border>
-                                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                                            <FontIcon Glyph="&#xE003;" FontSize="48" FontFamily="Segoe MDL2 Assets"     
-                                                      Visibility="{x:Bind CurrentVisibility, Mode=OneWay}"/>
-                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                                                       Text="{x:Bind Index, Mode=OneWay}"
-                                                       Visibility="{x:Bind UnlockVisibility, Mode=OneWay}"/>
-                                            <FontIcon Glyph="&#x1F512;" FontSize="32" FontWeight="Bold" FontFamily="Segoe UI Symbol"
-                                                      Visibility="{x:Bind LockVisibility, Mode=OneWay}"/>
-                                        </Grid>
-                                    </Border>
+                                <!--DataTemplate-->
+                                <DataTemplate x:Name="ChapterTemplate" x:DataType="viewmodels:ChapterViewItem">
+                                    <Grid BorderThickness="1" BorderBrush="White" Background="Transparent">
+                                        
+                                        <Border BorderThickness="2" BorderBrush="White"                              
+                                                Visibility="{x:Bind CurrentVisibility, Mode=OneWay}"/>
+                                    
+                                        <TextBlock FontSize="22" FontWeight="Bold"                        
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"                        
+                                                   Text="{x:Bind Index, Mode=OneWay}"                        
+                                                   Visibility="{x:Bind UnlockVisibility, Mode=OneWay}"/>
+                                       
+                                        <FontIcon Glyph="&#x1F512;" FontSize="32" FontWeight="Bold" FontFamily="Segoe UI Symbol"
+                                                  Visibility="{x:Bind LockVisibility, Mode=OneWay}"/>
+
+                                        <ItemsControl Margin="4" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                                      ItemsSource="{x:Bind FriendSprites, Mode=OneWay}"  
+                                                      Visibility="{x:Bind UnlockVisibility, Mode=OneWay}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal"/>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <FontIcon Width="8" Height="8" FontSize="4" Glyph="&#xF63C;" FontFamily="Segoe MDL2 Assets"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                        <ItemsControl Margin="4" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                                      ItemsSource="{x:Bind EnemySprites, Mode=OneWay}"  
+                                                      Visibility="{x:Bind UnlockVisibility, Mode=OneWay}">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal"/>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <FontIcon Width="8" Height="8" FontSize="4" Glyph="&#xF63C;" FontFamily="Segoe MDL2 Assets"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                        
+                                    </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
 
-                            <ListView.Header>
+                            <ListView.Footer>
                                 <Button x:Name="BackButton">
-                                    <FontIcon Glyph="&#xE112;" FontSize="32" FontFamily="Segoe UI Symbol"
-                                              MirroredWhenRightToLeft="True"/>
+                                    <FontIcon Glyph="&#xE10A;" FontSize="32" FontFamily="Segoe UI Symbol"/>
                                 </Button>
-                            </ListView.Header>
-
+                            </ListView.Footer>
+                            
                         </ListView>
                     </Flyout>
                 </Button.Flyout>

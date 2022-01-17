@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections;
+using System.ComponentModel;
+using System.Linq;
 using Windows.UI.Xaml;
 
 namespace Phagocytosis.ViewModels
@@ -14,6 +16,9 @@ namespace Phagocytosis.ViewModels
         public Visibility UnlockVisibility => this.IsEnabled ? Visibility.Visible : Visibility.Collapsed;
         public Visibility LockVisibility => this.IsEnabled ? Visibility.Collapsed : Visibility.Visible;
         public Visibility CurrentVisibility => this.IsCurrent ? Visibility.Visible : Visibility.Collapsed;
+
+        public IEnumerable FriendSprites => this.Chapter?.FriendSprites == null ? null : Enumerable.Range(0, this.Chapter.FriendSprites.Count());
+        public IEnumerable EnemySprites => this.Chapter?.EnemySprites == null ? null : Enumerable.Range(0, this.Chapter.EnemySprites.Count());
 
         public int Index
         {

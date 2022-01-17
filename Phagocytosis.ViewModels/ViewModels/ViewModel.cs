@@ -21,34 +21,6 @@ namespace Phagocytosis.ViewModels
         }
         private int selectedIndex;
 
-        public int GroupIndex
-        {
-            get
-            {
-                Windows.Storage.ApplicationDataContainer container = Windows.Storage.ApplicationData.Current.LocalSettings;
-                if (container.Values.ContainsKey("ChaptersGroupIndex"))
-                {
-                    if (container.Values["ChaptersGroupIndex"] is int value)
-                    {
-                        return value;
-                    }
-                }
-                return 0;
-            }
-            set
-            {
-                Windows.Storage.ApplicationDataContainer container = Windows.Storage.ApplicationData.Current.LocalSettings;
-                container.Values["ChaptersGroupIndex"] = value;
-
-                this.OnPropertyChanged(nameof(GroupIndex)); // Notify
-
-                foreach (ChapterViewItem item in this.Chapters)
-                {
-                    item.GroupIndex = value;
-                }
-            }
-        }
-
 
         public int Count => this.Chapters.Count;
         public ChapterViewItem CurrentChapter => this.Chapters[this.SelectedIndex];
@@ -64,7 +36,7 @@ namespace Phagocytosis.ViewModels
             index++;
             if (index >= this.Chapters.Count) return false;
 
-            if (this.SelectedIndex > this.GroupIndex) return false;
+            if (this.SelectedIndex > this.GetGroupIndex()) return false;
             this.SelectedIndex = index;
             return true;
         }
@@ -77,7 +49,7 @@ namespace Phagocytosis.ViewModels
             index++;
             if (index >= this.Chapters.Count) return false;
 
-            if (this.GroupIndex < index) this.GroupIndex = index;
+            if (this.GetGroupIndex() < index) this.SetGroupIndex(index);
             return true;
         }
 
@@ -86,7 +58,7 @@ namespace Phagocytosis.ViewModels
         {
             this.Chapters.Clear();
 
-            int groupIndex = this.GroupIndex;
+            int groupIndex = this.GetGroupIndex();
             foreach (Chapter item in chapters)
             {
                 this.Chapters.Add(new ChapterViewItem
@@ -103,9 +75,34 @@ namespace Phagocytosis.ViewModels
                 chapter.Chapter.IsGuider = i == 0;
             }
 
-            this.selectedIndex = 0;
+            this.selectedIndex = groupIndex;
             this.OnPropertyChanged(nameof(SelectedIndex)); // Notify
             this.OnPropertyChanged(nameof(Count)); // Notify
+        }
+
+
+        public int GetGroupIndex()
+        {
+            Windows.Storage.ApplicationDataContainer container = Windows.Storage.ApplicationData.Current.LocalSettings;
+            if (container.Values.ContainsKey("ChaptersGroupIndex"))
+            {
+                if (container.Values["ChaptersGroupIndex"] is int value)
+                {
+                    return value;
+                }
+            }
+            return 0;
+        }
+
+        public void SetGroupIndex(int value)
+        {
+            Windows.Storage.ApplicationDataContainer container = Windows.Storage.ApplicationData.Current.LocalSettings;
+            container.Values["ChaptersGroupIndex"] = value;
+
+            foreach (ChapterViewItem item in this.Chapters)
+            {
+                item.GroupIndex = value;
+            }
         }
 
 

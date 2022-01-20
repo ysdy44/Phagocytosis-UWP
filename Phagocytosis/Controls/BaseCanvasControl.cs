@@ -107,7 +107,7 @@ namespace Phagocytosis.Controls
             }
         }
 
-        private float Clamp(float value) => Math.Max(0.1f, Math.Min(10f, value));
+        private float Clamp(float value) => Math.Max(1f, Math.Min(2f, value));
         public void ZoomIn() => this.Scale2 = this.Clamp(this.Scale2 * 1.1f);
         public void ZoomOut() => this.Scale2 = this.Clamp(this.Scale2 / 1.1f);
 

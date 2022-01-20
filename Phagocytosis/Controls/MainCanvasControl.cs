@@ -289,38 +289,46 @@ namespace Phagocytosis.Controls
 
 
                 // Gamepad
+                foreach (Windows.Gaming.Input.Gamepad item in Windows.Gaming.Input.Gamepad.Gamepads)
                 {
-                    if (Gamepad.Instance.IsGamepad)
-                    {
-                        Windows.Gaming.Input.GamepadReading reading = Gamepad.Instance.GetReading(this.Direction);
-                        switch (reading.Buttons)
-                        {
-                            case Windows.Gaming.Input.GamepadButtons.Menu:
-                                this.IsGamepadButtonsMenu = true;
-                                break;
-                            case Windows.Gaming.Input.GamepadButtons.X:
-                                this.Player.Dividing();
-                                break;
-                            default:
-                                break;
-                        }
+                    Windows.Gaming.Input.GamepadReading reading = item.GetCurrentReading();
 
-                        float lx = (float)reading.LeftThumbstickX;
-                        float ly = (float)reading.LeftThumbstickY;
-                        float rx = (float)reading.RightThumbstickX;
-                        float ry = (float)reading.RightThumbstickY;
-                        switch (this.Direction)
-                        {
-                            case FlowDirection.LeftToRight:
-                                this.Player.Velocity = new Vector2(lx, -ly);
-                                this.Move(new Vector2(-rx, ry));
-                                break;
-                            case FlowDirection.RightToLeft:
-                                this.Player.Velocity = new Vector2(-lx, -ly);
-                                this.Move(new Vector2(rx, ry));
-                                break;
-                        }
+                    switch (reading.Buttons)
+                    {
+                        case Windows.Gaming.Input.GamepadButtons.Menu:
+                            this.IsGamepadButtonsMenu = true;
+                            break;
+                        case Windows.Gaming.Input.GamepadButtons.X:
+                            this.Player.Dividing();
+                            break;
+                        case Windows.Gaming.Input.GamepadButtons.LeftShoulder:
+                            base.ZoomIn();
+                            break;
+                        case Windows.Gaming.Input.GamepadButtons.RightShoulder:
+                            base.ZoomOut();
+                            break;
+                        default:
+                            break;
                     }
+
+
+                    float lx = (float)reading.LeftThumbstickX;
+                    float ly = (float)reading.LeftThumbstickY;
+                    float rx = (float)reading.RightThumbstickX;
+                    float ry = (float)reading.RightThumbstickY;
+                    switch (this.Direction)
+                    {
+                        case FlowDirection.LeftToRight:
+                            this.Player.Velocity = new Vector2(lx, -ly);
+                            this.Move(new Vector2(-rx, ry));
+                            break;
+                        case FlowDirection.RightToLeft:
+                            this.Player.Velocity = new Vector2(-lx, -ly);
+                            this.Move(new Vector2(rx, ry));
+                            break;
+                    }
+
+                    break;
                 }
 
 

@@ -74,6 +74,7 @@ namespace Phagocytosis.Controls
 
         #endregion
 
+        public bool IsResizing { get; set; }
         public FlowDirection Direction { private get; set; }
         bool IsGamepadButtonsMenu;
         readonly CanvasStopwatch Stopwatch = new CanvasStopwatch();
@@ -165,8 +166,10 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Draw += (sender, args) =>
             {
+                if (this.IsResizing) return;
                 if (this.HasCreateResources == false) return;
                 if (this.LoadingFromProject) return;
+
                 args.DrawingSession.Transform = this.Transform;
 
 
@@ -280,6 +283,7 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Update += (sender, args) =>
             {
+                if (this.IsResizing) return;
                 if (this.HasCreateResources == false) return;
                 if (this.LoadingFromProject) return;
 

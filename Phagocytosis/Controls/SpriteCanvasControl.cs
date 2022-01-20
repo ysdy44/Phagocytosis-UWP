@@ -45,6 +45,7 @@ namespace Phagocytosis.Controls
 
         #endregion
 
+        public bool IsResizing { get; set; }
         CanvasAnimatedControl CanvasControl = new CanvasAnimatedControl
         {
             Paused = false,
@@ -91,6 +92,9 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Draw += (sender, args) =>
             {
+                if (this.IsResizing) return;
+                if (this.BugMap.IsResizing) return;
+
                 Spriter sprite = this.Sprites[this.Index];
                 CanvasCommandList renderTarget = new CanvasCommandList(this.CanvasControl);
                 using (CanvasDrawingSession ds = renderTarget.CreateDrawingSession())
@@ -108,6 +112,9 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Update += (sender, args) =>
             {
+                if (this.IsResizing) return;
+                if (this.BugMap.IsResizing) return;
+
                 float totalTime = (float)args.Timing.TotalTime.TotalMilliseconds;
                 float radians = totalTime / 360f / 4f;
                 Vector2 position = this.RotateConverter(radians);

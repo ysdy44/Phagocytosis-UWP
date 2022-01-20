@@ -24,6 +24,7 @@ namespace Phagocytosis.Controls
         private Spriter Player;
         readonly BugMap BugMap = new BugMap(200, 200);
 
+        public bool IsResizing { get; set; }
         CanvasAnimatedControl CanvasControl = new CanvasAnimatedControl
         {
             Paused = false,
@@ -60,7 +61,9 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Draw += (sender, args) =>
             {
+                if (this.IsResizing) return;
                 if (this.BugMap.IsResizing) return;
+                if (this.Player == null) return;
 
                 CanvasCommandList renderTarget = new CanvasCommandList(this.CanvasControl);
                 using (CanvasDrawingSession ds = renderTarget.CreateDrawingSession())
@@ -78,6 +81,7 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.Update += (sender, args) =>
             {
+                if (this.IsResizing) return;
                 if (this.BugMap.IsResizing) return;
                 if (this.Player == null) return;
 

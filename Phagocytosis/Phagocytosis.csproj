@@ -134,6 +134,7 @@
     <Compile Include="Controls\DualStackPanel.cs" />
     <Compile Include="Controls\EditCanvasControl.cs" />
     <Compile Include="Controls\EditType.cs" />
+    <Compile Include="Controls\MainCanvasControl.Construct.cs" />
     <Compile Include="Controls\MainCanvasControl.cs" />
     <Compile Include="Controls\RecordEventArgs.cs" />
     <Compile Include="Controls\ScoredEventArgs.cs" />

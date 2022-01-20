@@ -26,7 +26,9 @@
         <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
 
         <!--CanvasControl-->
-        <controls:EditCanvasControl x:Name="CanvasControl" />
+        <controls:EditCanvasControl x:Name="CanvasControl"
+                Width="{x:Bind ViewModel.WindowWidth, Mode=OneWay}"
+                Height="{x:Bind ViewModel.WindowHeight, Mode=OneWay}"/>
 
         <!--Developer-->
         <ListView x:Name="ZoomListView" VerticalAlignment="Top"

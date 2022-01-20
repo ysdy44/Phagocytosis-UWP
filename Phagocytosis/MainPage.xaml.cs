@@ -36,6 +36,9 @@ namespace Phagocytosis
                 if (this.ViewModel.Chapters.Count != 0) return;
                 IEnumerable<Chapter> chapters = await XML.ConstructChaptersFile();
                 this.ViewModel.LoadFromProject(chapters);
+
+                this.ViewModel.UnregisteLayout();
+                this.ViewModel.RegisteLayout();
             };
 
             this.BackButton.Click += (s, e) => this.PlayButton.Flyout.Hide();

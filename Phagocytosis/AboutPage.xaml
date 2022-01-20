@@ -26,7 +26,10 @@
         <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
 
         <!--CanvasControl-->
-        <controls:BackgroundCanvasControl x:Name="CanvasControl" />
+        <controls:BackgroundCanvasControl x:Name="CanvasControl"
+                IsResizing="{x:Bind ViewModel.IsResizing, Mode=OneWay}"
+                Width="{x:Bind ViewModel.WindowWidth, Mode=OneWay}"
+                Height="{x:Bind ViewModel.WindowHeight, Mode=OneWay}"/>
 
 
         <ScrollViewer x:Name="ScrollViewer">

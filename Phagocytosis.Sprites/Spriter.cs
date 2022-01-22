@@ -70,11 +70,13 @@ namespace Phagocytosis.Sprites
 
         public void Render()
         {
-            CellRenderTarget render = this.RenderCore();
-            this.Nuvleus.Dispose();
-            this.Nuvleus = render.Nuvleus;
-            this.Cytoplasm.Dispose();
-            this.Cytoplasm = render.Cytoplasm;
+            using (this.Nuvleus)
+            using (this.Cytoplasm)
+            {
+                CellRenderTarget render = this.RenderCore();
+                this.Nuvleus = render.Nuvleus;
+                this.Cytoplasm = render.Cytoplasm;
+            }
         }
         private CellRenderTarget RenderCore()
         {

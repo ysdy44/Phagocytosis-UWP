@@ -20,6 +20,7 @@ namespace Phagocytosis
         ViewModel ViewModel => App.ViewModel;
 
         //@Converter
+        private Symbol BooleanToFullScreenConverter(bool value) => value ? Symbol.FullScreen : Symbol.BackToWindow;
         private Symbol BooleanToMuteConverter(bool value) => value ? Symbol.Mute : Symbol.Volume;
 
         //@Construct
@@ -42,6 +43,15 @@ namespace Phagocytosis
             };
 
             this.BackButton.Click += (s, e) => this.PlayButton.Flyout.Hide();
+            this.FullScreenButton.Click += (s, e) =>
+            {
+                if (this.ApplicationView.IsFullScreenMode)
+                    this.ApplicationView.ExitFullScreenMode();
+                else
+                    this.ApplicationView.TryEnterFullScreenMode();
+
+                this.FullScreenIcon.Symbol = this.BooleanToFullScreenConverter(!this.ApplicationView.IsFullScreenMode);
+            };
             this.MuteButton.Click += (s, e) => this.ViewModel.IsMuted = !this.ViewModel.IsMuted;
             this.AboutButton.Click += (s, e) => base.Frame.Navigate(typeof(AboutPage));
             this.LibraryButton.Click += (s, e) => base.Frame.Navigate(typeof(LibraryPage));

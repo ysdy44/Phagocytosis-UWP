@@ -33,25 +33,25 @@ namespace Phagocytosis.Controls
                         // Delegate
                         this.Scored?.Invoke(this, new ScoredEventArgs
                         {
-                            FriendSpritesSumLevel = this.FriendSprites.Sum(a => a.Level),
-                            EnemySpritesSumLevel = this.EnemySprites.Sum(a => a.Level)
+                            FriendSpritesSumLevel = base.FriendSprites.Sum(a => a.Level),
+                            EnemySpritesSumLevel = base.EnemySprites.Sum(a => a.Level)
                         });
                         // Delegate
                         this.Record?.Invoke(this, new RecordEventArgs
                         {
-                            FriendSpritesMaxLevel = this.FriendSprites.Max(a => a.Level),
-                            FriendSpritesCount = this.FriendSprites.Count,
+                            FriendSpritesMaxLevel = base.FriendSprites.Max(a => a.Level),
+                            FriendSpritesCount = base.FriendSprites.Count,
                             TotalTime = this.Stopwatch.TotalTime()
                         });
                         break;
                     case PlayState.Loser:
                         this.FriendsCount = 0;
-                        this.EnemysCount = this.EnemySprites.Sum(a => a.Level);
+                        this.EnemysCount = base.EnemySprites.Sum(a => a.Level);
                         this.Pause();
                         this.GameOver?.Invoke(this, PlayState.Loser); // Delegate
                         break;
                     case PlayState.Winner:
-                        this.FriendsCount = this.FriendSprites.Sum(a => a.Level);
+                        this.FriendsCount = base.FriendSprites.Sum(a => a.Level);
                         this.EnemysCount = 0;
                         this.Pause();
                         this.GameOver?.Invoke(this, PlayState.Winner); // Delegate
@@ -72,9 +72,9 @@ namespace Phagocytosis.Controls
                         float space = e.GetCurrentPoint(this).Properties.MouseWheelDelta;
 
                         if (space > 0)
-                            this.ZoomIn();
+                            base.ZoomIn();
                         else
-                            this.ZoomOut();
+                            base.ZoomOut();
                         break;
                 }
             };
@@ -98,7 +98,7 @@ namespace Phagocytosis.Controls
                 this.EnemysCount = chapter.EnemySprites.Sum(a => a.Level);
 
                 base.Load(chapter);
-                this.Player = this.FriendSprites.First(c => c.Type == SpriteType.Player).Rebirth();
+                this.Player = base.FriendSprites.First(c => c.Type == SpriteType.Player).Rebirth();
 
                 this.Stopwatch.Restart();
                 this.Play();
@@ -194,26 +194,26 @@ namespace Phagocytosis.Controls
 
         private void NewCamera(Vector2 position1, Vector2 position2, float radius2)
         {
-            Vector2 screenPosition1 = Vector2.Transform(position1, this.Transform);
-            Vector2 screenPosition2 = Vector2.Transform(position2, this.Transform);
-            float screenRadius = radius2 * this.Scale2;
+            Vector2 screenPosition1 = Vector2.Transform(position1, base.Transform);
+            Vector2 screenPosition2 = Vector2.Transform(position2, base.Transform);
+            float screenRadius = radius2 * base.Scale2;
 
             if (screenPosition2.X > screenRadius)
             {
                 if (screenPosition2.Y > screenRadius)
                 {
-                    if (screenPosition2.X < this.Center.X * 2 - screenRadius)
+                    if (screenPosition2.X < base.Center.X * 2 - screenRadius)
                     {
-                        if (screenPosition2.Y < this.Center.Y * 2 - screenRadius)
+                        if (screenPosition2.Y < base.Center.Y * 2 - screenRadius)
                         {
-                            this.Position -= screenPosition1 - screenPosition2;
+                            base.Position -= screenPosition1 - screenPosition2;
                             return;
                         }
                     }
                 }
             }
 
-            this.Position = Vector2.Zero;
+            base.Position = Vector2.Zero;
         }
 
     }

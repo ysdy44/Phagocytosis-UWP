@@ -43,8 +43,8 @@ namespace Phagocytosis.Controls
                 if (e.NewSize == Size.Empty) return;
                 if (e.NewSize == e.PreviousSize) return;
 
-                int width = (int)this.ActualWidth;
-                int height = (int)this.ActualHeight;
+                int width = (int)base.ActualWidth;
+                int height = (int)base.ActualHeight;
 
                 bool can = this.BugMap.CanResize(width, height);
                 if (can == false) return;

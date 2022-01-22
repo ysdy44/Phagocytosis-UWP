@@ -109,23 +109,23 @@ namespace Phagocytosis.Controls
                 if (this.HasCreateResources == false) return;
                 if (this.LoadingFromProject) return;
 
-                args.DrawingSession.Transform = this.Transform;
+                args.DrawingSession.Transform = base.Transform;
 
 
                 CanvasCommandList renderTargetNuvleus = new CanvasCommandList(this.ResourceCreator);
                 using (CanvasDrawingSession ds = renderTargetNuvleus.CreateDrawingSession())
                 {
-                    ds.DrawBugMap(this.Map.Restricteds.BugMap);
-                    ds.DrawRectMap(this.Map.Restricteds);
-                    ds.DrawMap(this.Map);
+                    ds.DrawBugMap(base.Map.Restricteds.BugMap);
+                    ds.DrawRectMap(base.Map.Restricteds);
+                    ds.DrawMap(base.Map);
 
                     using (CanvasSpriteBatch sb = ds.CreateSpriteBatch())
                     {
-                        foreach (Spriter item in this.FriendSprites)
+                        foreach (Spriter item in base.FriendSprites)
                         {
                             this.DrawNuvleus(sb, item);
                         }
-                        foreach (Spriter item in this.EnemySprites)
+                        foreach (Spriter item in base.EnemySprites)
                         {
                             this.DrawNuvleus(sb, item);
                         }
@@ -139,11 +139,11 @@ namespace Phagocytosis.Controls
                 {
                     using (CanvasSpriteBatch sb = ds.CreateSpriteBatch())
                     {
-                        foreach (Spriter item in this.FriendSprites)
+                        foreach (Spriter item in base.FriendSprites)
                         {
                             this.DrawCytoplasm(sb, item);
                         }
-                        foreach (Spriter item in this.EnemySprites)
+                        foreach (Spriter item in base.EnemySprites)
                         {
                             this.DrawCytoplasm(sb, item);
                         }
@@ -179,15 +179,15 @@ namespace Phagocytosis.Controls
                 float elapsedTime = (float)args.Timing.ElapsedTime.TotalMilliseconds;
 
                 this.Stopwatch.Update(totalTime);
-                this.Map.Restricteds.BugMap.Update(elapsedTime);
-                bool isAdd = this.Map.Update(totalTime);
+                base.Map.Restricteds.BugMap.Update(elapsedTime);
+                bool isAdd = base.Map.Update(totalTime);
 
 
                 // FriendSprites
                 {
-                    foreach (Spriter item in this.FriendSprites)
+                    foreach (Spriter item in base.FriendSprites)
                     {
-                        item.Update(this.EnemySprites, this.Map, elapsedTime);
+                        item.Update(base.EnemySprites, base.Map, elapsedTime);
                         switch (item.State)
                         {
                             case SpriteState.Dead:
@@ -199,7 +199,7 @@ namespace Phagocytosis.Controls
                                 switch (item.Type)
                                 {
                                     case SpriteType.Player:
-                                        this.Position.X += item.Radius;
+                                        base.Position.X += item.Radius;
                                         break;
                                 }
                                 break;
@@ -218,7 +218,7 @@ namespace Phagocytosis.Controls
                                     {
                                         case SpriteState.Dead:
                                         case SpriteState.Cancerous:
-                                            foreach (Spriter item2 in this.FriendSprites)
+                                            foreach (Spriter item2 in base.FriendSprites)
                                             {
                                                 switch (item2.State)
                                                 {
@@ -243,7 +243,7 @@ namespace Phagocytosis.Controls
                                     break;
                             }
 
-                            this.FriendSprites.Remove(item);
+                            base.FriendSprites.Remove(item);
                         }
                         this.RemoveFriendSprites.Clear();
                     }
@@ -252,7 +252,7 @@ namespace Phagocytosis.Controls
                     {
                         foreach (Spriter item in this.AddFriendSprites)
                         {
-                            this.FriendSprites.Add(item);
+                            base.FriendSprites.Add(item);
                         }
                         this.AddFriendSprites.Clear();
                     }
@@ -261,9 +261,9 @@ namespace Phagocytosis.Controls
 
                 // EnemySprites
                 {
-                    foreach (Spriter item in this.EnemySprites)
+                    foreach (Spriter item in base.EnemySprites)
                     {
-                        item.Update(this.FriendSprites, this.Map, elapsedTime);
+                        item.Update(base.FriendSprites, base.Map, elapsedTime);
                         switch (item.State)
                         {
                             case SpriteState.Dead:
@@ -279,7 +279,7 @@ namespace Phagocytosis.Controls
                     {
                         foreach (Spriter item in this.RemoveEnemySprites)
                         {
-                            this.EnemySprites.Remove(item);
+                            base.EnemySprites.Remove(item);
                         }
                         this.RemoveEnemySprites.Clear();
                     }
@@ -288,22 +288,22 @@ namespace Phagocytosis.Controls
                     {
                         foreach (Spriter item in this.AddEnemySprites)
                         {
-                            this.EnemySprites.Add(item);
+                            base.EnemySprites.Add(item);
                         }
                         this.AddEnemySprites.Clear();
                     }
                 }
 
 
-                if (this.CanVelocity) this.Position += this.Velocity * elapsedTime / 4f;
+                if (this.CanVelocity) base.Position += this.Velocity * elapsedTime / 4f;
 
                 switch (this.State)
                 {
                     case PlayState.Playing:
-                        this.Transform = this.GetTransform();
-                        if (this.FriendSprites.Count == 0)
+                        base.Transform = this.GetTransform();
+                        if (base.FriendSprites.Count == 0)
                             this.State = PlayState.Losing;
-                        if (this.EnemySprites.Count == 0)
+                        if (base.EnemySprites.Count == 0)
                             this.State = PlayState.Winning;
                         break;
                     case PlayState.Losing:
@@ -313,7 +313,7 @@ namespace Phagocytosis.Controls
                         float duration = 800;
                         this.Duration += elapsedTime;
                         float progress = Math.Max(0, Math.Min(1, this.Duration / duration));
-                        this.Transform = this.GetTransform(progress);
+                        base.Transform = this.GetTransform(progress);
                         if (this.Duration >= duration) // 800 ms
                             this.State = PlayState.Winner;
                         break;
@@ -354,22 +354,22 @@ namespace Phagocytosis.Controls
         {
             return
                  Matrix3x2.CreateTranslation(-this.Player.Position) *
-                 Matrix3x2.CreateScale(this.Scale2) *
-                 Matrix3x2.CreateTranslation(this.Center) *
-                 Matrix3x2.CreateTranslation(this.Position);
+                 Matrix3x2.CreateScale(base.Scale2) *
+                 Matrix3x2.CreateTranslation(base.Center) *
+                 Matrix3x2.CreateTranslation(base.Position);
         }
         private Matrix3x2 GetTransform(float progress)
         {
             float noprogress = 1 - progress;
-            float scale = Math.Min(this.Center.X * 2 / (this.Map.Width + 20), this.Center.Y * 2 / (this.Map.Height + 20));
-            Vector2 center = new Vector2(this.Map.Width, this.Map.Height) / 2;
+            float scale = Math.Min(base.Center.X * 2 / (base.Map.Width + 20), base.Center.Y * 2 / (base.Map.Height + 20));
+            Vector2 center = new Vector2(base.Map.Width, base.Map.Height) / 2;
 
             return
                  Matrix3x2.CreateTranslation(-center * progress) *
                  Matrix3x2.CreateTranslation(-this.Player.Position * noprogress) *
-                 Matrix3x2.CreateScale(this.Scale2 * noprogress + scale * progress) *
-                 Matrix3x2.CreateTranslation(this.Center) *
-                 Matrix3x2.CreateTranslation(this.Position * noprogress);
+                 Matrix3x2.CreateScale(base.Scale2 * noprogress + scale * progress) *
+                 Matrix3x2.CreateTranslation(base.Center) *
+                 Matrix3x2.CreateTranslation(base.Position * noprogress);
         }
 
     }

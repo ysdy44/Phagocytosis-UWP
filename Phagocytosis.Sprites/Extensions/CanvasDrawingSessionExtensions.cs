@@ -36,33 +36,19 @@ namespace Phagocytosis.Sprites
         };
 
 
-        public static void DrawDisplacementNuvleus(this CanvasDrawingSession drawingSession, ICanvasImage players)
+        public static void DrawDisplacementNuvleus(this CanvasDrawingSession drawingSession, ICanvasImage players) => drawingSession.DrawDisplacement(players, 32f, Matrix3x2.CreateTranslation(new Vector2(-10)));
+        public static void DrawDisplacementCytoplasm(this CanvasDrawingSession drawingSession, ICanvasImage players) => drawingSession.DrawDisplacement(players, 16f, Matrix3x2.CreateTranslation(new Vector2(-4)));
+        private static void DrawDisplacement(this CanvasDrawingSession drawingSession, ICanvasImage players, float amount, Matrix3x2 transformMatrix)
         {
             drawingSession.DrawImage(new DisplacementMapEffect
             {
                 XChannelSelect = EffectChannelSelect.Red,
                 YChannelSelect = EffectChannelSelect.Green,
-                Amount = 32f,
-                Displacement = DisplacementNuvleus,
-                Source = new Transform2DEffect
-                {
-                    TransformMatrix = Matrix3x2.CreateTranslation(new Vector2(-10)),
-                    Source = players
-                }
-            });
-        }
-
-        public static void DrawDisplacementCytoplasm(this CanvasDrawingSession drawingSession, ICanvasImage players)
-        {
-            drawingSession.DrawImage(new DisplacementMapEffect
-            {
-                XChannelSelect = EffectChannelSelect.Red,
-                YChannelSelect = EffectChannelSelect.Green,
-                Amount = 16f,
+                Amount = amount,
                 Displacement = DisplacementCytoplasm,
                 Source = new Transform2DEffect
                 {
-                    TransformMatrix = Matrix3x2.CreateTranslation(new Vector2(-4)),
+                    TransformMatrix = transformMatrix,
                     Source = players
                 }
             });
@@ -93,9 +79,13 @@ namespace Phagocytosis.Sprites
         {
             foreach (Food item in map)
             {
-                drawingSession.FillCircle(item.Position, Food.Radius, CanvasDrawingSessionExtensions.MediumColor);
-                drawingSession.DrawCircle(item.Position, Food.Radius, Colors.White, 2);
+                drawingSession.DrawFood(item.Position);
             }
+        }
+        public static void DrawFood(this CanvasDrawingSession drawingSession, Vector2 position)
+        {
+            drawingSession.FillCircle(position, Food.Radius, CanvasDrawingSessionExtensions.MediumColor);
+            drawingSession.DrawCircle(position, Food.Radius, Colors.White, 2);
         }
 
         public static void DrawFlag(this CanvasDrawingSession drawingSession, string text, Spriter sprite, Color color)

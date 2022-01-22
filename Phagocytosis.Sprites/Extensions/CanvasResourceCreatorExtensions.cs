@@ -14,7 +14,7 @@ namespace Phagocytosis.Sprites
     public static partial class CanvasResourceCreatorExtensions
     {
 
-        public static CellRenderTarget RenderCell(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin)
+        private static CellRenderTarget RenderCellCore(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin, CanvasGradientStop[] nuvleusStops, CanvasGradientStop[] cytoplasmStops)
         {
             float radius1 = radius - 1;
             float radius2 = 2 * (float)Math.Pow(level, 0.333333333333333333333333333333333f);
@@ -22,7 +22,7 @@ namespace Phagocytosis.Sprites
             CanvasRenderTarget nuvleus = new CanvasRenderTarget(resourceCreator, diameter, diameter);
             using (CanvasDrawingSession ds = nuvleus.CreateDrawingSession())
             {
-                ds.FillCircle(origin, radius1, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellNuvleus)
+                ds.FillCircle(origin, radius1, new CanvasRadialGradientBrush(resourceCreator, nuvleusStops)
                 {
                     Center = origin,
                     RadiusX = radius1,
@@ -34,7 +34,7 @@ namespace Phagocytosis.Sprites
             CanvasRenderTarget cytoplasm = new CanvasRenderTarget(resourceCreator, diameter, diameter);
             using (CanvasDrawingSession ds = cytoplasm.CreateDrawingSession())
             {
-                ds.FillCircle(origin, radius2, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.CellCytoplasm)
+                ds.FillCircle(origin, radius2, new CanvasRadialGradientBrush(resourceCreator, cytoplasmStops)
                 {
                     Center = origin,
                     RadiusX = radius2,
@@ -51,40 +51,14 @@ namespace Phagocytosis.Sprites
         }
 
 
-        public static CellRenderTarget RenderBacteria(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin)
-        {
-            float radius2 = 2 * (float)Math.Pow(level, 0.333333333333333333333333333333333f);
+        public static CellRenderTarget RenderCell(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin) =>
+            resourceCreator.RenderCellCore(level, radius, diameter, origin,
+                CanvasResourceCreatorExtensions.CellNuvleus, CanvasResourceCreatorExtensions.CellCytoplasm);
 
-            CanvasRenderTarget nuvleus = new CanvasRenderTarget(resourceCreator, diameter, diameter);
-            using (CanvasDrawingSession ds = nuvleus.CreateDrawingSession())
-            {
-                ds.FillCircle(origin, radius, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.BacteriaNuvleus)
-                {
-                    Center = origin,
-                    RadiusX = radius,
-                    RadiusY = radius,
-                });
-                ds.DrawCircle(origin, radius, Colors.White, 2);
-            }
 
-            CanvasRenderTarget cytoplasm = new CanvasRenderTarget(resourceCreator, diameter, diameter);
-            using (CanvasDrawingSession ds = cytoplasm.CreateDrawingSession())
-            {
-                ds.FillCircle(origin, radius2, new CanvasRadialGradientBrush(resourceCreator, CanvasResourceCreatorExtensions.BacteriaCytoplasm)
-                {
-                    Center = origin,
-                    RadiusX = radius2,
-                    RadiusY = radius2,
-                });
-                ds.DrawCircle(origin, radius2, Colors.White, 2);
-            }
-
-            return new CellRenderTarget
-            {
-                Nuvleus = nuvleus,
-                Cytoplasm = cytoplasm
-            };
-        }
+        public static CellRenderTarget RenderBacteria(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin) =>
+            resourceCreator.RenderCellCore(level, radius, diameter, origin,
+                CanvasResourceCreatorExtensions.BacteriaNuvleus, CanvasResourceCreatorExtensions.BacteriaCytoplasm);
 
 
         public static CellRenderTarget RenderVirus(this ICanvasResourceCreatorWithDpi resourceCreator, int level, float radius, float diameter, Vector2 origin)

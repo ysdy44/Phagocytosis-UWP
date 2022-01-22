@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>celda </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>citar</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>retroalimentación</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>La madera tiene más</value> </data>
-<data name='Move' xml:space='preserve'> <value>Mover la lente</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>Únete a la pared</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>Únete a aliados</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>Únete al enemigo</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>Manipule el joystick o presione la tecla WASD para mover la celda</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>Pellizque con dos dedos o presione la tecla - + para ampliar la lente</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>Desliza la pantalla o pulsa la tecla ↑←↓ → para mover el objetivo</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Los glóbulos blancos son amigables (no)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>¡Soy una celda, no me comas! ——— celdas</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Lo siento, pero tanto los virus bacterianos como las células alogénicas son mis enemigos. ——— Glóbulos blancos</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>Haga clic ⭕ editar el mapa</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Haga clic en ⭕ para abrir el archivo de mapa</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Toque ⭕ o presione Q para dividirlo en dos celdas</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Haga clic en ⭕ para volver</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>Haga clic en ⭕ para saltar al siguiente nivel</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>Haga clic en ⭕ para continuar</value> </data>
 
  </root>

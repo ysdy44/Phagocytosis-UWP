@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>세포 </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>참조입니다</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>피드백</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>나무가 더 있습니다</value> </data>
-<data name='Move' xml:space='preserve'> <value>렌즈를 이동합니다</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>벽에 추가합니다</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>아군에 합류하다</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>적과 합류하십시오</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>조이스틱을 조작하거나 WASD 키를 눌러 셀을 이동합니다</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>두 손가락을 꼬집거나 - + 키를 눌러 렌즈의 배율을 조정합니다</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>화면을 스와이프하거나 [←] → 키를 눌러 렌즈를 이동합니다</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>백혈구는 아군입니다.</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>나는 세포야, 날 먹지 마! ——— 세포</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>죄송합니다, 세균성 바이러스든 이종 세포든 내 적이다. ——— 백혈구</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>클릭하여 맵을 편집합니다</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>클릭하여 맵 파일을 엽니다</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>클릭하거나 Q 키를 눌러 두 개의 셀로 분할합니다</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>클릭하여 돌아갑니다</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>클릭하여 다음 레벨로 이동합니다</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>다음 레벨로 점프하기 위해</value> </data>
 
  </root>

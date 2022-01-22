@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>胞吞</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://gitee.com/ysdy44/phagocytosis-uwp</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>细胞 </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>引用</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>反馈</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>木有更多了</value> </data>
-<data name='Move' xml:space='preserve'> <value>移动镜头</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>加入墙</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>加入友军</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>加入敌人</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>操控摇杆 或按下 WASD 键以移动细胞</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>双指捏合 或按下 - + 键以缩放镜头</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>滑动屏幕 或按下 ↑←↓→ 键以移动镜头</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>白细胞是友军哦（不是）</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>“我是细胞，别吃我！” ——— 细胞</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>“不好意思，无论细菌病毒还是异体细胞都是我的敌人。” ——— 白细胞</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>点击 ⭕ 编辑地图</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>点击 ⭕ 以打开地图文件</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>点击 ⭕ 或按下 Q 键以分裂成两个细胞</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>点击 ⭕ 返回</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>点击 ⭕  跳转到下一关</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>点击 ⭕ 继续</value> </data>
 
  </root>

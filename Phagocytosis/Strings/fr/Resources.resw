@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>cellule </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>citer</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>rétroaction</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>Le bois a plus</value> </data>
-<data name='Move' xml:space='preserve'> <value>Déplacer l’objectif</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>Rejoignez le mur</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>Rejoignez des alliés</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>Rejoignez l’ennemi</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>Manipulez le joystick ou appuyez sur la touche WASD pour déplacer la cellule</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>Pincez avec deux doigts ou appuyez sur la touche - + pour zoomer sur l’objectif</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>Faites glisser l’écran ou appuyez sur la touche ↑←↓→ pour déplacer l’objectif</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Les globules blancs sont amicaux (pas)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>« Je suis une cellule, ne me mange pas! » cellules ———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>« Je suis désolé, mais les virus bactériens et les cellules allogéniques sont mes ennemis. » ——— globules blancs</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>Cliquez ⭕ modifier la carte</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Cliquez sur ⭕ pour ouvrir le fichier de carte</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Appuyez sur ⭕ ou appuyez sur Q pour diviser en deux cellules</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Cliquez sur ⭕ pour retourner</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>Cliquez sur ⭕ pour passer au niveau suivant</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>Cliquez sur ⭕ pour continuer</value> </data>
 
  </root>

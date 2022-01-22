@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>Cell</value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>Reference</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>Feedback</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>no more</value> </data>
-<data name='Move' xml:space='preserve'> <value>Move</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>Add Restricted</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>Add Friend</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>Add Enemy</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>Move the joystick or press the WASD key to move the cell</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>Pinch with two fingers or press - + keys to zoom the camera</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>Swipe the screen or press the ↑←↓→ keys to move the camera</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>White blood cells are friendly (not)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>I'm a cell, don't eat me! ——— cell</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>I'm sorry, but both bacterial viruses and allogeneic cells are my enemies. ——— White blood cells</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>Click ⭕ to Edit the map</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Click ⭕ to Open the map file</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Click ⭕ or press the Q key to divide into two cells</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Click ⭕ to come back</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>Click ⭕ to jump to the next level</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>Click ⭕ to continue</value> </data>
 
  </root>

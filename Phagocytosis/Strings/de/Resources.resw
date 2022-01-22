@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>Zelle </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>zitieren</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>Feedback</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>Holz hat mehr</value> </data>
-<data name='Move' xml:space='preserve'> <value>Bewegen Sie das Objektiv</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>Schließen Sie sich der Wand an</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>Schließe dich Verbündeten an</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>Schließe dich dem Feind an</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>Manipulieren Sie den Joystick oder drücken Sie die WASD-Taste, um die Zelle zu bewegen</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>Drücken Sie mit zwei Fingern oder drücken Sie die Taste - +, um das Objektiv zu vergrößern</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>Wischen Sie über den Bildschirm oder drücken Sie die Taste ↑←↓→, um das Objektiv zu bewegen</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Weißblut Arefrey Endley (Nott)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>I'M' Muasser, Don't'Eit! ——— Searle</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>I'Mesori, Bad Bosbacht Rial Verruses Ande AlognekneXels Arémeyenmes. ——— Weißblut-Sears</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>Klicken Sie auf ⭕ bearbeiten Sie die Karte</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Klicken Sie auf ⭕, um die Kartendatei zu öffnen.</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Tippen Sie auf ⭕ oder drücken Sie Q, um sie in zwei Zellen aufzuteilen</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Klicken Sie auf ⭕, um zurückzukehren</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>Klicken Sie auf ⭕, um zum nächsten Level zu springen</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>Klicken Sie ⭕, um fortzufahren</value> </data>
 
  </root>

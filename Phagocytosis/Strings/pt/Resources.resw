@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>célula </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>citar</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>realimentação</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>Madeira tem mais</value> </data>
-<data name='Move' xml:space='preserve'> <value>Mova a lente</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>Junte-se à parede</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>Junte-se a aliados</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>Junte-se ao inimigo</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>Manipule o joystick ou pressione a tecla WASD para mover a célula</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>Aperte com dois dedos ou pressione a tecla - + para ampliar a lente</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>Deslize a tela ou pressione a tecla ↑←→ para mover a lente</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Os glóbulos brancos são amigáveis (não)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>Eu sou uma célula, não me coma! células ———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Sinto muito, mas tanto vírus bacterianos quanto células aogenéricas são meus inimigos. ——— Glóbulos brancos</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>Clique ⭕ editar o mapa</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>Clique em ⭕ para abrir o arquivo do mapa</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>Toque ⭕ ou pressione Q para dividir em duas células</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>Clique em ⭕ para retornar</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>Clique ⭕ para saltar para o próximo nível</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>Clique em ⭕ para continuar</value> </data>
 
  </root>

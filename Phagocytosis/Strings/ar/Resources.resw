@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>Phagocytosis</value> </data>
-<data name='$Version' xml:space='preserve'> <value>1.2.0</value> </data>
+<data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
 <data name='$GithubLink' xml:space='preserve'> <value>https://github.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>خلية </value> </data>
@@ -93,10 +93,6 @@
 <data name='Reference' xml:space='preserve'> <value>استشهد</value> </data>
 <data name='Feedback' xml:space='preserve'> <value>ردود الفعل</value> </data>
 <data name='NoMore' xml:space='preserve'> <value>الخشب لديه أكثر</value> </data>
-<data name='Move' xml:space='preserve'> <value>تحريك العدسة</value> </data>
-<data name='AddRestricted' xml:space='preserve'> <value>انضم إلى الجدار</value> </data>
-<data name='AddFriend' xml:space='preserve'> <value>انضم إلى الحلفاء</value> </data>
-<data name='AddEnemy' xml:space='preserve'> <value>انضم إلى العدو</value> </data>
 <data name='Guider001' xml:space='preserve'> <value>معالجة عصا التحكم أو الضغط على مفتاح WASD لتحريك الخلية</value> </data>
 <data name='Guider002' xml:space='preserve'> <value>قرصة بإصبعين أو اضغط على - + مفتاح لتكبير العدسة</value> </data>
 <data name='Guider003' xml:space='preserve'> <value>مرر الشاشة أو اضغط على مفتاح ↑←↓→ لتحريك العدسة</value> </data>
@@ -140,5 +136,11 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>وايتبلودز أفري إندلي (نوت)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>أنا (موزر)، لا تذيت! ——— تبيع</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>أنا مسوري، باد بوسباخت ريال فيروس أندي الونيكنكسيلز أريمينميس. ——— وايتبلود سيرز</value> </data>
+<data name='ToEdit' xml:space='preserve'> <value>انقر ⭕ تحرير الخريطة</value> </data>
+<data name='ToOpen' xml:space='preserve'> <value>انقر فوق ⭕ لفتح ملف الخريطة</value> </data>
+<data name='Guider004' xml:space='preserve'> <value>اضغط على ⭕ أو اضغط Q لتقسيمها إلى خلية</value> </data>
+<data name='ToRestart' xml:space='preserve'> <value>انقر فوق ⭕ للعودة</value> </data>
+<data name='ToNext' xml:space='preserve'> <value>انقر فوق ⭕ للانتقال إلى المستوى التالي</value> </data>
+<data name='ToPlay' xml:space='preserve'> <value>انقر فوق ⭕ للمتابعة</value> </data>
 
  </root>

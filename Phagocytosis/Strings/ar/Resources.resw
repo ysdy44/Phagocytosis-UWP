@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>وايتبلودز أفري إندلي (نوت)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>أنا (موزر)، لا تذيت! ——— تبيع</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>أنا مسوري، باد بوسباخت ريال فيروس أندي الونيكنكسيلز أريمينميس. ——— وايتبلود سيرز</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>انقر ⭕ تحرير الخريطة</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>انقر فوق ⭕ لفتح ملف الخريطة</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>اضغط على ⭕ أو اضغط Q لتقسيمها إلى خلية</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>انقر فوق ⭕ للعودة</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>انقر فوق ⭕ للانتقال إلى المستوى التالي</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>انقر فوق ⭕ للمتابعة</value> </data>
 
  </root>

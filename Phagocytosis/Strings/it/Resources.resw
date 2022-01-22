@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>I globuli bianchi sono amichevoli (non)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>Sono una cellula, non mangiarmi! celle ———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Mi dispiace, ma sia i virus batterici che le cellule allogeniche sono i miei nemici. ——— Globuli bianchi</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Clicca ⭕ modificare la mappa</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Fare clic su ⭕ per aprire il file della mappa</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Tocca ⭕ o premi Q per dividerlo in due celle</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Fare clic su ⭕ per restituire</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Fai clic su ⭕ per passare al livello successivo</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Fai clic su ⭕ per continuare</value> </data>
 
  </root>

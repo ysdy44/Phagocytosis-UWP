@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>白血球は友軍だ</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>「私は細胞です、私を食べないでください! 細胞———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>「申し訳ありませんが、細菌ウイルスや同種細胞は私の敵です。 ———白血球</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>をタップしてマップを編集します</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>をタップしてマップ ファイルを開きます</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>をタップするか、Q キーを押して 2 つのセルに分割します</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>をタップして戻ります</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>次のレベルにジャンプする</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>をクリックして続行します</value> </data>
 
  </root>

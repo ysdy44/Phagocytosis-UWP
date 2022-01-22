@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Les globules blancs sont amicaux (pas)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>« Je suis une cellule, ne me mange pas! » cellules ———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>« Je suis désolé, mais les virus bactériens et les cellules allogéniques sont mes ennemis. » ——— globules blancs</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Cliquez ⭕ modifier la carte</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Cliquez sur ⭕ pour ouvrir le fichier de carte</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Appuyez sur ⭕ ou appuyez sur Q pour diviser en deux cellules</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Cliquez sur ⭕ pour retourner</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Cliquez sur ⭕ pour passer au niveau suivant</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Cliquez sur ⭕ pour continuer</value> </data>
 
  </root>

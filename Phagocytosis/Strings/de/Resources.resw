@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Weißblut Arefrey Endley (Nott)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>I'M' Muasser, Don't'Eit! ——— Searle</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>I'Mesori, Bad Bosbacht Rial Verruses Ande AlognekneXels Arémeyenmes. ——— Weißblut-Sears</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Klicken Sie auf ⭕ bearbeiten Sie die Karte</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Klicken Sie auf ⭕, um die Kartendatei zu öffnen.</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Tippen Sie auf ⭕ oder drücken Sie Q, um sie in zwei Zellen aufzuteilen</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Klicken Sie auf ⭕, um zurückzukehren</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Klicken Sie auf ⭕, um zum nächsten Level zu springen</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Klicken Sie ⭕, um fortzufahren</value> </data>
 
  </root>

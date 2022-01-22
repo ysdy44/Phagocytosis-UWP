@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Os glóbulos brancos são amigáveis (não)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>Eu sou uma célula, não me coma! células ———</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Sinto muito, mas tanto vírus bacterianos quanto células aogenéricas são meus inimigos. ——— Glóbulos brancos</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Clique ⭕ editar o mapa</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Clique em ⭕ para abrir o arquivo do mapa</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Toque ⭕ ou pressione Q para dividir em duas células</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Clique em ⭕ para retornar</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Clique ⭕ para saltar para o próximo nível</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Clique em ⭕ para continuar</value> </data>
 
  </root>

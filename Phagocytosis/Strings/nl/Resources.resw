@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Witte bloedcellen zijn vriendelijk (niet)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>Ik ben een cel, eet me niet op! ——— cellen</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Het spijt me, maar zowel bacteriële virussen als allogene cellen zijn mijn vijanden. ——— Witte bloedcellen</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Klik ⭕ bewerk de kaart</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Klik ⭕ om het kaartbestand te openen</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Tik op ⭕ of druk op Q om deze in twee cellen te splitsen</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Klik ⭕ om terug te keren</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Klik ⭕ om naar het volgende niveau te gaan</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Klik ⭕ om door te gaan</value> </data>
 
  </root>

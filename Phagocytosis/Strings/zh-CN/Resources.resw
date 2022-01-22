@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>白细胞是友军哦（不是）</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>“我是细胞，别吃我！” ——— 细胞</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>“不好意思，无论细菌病毒还是异体细胞都是我的敌人。” ——— 白细胞</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>点击 ⭕ 编辑地图</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>点击 ⭕ 以打开地图文件</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>点击 ⭕ 或按下 Q 键以分裂成两个细胞</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>点击 ⭕ 返回</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>点击 ⭕  跳转到下一关</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>点击 ⭕ 继续</value> </data>
 
  </root>

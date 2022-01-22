@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>Белые кровяные тельца являются союзниками (нет)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>Я клетка, не ешьте меня! ——— клетки</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>Извините, как бактериальные вирусы, так и инородные клетки являются моими врагами. ——— белые кровяные тельца</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Нажмите ⭕ Редактировать карту</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Нажмите ⭕, чтобы открыть файл карты</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Нажмите ⭕ или нажмите клавишу Q, чтобы разделить на две клетки</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Нажмите ⭕, чтобы вернуться</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Нажмите ⭕, чтобы перейти к следующему уровню</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Нажмите ⭕, чтобы продолжить</value> </data>
 
  </root>

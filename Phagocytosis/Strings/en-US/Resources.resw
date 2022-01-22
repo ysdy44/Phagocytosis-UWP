@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>White blood cells are friendly (not)</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>I'm a cell, don't eat me! ——— cell</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>I'm sorry, but both bacterial viruses and allogeneic cells are my enemies. ——— White blood cells</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>Click ⭕ to Edit the map</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>Click ⭕ to Open the map file</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>Click ⭕ or press the Q key to divide into two cells</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>Click ⭕ to come back</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>Click ⭕ to jump to the next level</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>Click ⭕ to continue</value> </data>
 
  </root>

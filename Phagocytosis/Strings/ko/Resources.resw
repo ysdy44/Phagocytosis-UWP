@@ -136,11 +136,5 @@
 <data name='Leukocyte003' xml:space='preserve'> <value>백혈구는 아군입니다.</value> </data>
 <data name='Leukocyte004' xml:space='preserve'> <value>나는 세포야, 날 먹지 마! ——— 세포</value> </data>
 <data name='Leukocyte005' xml:space='preserve'> <value>죄송합니다, 세균성 바이러스든 이종 세포든 내 적이다. ——— 백혈구</value> </data>
-<data name='ToEdit' xml:space='preserve'> <value>클릭하여 맵을 편집합니다</value> </data>
-<data name='ToOpen' xml:space='preserve'> <value>클릭하여 맵 파일을 엽니다</value> </data>
-<data name='Guider004' xml:space='preserve'> <value>클릭하거나 Q 키를 눌러 두 개의 셀로 분할합니다</value> </data>
-<data name='ToRestart' xml:space='preserve'> <value>클릭하여 돌아갑니다</value> </data>
-<data name='ToNext' xml:space='preserve'> <value>클릭하여 다음 레벨로 이동합니다</value> </data>
-<data name='ToPlay' xml:space='preserve'> <value>다음 레벨로 점프하기 위해</value> </data>
 
  </root>

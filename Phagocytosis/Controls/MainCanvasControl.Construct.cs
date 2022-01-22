@@ -19,40 +19,29 @@ namespace Phagocytosis.Controls
         {
             this.PausedTimer.Tick += (s, e) =>
             {
-                if (this.IsGamepadButtonsMenu)
+                // Delegate
+                this.Scored?.Invoke(this, new ScoredEventArgs
                 {
-                    this.IsGamepadButtonsMenu = false;
-
-                    PlayState state = this.CanvasControl.Paused ? PlayState.Playing : PlayState.Paused;
-                    this.GameOver?.Invoke(this, state); // Delegate
-                }
+                    FriendSpritesSumLevel = base.FriendSprites.Sum(a => a.Level),
+                    EnemySpritesSumLevel = base.EnemySprites.Sum(a => a.Level)
+                });
+                // Delegate
+                this.Record?.Invoke(this, new RecordEventArgs
+                {
+                    FriendSpritesMaxLevel = base.FriendSprites.Max(a => a.Level),
+                    FriendSpritesCount = base.FriendSprites.Count,
+                    TotalTime = this.Stopwatch.TotalTime()
+                });
 
                 switch (this.State)
                 {
                     case PlayState.Playing:
-                        // Delegate
-                        this.Scored?.Invoke(this, new ScoredEventArgs
-                        {
-                            FriendSpritesSumLevel = base.FriendSprites.Sum(a => a.Level),
-                            EnemySpritesSumLevel = base.EnemySprites.Sum(a => a.Level)
-                        });
-                        // Delegate
-                        this.Record?.Invoke(this, new RecordEventArgs
-                        {
-                            FriendSpritesMaxLevel = base.FriendSprites.Max(a => a.Level),
-                            FriendSpritesCount = base.FriendSprites.Count,
-                            TotalTime = this.Stopwatch.TotalTime()
-                        });
                         break;
                     case PlayState.Loser:
-                        this.FriendsCount = 0;
-                        this.EnemysCount = base.EnemySprites.Sum(a => a.Level);
                         this.Pause();
                         this.GameOver?.Invoke(this, PlayState.Loser); // Delegate
                         break;
                     case PlayState.Winner:
-                        this.FriendsCount = base.FriendSprites.Sum(a => a.Level);
-                        this.EnemysCount = 0;
                         this.Pause();
                         this.GameOver?.Invoke(this, PlayState.Winner); // Delegate
                         break;
@@ -94,8 +83,12 @@ namespace Phagocytosis.Controls
 
             this.LoadingFromProject = true;
             {
-                this.FriendsCount = chapter.FriendSprites.Sum(a => a.Level);
-                this.EnemysCount = chapter.EnemySprites.Sum(a => a.Level);
+                // Delegate
+                this.Scored?.Invoke(this, new ScoredEventArgs
+                {
+                    FriendSpritesSumLevel = chapter.FriendSprites.Sum(a => a.Level),
+                    EnemySpritesSumLevel = chapter.EnemySprites.Sum(a => a.Level)
+                });
 
                 base.Load(chapter);
                 this.Player = base.FriendSprites.First(c => c.Type == SpriteType.Player).Rebirth();
@@ -155,7 +148,7 @@ namespace Phagocytosis.Controls
                 switch (reading.Buttons)
                 {
                     case Windows.Gaming.Input.GamepadButtons.Menu:
-                        this.IsGamepadButtonsMenu = true;
+                        this.State = PlayState.Paused;
                         break;
                     case Windows.Gaming.Input.GamepadButtons.X:
                         this.Player.Dividing();

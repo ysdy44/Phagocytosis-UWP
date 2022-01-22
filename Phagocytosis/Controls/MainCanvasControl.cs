@@ -49,34 +49,8 @@ namespace Phagocytosis.Controls
             Interval = TimeSpan.FromMilliseconds(600)
         };
 
-        #region DependencyProperty
-
-
-        /// <summary> Gets or set the count for <see cref="MainCanvasControl"/>'s Friends. </summary>
-        public int FriendsCount
-        {
-            get => (int)base.GetValue(FriendsCountProperty);
-            set => base.SetValue(FriendsCountProperty, value);
-        }
-        /// <summary> Identifies the <see cref = "MainCanvasControl.FriendsCount" /> dependency property. </summary>
-        public static readonly DependencyProperty FriendsCountProperty = DependencyProperty.Register(nameof(FriendsCount), typeof(int), typeof(MainCanvasControl), new PropertyMetadata(0));
-
-
-        /// <summary> Gets or set the count for <see cref="MainCanvasControl"/>'s Enemys. </summary>
-        public int EnemysCount
-        {
-            get => (int)base.GetValue(EnemysCountProperty);
-            set => base.SetValue(EnemysCountProperty, value);
-        }
-        /// <summary> Identifies the <see cref = "MainCanvasControl.EnemysCount" /> dependency property. </summary>
-        public static readonly DependencyProperty EnemysCountProperty = DependencyProperty.Register(nameof(EnemysCount), typeof(int), typeof(MainCanvasControl), new PropertyMetadata(0));
-
-
-        #endregion
-
         public bool IsResizing { get; set; }
         public FlowDirection Direction { private get; set; }
-        bool IsGamepadButtonsMenu;
         readonly CanvasStopwatch Stopwatch = new CanvasStopwatch();
         CanvasAnimatedControl CanvasControl = new CanvasAnimatedControl
         {

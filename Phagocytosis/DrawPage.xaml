@@ -43,25 +43,40 @@
 
 
         <!--Developer-->
-        <ListView x:Name="ZoomListView" VerticalAlignment="Top"
-                  Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-            <ListView.Footer>
-                <Button x:Name="ExportButton" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                    <Button.Flyout>
-                        <Flyout Placement="Full">
-                            <TextBox x:Name="TextBox" TextWrapping="Wrap" AcceptsReturn="True"/>
-                        </Flyout>
-                    </Button.Flyout>
-                    <Viewbox Width="32" Height="32">
-                        <SymbolIcon Symbol="NewWindow" />
-                    </Viewbox>
-                </Button>
-            </ListView.Footer>
-            <SymbolIcon Symbol="ZoomIn" IsHitTestVisible="False"/>
-            <SymbolIcon Symbol="ZoomOut" IsHitTestVisible="False"/>
-            <SymbolIcon Symbol="ZoomIn"/>
-            <SymbolIcon Symbol="ZoomOut"/>
-        </ListView>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}">
+            <Button x:Name="ExportButton">
+                <Button.Flyout>
+                    <Flyout Placement="Full">
+                        <Flyout.FlyoutPresenterStyle>
+                            <Style TargetType="FlyoutPresenter">
+                                <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Disabled" />
+                                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+                            </Style>
+                        </Flyout.FlyoutPresenterStyle>
+                        <TextBox x:Name="TextBox" TextWrapping="Wrap" AcceptsReturn="True"/>
+                    </Flyout>
+                </Button.Flyout>
+                <Viewbox Width="32" Height="32">
+                    <SymbolIcon Symbol="NewWindow" />
+                </Viewbox>
+            </Button>
+            <Button x:Name="LocalFolderButton" >
+                <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+            <Button x:Name="ZoomInFriendButton">
+                <SymbolIcon Symbol="ZoomIn" />
+            </Button>
+            <Button x:Name="ZoomOutFriendButton">
+                <SymbolIcon Symbol="ZoomOut" />
+            </Button>
+            <Button x:Name="ZoomInEnemyButton">
+                <SymbolIcon Symbol="ZoomIn" />
+            </Button>
+            <Button x:Name="ZoomOutEnemyButton">
+                <SymbolIcon Symbol="ZoomOut" />
+            </Button>
+        </StackPanel>
 
 
         <Button x:Name="PauseButton" HorizontalAlignment="Left" VerticalAlignment="Top">

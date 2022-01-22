@@ -326,15 +326,15 @@ namespace Phagocytosis.Controls
             this.CanvasControl2.Invalidate(); // Invalidate
         }
 
-        public void ZoomSprite(bool isFriend, Symbol symbol)
+        public void ZoomSprite2(bool isFriend, bool isZoomIn)
         {
-            switch (symbol)
+            foreach (Spriter item in isFriend ? this.FriendSprites : this.EnemySprites)
             {
-                case Symbol.ZoomIn: base.ZoomSprite(isFriend, true); break;
-                case Symbol.ZoomOut: base.ZoomSprite(isFriend, false); break;
-                default: break;
+                int level = isZoomIn ? item.Level * 2 : item.Level / 2;
+                item.Upgrade(level);
             }
             this.CanvasControl.Invalidate(); // Invalidate
+            this.CanvasControl2.Invalidate(); // Invalidate
         }
         public void ZoomIn2()
         {

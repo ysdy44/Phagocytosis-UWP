@@ -1,8 +1,11 @@
 ﻿using Phagocytosis.Controls;
 using Phagocytosis.Sprites;
 using Phagocytosis.ViewModels;
+using System;
 using System.Xml.Linq;
 using Windows.ApplicationModel.Resources;
+using Windows.Storage;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -53,14 +56,15 @@ namespace Phagocytosis
                     this.TextBox.TextChanged += this.TextBox_TextChanged;
                 }
             };
-
-            this.ZoomListView.ItemClick += (s, e) =>
+            this.LocalFolderButton.Click += async (s, e) =>
             {
-                if (e.ClickedItem is SymbolIcon symbol)
-                {
-                    this.CanvasControl.ZoomSprite(symbol.IsHitTestVisible, symbol.Symbol);
-                }
+                IStorageFolder folder = ApplicationData.Current.LocalFolder;
+                await Launcher.LaunchFolderAsync(folder);
             };
+            this.ZoomInFriendButton.Click += (s, e) => this.CanvasControl.ZoomSprite2(true, true);
+            this.ZoomOutFriendButton.Click += (s, e) => this.CanvasControl.ZoomSprite2(true, false);
+            this.ZoomInEnemyButton.Click += (s, e) => this.CanvasControl.ZoomSprite2(false, true);
+            this.ZoomOutEnemyButton.Click += (s, e) => this.CanvasControl.ZoomSprite2(false, false);
 
             this.SpriteListView.ItemClick += (s, e) =>
             {

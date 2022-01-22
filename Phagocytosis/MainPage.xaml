@@ -32,7 +32,6 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-100.png"/>
                         <Setter Target="LogoImage.Width" Value="240"/>
                         <Setter Target="LogoImage.Height" Value="120"/>
                     </VisualState.Setters>
@@ -44,7 +43,6 @@
                         <AdaptiveTrigger MinWindowWidth="600" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-125.png"/>
                         <Setter Target="LogoImage.Width" Value="300"/>
                         <Setter Target="LogoImage.Height" Value="150"/>
                     </VisualState.Setters>
@@ -56,7 +54,6 @@
                         <AdaptiveTrigger MinWindowWidth="900" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="LogoImage.Source" Value="ms-appx:///Assets\SplashScreen.scale-150.png"/>
                         <Setter Target="LogoImage.Width" Value="360"/>
                         <Setter Target="LogoImage.Height" Value="180"/>
                     </VisualState.Setters>
@@ -244,43 +241,18 @@
                 <FontIcon Glyph="&#xE102;" FontSize="32" FontFamily="Segoe UI Symbol"/>
             </Button>
 
+            <Button x:Name="EditButton" HorizontalAlignment="Center">
+                <FontIcon Glyph="&#xE104;" FontSize="32" FontFamily="Segoe UI Symbol"/>
+            </Button>
+
         </StackPanel>
 
-        <!--Developer-->
-        <Border HorizontalAlignment="Center" VerticalAlignment="Top" 
-                Background="{StaticResource SystemAltLowColor}"
-                MinWidth="100"
-                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-            <StackPanel Margin="22,0" VerticalAlignment="Center">
-                <TextBlock x:Name="DeveloperModeTextBlock" Style="{StaticResource AppBoldTextBlockStyle}">
-                    开发者态
-                </TextBlock>
-                <TextBlock>
-                    <Run x:Name="Click001Run">点击</Run>                
-                    <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
-                    <Run x:Name="ToEditRun">以编辑地图</Run>
-                </TextBlock>
-                <TextBlock>
-                    <Run x:Name="Click002Run">点击</Run>                
-                    <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
-                    <Run x:Name="ToOpenRun">以打开地图文件</Run>
-                </TextBlock>
-            </StackPanel>
-        </Border>
 
-
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Button x:Name="FullScreenButton">
-                <Viewbox Width="32" Height="32">
-                    <SymbolIcon x:Name="FullScreenIcon" Symbol="FullScreen"/>
-                </Viewbox>
-            </Button>
-            <Button x:Name="MuteButton">
-                <Viewbox Width="32" Height="32">
-                    <SymbolIcon Symbol="{x:Bind BooleanToMuteConverter(ViewModel.IsMuted), Mode=OneWay}" />
-                </Viewbox>
-            </Button>
-        </StackPanel>
+        <Button x:Name="MuteButton" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Viewbox Width="32" Height="32">
+                <SymbolIcon Symbol="{x:Bind BooleanToMuteConverter(ViewModel.IsMuted), Mode=OneWay}" />
+            </Viewbox>
+        </Button>
 
         <Button x:Name="AboutButton" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <FontIcon Glyph="&#xE171;" FontSize="32" FontFamily="Segoe UI Symbol"/>
@@ -290,16 +262,11 @@
             <FontIcon Glyph="&#xE1D3;" FontSize="32" FontFamily="Segoe UI Symbol"/>
         </Button>
 
-
-        <!--Developer-->
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}">
-            <Button x:Name="EditButton">
-                <FontIcon Glyph="&#xE104;" FontSize="32" FontFamily="Segoe UI Symbol"/>
-            </Button>
-            <Button x:Name="LocalFolderButton">
-                <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
-            </Button>
-        </StackPanel>
+        <Button x:Name="FullScreenButton" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Viewbox Width="32" Height="32">
+                <SymbolIcon x:Name="FullScreenIcon" Symbol="FullScreen"/>
+            </Viewbox>
+        </Button>
 
 
     </Grid>

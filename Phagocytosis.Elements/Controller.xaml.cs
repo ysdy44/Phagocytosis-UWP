@@ -64,8 +64,6 @@ namespace Phagocytosis.Elements
 
         readonly ControllerVelocity VectorVelocity = new ControllerVelocity();
         readonly ControllerVelocity MoveVelocity = new ControllerVelocity();
-        public bool IsGamepad { get; private set; }
-        bool IsGamepadB;
 
         //@Construct
         public Controller()

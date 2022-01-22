@@ -14,9 +14,9 @@ namespace Phagocytosis.Sprites
         TimeSpan Last = TimeSpan.Zero;
 
         /// <summary> Gets map's maximum. </summary>
-        public int Maximum { get; set; }
+        public int Maximum { get; set; } = 6;
         /// <summary> Gets map's increase. </summary>
-        public int Increase { get; set; }
+        public int Increase { get; set; } = 1;
 
         /// <summary> Gets map's width. </summary>
         public int Width => this.Restricteds.Width;

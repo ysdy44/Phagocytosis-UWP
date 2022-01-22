@@ -29,7 +29,7 @@ namespace Phagocytosis.Controls
         protected Vector2 Center;
         protected Matrix3x2 Transform = Matrix3x2.Identity;
 
-        protected FoodMap Map = new FoodMap(800, 800);
+        public FoodMap Map { get; private set; } = new FoodMap(800, 800);
 
         protected readonly IList<Spriter> FriendSprites = new List<Spriter>();
         protected readonly IList<Spriter> EnemySprites = new List<Spriter>();
@@ -59,8 +59,8 @@ namespace Phagocytosis.Controls
             {
                 Width = this.Map.Width,
                 Height = this.Map.Height,
-                MaximumFoods = 6,
-                IncreaseFoods = 1,
+                MaximumFoods = this.Map.Maximum,
+                IncreaseFoods = this.Map.Increase,
                 Restricteds = this.Map.Restricteds.ToList(),
                 FriendSprites = this.FriendSprites.Select(e => e.Save()).ToList(),
                 EnemySprites = this.EnemySprites.Select(e => e.Save()).ToList(),

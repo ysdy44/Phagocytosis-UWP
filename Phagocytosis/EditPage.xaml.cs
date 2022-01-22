@@ -2,8 +2,9 @@
 using Phagocytosis.Sprites;
 using Phagocytosis.ViewModels;
 using System;
+using System.Numerics;
 using System.Xml.Linq;
-using Windows.ApplicationModel.Resources;
+using Windows.Foundation;
 using Windows.Storage;
 using Windows.System;
 using Windows.UI.Xaml;
@@ -29,7 +30,6 @@ namespace Phagocytosis
         {
             this.InitializeComponent();
             this.ConstructFlowDirection();
-            this.ConstructStrings();
             this.BackButton.Click += (s, e) =>
             {
                 if (base.Frame.CanGoBack)
@@ -44,6 +44,13 @@ namespace Phagocytosis
                     this.ViewModel.SelectedIndex = -1;
                     base.Frame.Navigate(typeof(DrawPage), chapter);
                 }
+            };
+
+            this.CanvasControl.Tapped += (s, e) =>
+            {
+                Point position = e.GetPosition(this.CanvasControl);
+                this.Select(this.CanvasControl.Mode, position.ToVector2());
+                e.Handled = true;
             };
 
             this.ExportButton.Click += (s, e) =>
@@ -68,44 +75,28 @@ namespace Phagocytosis
 
             this.SpriteListView.ItemClick += (s, e) =>
             {
-                if (e.ClickedItem is TextBlock textBlock)
+                if (e.ClickedItem is FrameworkElement element)
                 {
-                    switch (textBlock.Name)
-                    {
-                        case "BacteriaTextBlock":
-                            this.CanvasControl.SpriteType = SpriteType.Bacteria;
-                            break;
-                        case "VirusTextBlock":
-                            this.CanvasControl.SpriteType = SpriteType.Virus;
-                            break;
-                        case "ParameciumTextBlock":
-                            this.CanvasControl.SpriteType = SpriteType.Paramecium;
-                            break;
-                        case "LeukocyteTextBlock":
-                            this.CanvasControl.SpriteType = SpriteType.Leukocyte;
-                            break;
-                        default:
-                            break;
-                    }
+                    this.ViewModel.PlayForegroundBGM();
+                    this.CanvasControl.Add((SpriteType)(int)element.Tag);
+                    this.Select(EditSelectionMode.Add);
                 }
             };
             this.EditListView.ItemClick += (s, e) =>
             {
-                if (e.ClickedItem is TextBlock textBlock)
+                if (e.ClickedItem is SymbolIcon symbolIcon)
                 {
-                    switch (textBlock.Name)
+                    switch (symbolIcon.Symbol)
                     {
-                        case "MoveTextBlock":
-                            this.CanvasControl.EditType = EditType.Move;
+                        case Symbol.ZoomIn:
+                            this.CanvasControl.ZoomIn2();
                             break;
-                        case "AddRestrictedTextBlock":
-                            this.CanvasControl.EditType = EditType.AddRestricted;
+                        case Symbol.ZoomOut:
+                            this.CanvasControl.ZoomOut2();
                             break;
-                        case "AddFriendTextBlock":
-                            this.CanvasControl.EditType = EditType.AddFriend;
-                            break;
-                        case "AddEnemyTextBlock":
-                            this.CanvasControl.EditType = EditType.AddEnemy;
+                        case Symbol.Delete:
+                            this.CanvasControl.Delete();
+                            this.Select(EditSelectionMode.Select);
                             break;
                         default:
                             break;
@@ -113,9 +104,9 @@ namespace Phagocytosis
                 }
             };
 
-            this.ZoomInButton.Click += (s, e) => this.CanvasControl.ZoomIn2();
-            this.ZoomOutButton.Click += (s, e) => this.CanvasControl.ZoomOut2();
-            this.DeleteButton.Click += (s, e) => this.CanvasControl.Delete();
+            this.IncreaseFood(null);
+            this.DecreaseButton.Click += (s, e) => this.IncreaseFood(false);
+            this.IncreaseButton.Click += (s, e) => this.IncreaseFood(true);
         }
 
         // FlowDirection
@@ -124,22 +115,6 @@ namespace Phagocytosis
             bool isRightToLeft = System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft;
 
             base.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-        }
-
-        // Strings
-        private void ConstructStrings()
-        {
-            ResourceLoader resource = ResourceLoader.GetForCurrentView();
-
-            this.BacteriaTextBlock.Text = resource.GetString("Bacteria");
-            this.VirusTextBlock.Text = resource.GetString("Virus");
-            this.ParameciumTextBlock.Text = resource.GetString("Paramecium");
-            this.LeukocyteTextBlock.Text = resource.GetString("Leukocyte");
-
-            this.MoveTextBlock.Text = resource.GetString("Move");
-            this.AddRestrictedTextBlock.Text = resource.GetString("AddRestricted");
-            this.AddFriendTextBlock.Text = resource.GetString("AddFriend");
-            this.AddEnemyTextBlock.Text = resource.GetString("AddEnemy");
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -155,6 +130,70 @@ namespace Phagocytosis
                 catch (System.Exception)
                 {
                 }
+            }
+        }
+
+        private void IncreaseFood(bool? increase)
+        {
+            if (increase.HasValue)
+            {
+                if (increase.Value)
+                    this.CanvasControl.Map.Increase++;
+                else
+                    this.CanvasControl.Map.Increase--;
+            }
+
+            this.CanvasControl.Map.Maximum = this.CanvasControl.Map.Increase * 6;
+            this.FoodTextBlock.Text = $"{this.CanvasControl.Map.Increase}";
+        }
+
+        private void Select(EditSelectionMode mode, Vector2 position = new Vector2())
+        {
+            EditType type =
+                (mode != EditSelectionMode.None || position == Vector2.Zero) ?
+                EditType.None :
+                this.CanvasControl.Select(position);
+
+            this.ZoomInItem.Visibility = this.ZoomOutItem.Visibility =
+                (type == EditType.None || type == EditType.Restricted) ?
+                Visibility.Collapsed : Visibility.Visible;
+
+            this.DeleteItem.Visibility =
+                (type == EditType.None || type == EditType.Player) ?
+                Visibility.Collapsed : Visibility.Visible;
+
+            switch (mode)
+            {
+                case EditSelectionMode.None:
+                    this.EllipseStoryboard.Begin(); // Storyboard
+                    this.ShowStoryboard.Begin(); // Storyboard
+                    if (type != EditType.None)
+                    {
+                        this.ShowEditStoryboard.Begin(); // Storyboard
+                        this.CanvasControl.Mode = EditSelectionMode.Select;
+                    }
+                    else
+                    {
+                        this.ShowSpriteStoryboard.Begin(); // Storyboard
+                        this.CanvasControl.Mode = EditSelectionMode.Add;
+                    }
+                    break;
+                case EditSelectionMode.Add:
+                    this.EllipseStoryboard.Stop(); // Storyboard
+                    this.HideStoryboard.Begin(); // Storyboard
+
+                    this.HideSpriteStoryboard.Begin(); // Storyboard
+                    this.CanvasControl.Mode = EditSelectionMode.None;
+                    break;
+                case EditSelectionMode.Select:
+                    this.EllipseStoryboard.Stop(); // Storyboard
+                    this.HideStoryboard.Begin(); // Storyboard
+
+                    this.HideEditStoryboard.Begin(); // Storyboard
+                    this.CanvasControl.Mode = EditSelectionMode.None;
+                    break;
+                default:
+                    break;
             }
         }
 

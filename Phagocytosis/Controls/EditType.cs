@@ -5,17 +5,24 @@
     /// </summary>
     public enum EditType
     {
-        Move,
-        AddRestricted,
-        AddFriend,
-        AddEnemy,
+        None,
+        Restricted,
+        Player,
+        Friend,
+        Enemy,
     }
     public enum EditMoveType
     {
         Move,
-        MoveMap,
+        ResizeMap,
         MoveRestricted,
+        ResizeRestricted,
         MoveSprite,
     }
-
+    public enum EditSelectionMode
+    {
+        None,
+        Add,
+        Select
+    }
 }

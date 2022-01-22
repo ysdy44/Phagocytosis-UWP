@@ -5,6 +5,7 @@ using Phagocytosis.ViewModels;
 using System.Linq;
 using System.Numerics;
 using Windows.UI;
+using Windows.UI.Input;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
@@ -18,15 +19,15 @@ namespace Phagocytosis.Controls
 
         //@Override
         public override ICanvasResourceCreatorWithDpi ResourceCreator => this.CanvasControl;
-      
-        public EditType EditType { get; set; }
-        public SpriteType SpriteType { get; set; } = SpriteType.Bacteria;
+
+        public EditSelectionMode Mode { get; set; }
 
         EditMoveType MoveType;
         Vector2 Point;
+        Vector2 Offset;
         Spriter Sprite;
+        Rect2 Rect;
         int Index;
-        bool IsManipulation;
 
         Matrix3x2 Transform2 = Matrix3x2.Identity;
         CanvasControl CanvasControl = new CanvasControl();
@@ -51,6 +52,8 @@ namespace Phagocytosis.Controls
 
             base.PointerWheelChanged += (s, e) =>
             {
+                if (this.Mode != EditSelectionMode.None) return;
+
                 float space = e.GetCurrentPoint(this).Properties.MouseWheelDelta;
 
                 if (space > 0)
@@ -65,165 +68,26 @@ namespace Phagocytosis.Controls
             };
             base.ManipulationStarted += (s, e) =>
             {
-                this.IsManipulation = true;
-                Vector2 point = e.Position.ToVector2();
-                Vector2 pointTransform = Vector2.Transform(point, this.Transform2);
+                if (this.Mode != EditSelectionMode.None) return;
 
-                this.Index = -1;
-                this.Sprite = null;
-
-                switch (this.EditType)
-                {
-                    case EditType.Move:
-                        if (this.IsNode(point, this.MapNode, base.Transform))
-                        {
-                            this.MoveType = EditMoveType.MoveMap;
-                            return;
-                        }
-
-                        for (int i = 0; i < base.Map.Restricteds.Count; i++)
-                        {
-                            Rect2 item = base.Map.Restricteds[i];
-
-                            if (this.IsNode(point, item.LeftTop(), base.Transform))
-                            {
-                                this.Point = item.RightBottm();
-                                this.Index = i;
-                                this.MoveType = EditMoveType.MoveRestricted;
-                                return;
-                            }
-                            if (this.IsNode(point, item.RightBottm(), base.Transform))
-                            {
-                                this.Point = item.LeftTop();
-                                this.Index = i;
-                                this.MoveType = EditMoveType.MoveSprite;
-                                return;
-                            }
-                        }
-
-                        foreach (Spriter item in base.FriendSprites)
-                        {
-                            if (this.IsNode(point, item.Position, base.Transform))
-                            {
-                                this.Sprite = item;
-                                this.MoveType = EditMoveType.MoveSprite;
-                                return;
-                            }
-                        }
-                        foreach (Spriter item in base.EnemySprites)
-                        {
-                            if (this.IsNode(point, item.Position, base.Transform))
-                            {
-                                this.Sprite = item;
-                                this.MoveType = EditMoveType.MoveSprite;
-                                return;
-                            }
-                        }
-
-                        base.ZoomStarted();
-                        this.MoveType = EditMoveType.Move;
-                        return;
-                        break;
-                    case EditType.AddRestricted:
-                        this.Point = pointTransform;
-                        this.Map.Restricteds.Add(new Rect2(this.Point));
-                        this.Index = base.Map.Restricteds.Count - 1;
-                        break;
-                    case EditType.AddFriend:
-                        base.FriendSprites.Add(new Spriter(this.CanvasControl, SpriteType.Cell, pointTransform, Spriter.GetLevel(SpriteType.Cell)));
-                        this.Sprite = base.FriendSprites.LastOrDefault();
-                        break;
-                    case EditType.AddEnemy:
-                        base.EnemySprites.Add(new Spriter(this.CanvasControl, this.SpriteType, pointTransform, Spriter.GetLevel(this.SpriteType)));
-                        this.Sprite = base.EnemySprites.LastOrDefault();
-                        break;
-                    default:
-                        break;
-                }
+                Vector2 position = e.Position.ToVector2();
+                this.MoveType = this.Started(position);
             };
             base.ManipulationDelta += (s, e) =>
             {
-                this.IsManipulation = true;
-                {
-                    Vector2 point = e.Position.ToVector2();
-                    Vector2 pointTransform = Vector2.Transform(point, this.Transform2);
+                if (this.Mode != EditSelectionMode.None) return;
 
-                    EditMoveType type = this.GetType(this.EditType, this.MoveType);
-                    switch (type)
-                    {
-                        case EditMoveType.Move:
-                            base.ZoomDelta(e.Cumulative);
-                            base.Transform = this.GetTransform();
-                            this.Transform2 = this.GetTransform2();
-                            break;
-                        case EditMoveType.MoveMap:
-                            base.Map = new FoodMap((int)pointTransform.X, (int)pointTransform.Y);
-                            break;
-                        case EditMoveType.MoveRestricted:
-                            if (this.Index >= 0)
-                            {
-                                if (this.Index < base.Map.Restricteds.Count)
-                                {
-                                    base.Map.Restricteds[base.Map.Restricteds.Count - 1] = new Rect2(this.Point, pointTransform);
-                                }
-                            }
-                            break;
-                        case EditMoveType.MoveSprite:
-                            if (this.Sprite != null)
-                            {
-                                this.Sprite.Position = pointTransform;
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                this.IsManipulation = false;
-
-                this.CanvasControl.Invalidate(); // Invalidate
-                this.CanvasControl2.Invalidate(); // Invalidate
+                Vector2 position = e.Position.ToVector2();
+                this.Delta(position, e.Cumulative);
             };
             base.ManipulationCompleted += (s, e) =>
             {
-                this.IsManipulation = true;
-                {
-                    Vector2 point = e.Position.ToVector2();
-                    Vector2 pointTransform = Vector2.Transform(point, this.Transform2);
+                if (this.Mode != EditSelectionMode.None) return;
 
-                    EditMoveType type = this.GetType(this.EditType, this.MoveType);
-                    switch (type)
-                    {
-                        case EditMoveType.Move:
-                            base.ZoomDelta(e.Cumulative);
-                            base.Transform = this.GetTransform();
-                            this.Transform2 = this.GetTransform2();
-                            break;
-                        case EditMoveType.MoveMap:
-                            base.Map = new FoodMap((int)pointTransform.X, (int)pointTransform.Y);
-                            break;
-                        case EditMoveType.MoveRestricted:
-                            if (this.Index >= 0)
-                            {
-                                if (this.Index < base.Map.Restricteds.Count)
-                                {
-                                    base.Map.Restricteds[base.Map.Restricteds.Count - 1] = new Rect2(this.Point, pointTransform);
-                                }
-                            }
-                            break;
-                        case EditMoveType.MoveSprite:
-                            if (this.Sprite != null)
-                            {
-                                this.Sprite.Position = pointTransform;
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                this.IsManipulation = false;
+                Vector2 position = e.Position.ToVector2();
+                this.Delta(position, e.Cumulative);
 
-                this.CanvasControl.Invalidate(); // Invalidate
-                this.CanvasControl2.Invalidate(); // Invalidate
+                this.MoveType = EditMoveType.Move;
             };
 
 
@@ -231,13 +95,11 @@ namespace Phagocytosis.Controls
             {
                 base.Transform = this.GetTransform();
                 this.Transform2 = this.GetTransform2();
-                base.FriendSprites.Add(new Spriter(this.CanvasControl, SpriteType.Player, new Vector2(400), 192 * 4));
+                base.FriendSprites.Add(new Spriter(this.ResourceCreator, SpriteType.Player, new Vector2(400), Spriter.GetLevel(SpriteType.Player)));
             };
 
             this.CanvasControl.Draw += (sender, args) =>
             {
-                if (this.IsManipulation) return;
-
                 args.DrawingSession.Transform = base.Transform;
 
                 args.DrawingSession.DrawBugMap(base.Map.Restricteds.BugMap);
@@ -265,14 +127,10 @@ namespace Phagocytosis.Controls
             {
                 foreach (Spriter item in base.FriendSprites)
                 {
-                    this.DrawNode(args.DrawingSession, item.Position, base.Transform);
-
                     if (item == this.Sprite) this.DrawSprite(args.DrawingSession, item, base.Transform, base.Scale2);
                 }
                 foreach (Spriter item in base.EnemySprites)
                 {
-                    this.DrawNode(args.DrawingSession, item.Position, base.Transform);
-
                     if (item == this.Sprite) this.DrawSprite(args.DrawingSession, item, base.Transform, base.Scale2);
                 }
 
@@ -303,27 +161,176 @@ namespace Phagocytosis.Controls
             this.CanvasControl2 = null;
         }
 
-        private EditMoveType GetType(EditType editType, EditMoveType moveType)
-        {
-            switch (editType)
-            {
-                case EditType.Move:
-                    return moveType;
-                case EditType.AddRestricted:
-                    return EditMoveType.MoveRestricted;
-                case EditType.AddFriend:
-                case EditType.AddEnemy:
-                    return EditMoveType.MoveSprite;
-                default:
-                    return EditMoveType.Move;
-            }
-        }
-
         public void LoadFromProject(Chapter chapter)
         {
             base.Load(chapter);
             this.CanvasControl.Invalidate(); // Invalidate
             this.CanvasControl2.Invalidate(); // Invalidate
+        }
+
+        public void Delta(Vector2 position, ManipulationDelta cumulative)
+        {
+            Vector2 position2 = Vector2.Transform(position, this.Transform2);
+
+            switch (this.MoveType)
+            {
+                case EditMoveType.Move:
+                    base.ZoomDelta(cumulative);
+                    base.Transform = this.GetTransform();
+                    this.Transform2 = this.GetTransform2();
+                    break;
+                case EditMoveType.ResizeMap:
+                    base.Map.Resize((int)position2.X, (int)position2.Y);
+                    break;
+                case EditMoveType.MoveRestricted:
+                    if (this.Index < 0) break;
+                    if (this.Index >= base.Map.Restricteds.Count) break;
+                    base.Map.Restricteds[base.Map.Restricteds.Count - 1] = this.Rect.Offset(cumulative.Translation.ToVector2());
+                    break;
+                case EditMoveType.ResizeRestricted:
+                    if (this.Index < 0) break;
+                    if (this.Index >= base.Map.Restricteds.Count) break;
+                    base.Map.Restricteds[base.Map.Restricteds.Count - 1] = new Rect2(this.Point, position2);
+                    break;
+                case EditMoveType.MoveSprite:
+                    if (this.Sprite == null) break;
+                    this.Sprite.Position = position2 - this.Offset;
+                    break;
+                default:
+                    break;
+            }
+
+            this.CanvasControl.Invalidate(); // Invalidate
+            this.CanvasControl2.Invalidate(); // Invalidate
+        }
+
+        public EditMoveType Started(Vector2 position)
+        {
+            Vector2 position2 = Vector2.Transform(position, this.Transform2);
+
+            this.Index = -1;
+            this.Sprite = null;
+
+            if (this.IsNode(position, this.MapNode, base.Transform))
+            {
+                return EditMoveType.ResizeMap;
+            }
+
+            for (int i = 0; i < base.Map.Restricteds.Count; i++)
+            {
+                Rect2 item = base.Map.Restricteds[i];
+
+                if (this.IsNode(position, item.LeftTop(), base.Transform))
+                {
+                    this.Point = item.RightBottm();
+                    this.Index = i;
+                    return EditMoveType.ResizeRestricted;
+                }
+                if (this.IsNode(position, item.RightBottm(), base.Transform))
+                {
+                    this.Point = item.LeftTop();
+                    this.Index = i;
+                    return EditMoveType.ResizeRestricted;
+                }
+                if (item.Contains(position2))
+                {
+                    this.Rect = item;
+                    this.Index = i;
+                    return EditMoveType.MoveRestricted;
+                }
+            }
+
+            foreach (Spriter item in base.FriendSprites)
+            {
+                float distance = Vector2.Distance(position2, item.Position);
+                if (item.Radius > distance)
+                {
+                    this.Offset = position2 - item.Position;
+                    this.Sprite = item;
+                    return EditMoveType.MoveSprite;
+                }
+            }
+            foreach (Spriter item in base.EnemySprites)
+            {
+                float distance = Vector2.Distance(position2, item.Position);
+                if (item.Radius > distance)
+                {
+                    this.Offset = position2 - item.Position;
+                    this.Sprite = item;
+                    return EditMoveType.MoveSprite;
+                }
+            }
+
+            base.ZoomStarted();
+            return EditMoveType.Move;
+        }
+
+        public EditType Select(Vector2 position)
+        {
+            Vector2 position2 = Vector2.Transform(position, this.Transform2);
+
+            this.Index = -1;
+            this.Sprite = null;
+
+            for (int i = 0; i < base.Map.Restricteds.Count; i++)
+            {
+                Rect2 item = base.Map.Restricteds[i];
+                if (item.Contains(position2))
+                {
+                    this.Index = i;
+
+                    this.Position = this.GetVector2(item.Center());
+                    base.Transform = this.GetTransform();
+                    this.Transform2 = this.GetTransform2();
+                    this.CanvasControl.Invalidate();
+                    this.CanvasControl2.Invalidate();
+                    return EditType.Restricted;
+                }
+            }
+
+            foreach (Spriter item in base.FriendSprites)
+            {
+                float distance = Vector2.Distance(position2, item.Position);
+                if (item.Radius > distance)
+                {
+                    this.Sprite = item;
+
+                    this.Position = this.GetVector2(item.Position);
+                    base.Transform = this.GetTransform();
+                    this.Transform2 = this.GetTransform2();
+                    this.CanvasControl.Invalidate();
+                    this.CanvasControl2.Invalidate();
+                    switch (item.Type)
+                    {
+                        case SpriteType.Player:
+                            return EditType.Player;
+                        default:
+                            return EditType.Friend;
+                    }
+                }
+            }
+            foreach (Spriter item in base.EnemySprites)
+            {
+                float distance = Vector2.Distance(position2, item.Position);
+                if (item.Radius > distance)
+                {
+                    this.Sprite = item;
+
+                    this.Position = this.GetVector2(item.Position);
+                    base.Transform = this.GetTransform();
+                    this.Transform2 = this.GetTransform2();
+                    this.CanvasControl.Invalidate();
+                    this.CanvasControl2.Invalidate();
+                    return EditType.Enemy;
+                }
+            }
+
+            this.Position = this.GetVector2(position2);
+            base.Transform = this.GetTransform();
+            this.Transform2 = this.GetTransform2();
+            this.CanvasControl.Invalidate();
+            this.CanvasControl2.Invalidate();
+            return EditType.None;
         }
 
         public void ZoomSprite2(bool isFriend, bool isZoomIn)
@@ -340,13 +347,15 @@ namespace Phagocytosis.Controls
         {
             if (this.Sprite == null) return;
             this.Sprite.Upgrade(this.Sprite.Level + Food.Level);
-            this.CanvasControl.Invalidate();
+            this.CanvasControl.Invalidate(); // Invalidate
+            this.CanvasControl2.Invalidate(); // Invalidate
         }
         public void ZoomOut2()
         {
             if (this.Sprite == null) return;
             this.Sprite.Upgrade(this.Sprite.Level - Food.Level);
-            this.CanvasControl.Invalidate();
+            this.CanvasControl.Invalidate(); // Invalidate
+            this.CanvasControl2.Invalidate(); // Invalidate
         }
         public void Delete()
         {
@@ -379,19 +388,40 @@ namespace Phagocytosis.Controls
             this.CanvasControl.Invalidate();
             this.CanvasControl2.Invalidate();
         }
+        public void Add(SpriteType type)
+        {
+            Vector2 positionTransform = this.GetVector(this.Position);
+
+            switch (type)
+            {
+                case SpriteType.Player:
+                    this.Map.Restricteds.Add(new Rect2((int)positionTransform.X - 20, (int)positionTransform.Y - 20, 20 + 20, 20 + 20));
+                    break;
+                case SpriteType.Cell:
+                    base.FriendSprites.Add(new Spriter(this.ResourceCreator, SpriteType.Cell, positionTransform, Spriter.GetLevel(SpriteType.Cell)));
+                    break;
+                default:
+                    base.EnemySprites.Add(new Spriter(this.ResourceCreator, type, positionTransform, Spriter.GetLevel(type)));
+                    break;
+            }
+
+            this.CanvasControl.Invalidate(); // Invalidate
+            this.CanvasControl2.Invalidate(); // Invalidate
+        }
 
         private Vector2 MapNode => new Vector2(base.Map.Width, base.Map.Height);
-
         private bool IsNode(Vector2 a, Vector2 b, Matrix3x2 matrix) => Vector2.Distance(a, Vector2.Transform(b, matrix)) < 20;
-        private void DrawNode(CanvasDrawingSession ds, Vector2 b, Matrix3x2 matrix) => ds.DrawCircle(Vector2.Transform(b, matrix), 20, Colors.Red, 2);
-        private void FillNode(CanvasDrawingSession ds, Vector2 b, Matrix3x2 matrix) => ds.FillCircle(Vector2.Transform(b, matrix), 20, Colors.Red);
+        private void DrawNode(CanvasDrawingSession ds, Vector2 b, Matrix3x2 matrix) => ds.DrawCircle(Vector2.Transform(b, matrix), 20, Colors.White, 2);
+        private void FillNode(CanvasDrawingSession ds, Vector2 b, Matrix3x2 matrix) => ds.FillCircle(Vector2.Transform(b, matrix), 20, Colors.White);
         private void DrawSprite(CanvasDrawingSession ds, Spriter item, Matrix3x2 matrix, float scale)
         {
             Vector2 position = Vector2.Transform(item.Position, matrix);
             float radius = item.Radius * scale;
-            ds.DrawRectangle(position.X - radius, position.Y - radius, radius + radius, radius + radius, Colors.Red, 2);
-            ds.FillCircle(position, 20, Colors.Red);
+            ds.DrawRectangle(position.X - radius, position.Y - radius, radius + radius, radius + radius, Colors.White, 2);
         }
+
+        private Vector2 GetVector(Vector2 position) => base.Map.Center - position / base.Scale2;
+        private Vector2 GetVector2(Vector2 position) => (base.Map.Center - position) * base.Scale2;
 
         private Matrix3x2 GetTransform()
         {

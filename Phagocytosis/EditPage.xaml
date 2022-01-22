@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Phagocytosis.Controls"
     xmlns:elements="using:Phagocytosis.Elements"
-    xmlns:viewmodels="using:Phagocytosis.ViewModels"
+    xmlns:sprites="using:Phagocytosis.Sprites"
     mc:Ignorable="d"
     NavigationCacheMode="Enabled"
     Background="{ThemeResource AppLinearGradientBrush}"
@@ -20,15 +20,82 @@
     </Page.Transitions>
 
 
+    <Page.Resources>
+        <!--Storyboard-->
+        <Storyboard x:Name="EllipseStoryboard">
+            <DoubleAnimation From="0" To="360" Duration="00:00:2" Storyboard.TargetProperty="Angle" Storyboard.TargetName="EllipseTransform" RepeatBehavior="Forever" d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="ShowStoryboard">
+            <DoubleAnimation From="0" To="1" Duration="00:00:0.4" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Ellipse" d:IsOptimized="True"/>
+            <DoubleAnimation From="0" To="0.5" Duration="00:00:0.4" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="LightDismissOverlay" d:IsOptimized="True"/>
+            <DoubleAnimation From="1" To="1.4" Duration="00:00:0.4" Storyboard.TargetProperty="ScaleX" Storyboard.TargetName="Transform" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="1" To="1.4" Duration="00:00:0.4" Storyboard.TargetProperty="ScaleY" Storyboard.TargetName="Transform" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="HideStoryboard">
+            <DoubleAnimation From="1" To="0" Duration="00:00:0.4" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Ellipse" d:IsOptimized="True"/>
+            <DoubleAnimation From="0.5" To="0" Duration="00:00:0.4" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="LightDismissOverlay" d:IsOptimized="True"/>
+            <DoubleAnimation From="1.4" To="1" Duration="00:00:0.4" Storyboard.TargetProperty="ScaleX" Storyboard.TargetName="Transform" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation From="1.4" To="1" Duration="00:00:0.4" Storyboard.TargetProperty="ScaleY" Storyboard.TargetName="Transform" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <PowerEase EasingMode="EaseIn"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="ShowSpriteStoryboard">
+            <DoubleAnimation From="74" To="0" BeginTime="00:00:0.1" Duration="00:00:0.2" Storyboard.TargetProperty="Y" Storyboard.TargetName="SpriteTransform" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="HideSpriteStoryboard">
+            <DoubleAnimation From="0" To="74" BeginTime="00:00:0.3" Duration="00:00:0.4" Storyboard.TargetProperty="Y" Storyboard.TargetName="SpriteTransform" d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="ShowEditStoryboard">
+            <DoubleAnimation From="74" To="0" BeginTime="00:00:0.1" Duration="00:00:0.2" Storyboard.TargetProperty="Y" Storyboard.TargetName="EditTransform" d:IsOptimized="True"/>
+        </Storyboard>
+        <Storyboard x:Name="HideEditStoryboard">
+            <DoubleAnimation From="0" To="74" BeginTime="00:00:0.3" Duration="00:00:0.4" Storyboard.TargetProperty="Y" Storyboard.TargetName="EditTransform" d:IsOptimized="True"/>
+        </Storyboard>
+    </Page.Resources>
+
+
     <Grid>
 
         <!--Extension-->
         <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
 
         <!--CanvasControl-->
+        <Border x:Name="LightDismissOverlay" IsHitTestVisible="False" Opacity="0" Background="Black"/>
         <controls:EditCanvasControl x:Name="CanvasControl"
                 Width="{x:Bind ViewModel.WindowWidth, Mode=OneWay}"
-                Height="{x:Bind ViewModel.WindowHeight, Mode=OneWay}"/>
+                Height="{x:Bind ViewModel.WindowHeight, Mode=OneWay}">
+            <UIElement.RenderTransformOrigin>
+                0.5, 0.5
+            </UIElement.RenderTransformOrigin>
+            <UIElement.RenderTransform>
+                <ScaleTransform x:Name="Transform" ScaleX="1" ScaleY="1" />
+            </UIElement.RenderTransform>
+        </controls:EditCanvasControl>
+        <Ellipse x:Name="Ellipse" IsHitTestVisible="False" Opacity="0" Width="75" Height="75" StrokeThickness="3" Stroke="White" StrokeDashArray="4 4.2" StrokeDashOffset="2">
+            <UIElement.RenderTransformOrigin>
+                0.5, 0.5
+            </UIElement.RenderTransformOrigin>
+            <UIElement.RenderTransform>
+                <RotateTransform x:Name="EllipseTransform" Angle="0"/>
+            </UIElement.RenderTransform>
+        </Ellipse>
 
         <!--Developer-->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top"
@@ -67,32 +134,71 @@
         </StackPanel>
 
         <!--Edit-->
-        <ListView x:Name="SpriteListView" Height="32" Margin="0,0,0,74" SelectionMode="Single"  VerticalAlignment="Bottom">
-            <TextBlock x:Name="BacteriaTextBlock">细菌</TextBlock>
-            <TextBlock x:Name="VirusTextBlock">病毒</TextBlock>
-            <TextBlock x:Name="ParameciumTextBlock">草履虫</TextBlock>
-            <TextBlock x:Name="LeukocyteTextBlock">白细胞</TextBlock>
+        <ListView x:Name="SpriteListView" IsItemClickEnabled="True" VerticalAlignment="Bottom">
+            <UIElement.RenderTransform>
+                <TranslateTransform x:Name="SpriteTransform" Y="74"/>
+            </UIElement.RenderTransform>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Restricted.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Player</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Cell.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Cell</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Bacteria.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Bacteria</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Virus.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Virus</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Paramecium.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Paramecium</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
+            <Image Width="50" Height="50" Source="ms-appx:///Icons\Leukocyte.png">
+                <FrameworkElement.Tag>
+                    <sprites:SpriteType>Leukocyte</sprites:SpriteType>
+                </FrameworkElement.Tag>
+            </Image>
         </ListView>
-        <ListView x:Name="EditListView" SelectionMode="Single"  VerticalAlignment="Bottom">
-            <ListView.Footer>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="ZoomInButton">
-                        <SymbolIcon Symbol="ZoomIn"/>
-                    </Button>
-                    <Button x:Name="ZoomOutButton">
-                        <SymbolIcon Symbol="ZoomOut"/>
-                    </Button>
-                    <Button x:Name="DeleteButton">
-                        <SymbolIcon Symbol="Delete"/>
-                    </Button>
-                </StackPanel>
-            </ListView.Footer>
-
-            <TextBlock x:Name="MoveTextBlock">移动镜头</TextBlock>
-            <TextBlock x:Name="AddRestrictedTextBlock">加入墙</TextBlock>
-            <TextBlock x:Name="AddFriendTextBlock">加入友军</TextBlock>
-            <TextBlock x:Name="AddEnemyTextBlock">加入敌人</TextBlock>
+        <ListView x:Name="EditListView" IsItemClickEnabled="True" VerticalAlignment="Bottom">
+            <UIElement.RenderTransform>
+                <TranslateTransform x:Name="EditTransform" Y="74"/>
+            </UIElement.RenderTransform>
+            <ListViewItem x:Name="ZoomInItem">
+                <SymbolIcon Symbol="ZoomIn"/>
+            </ListViewItem>
+            <ListViewItem x:Name="ZoomOutItem">
+                <SymbolIcon Symbol="ZoomOut"/>
+            </ListViewItem>
+            <ListViewItem x:Name="DeleteItem">
+                <SymbolIcon Symbol="Delete"/>
+            </ListViewItem>
         </ListView>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="DecreaseButton" Padding="4" Height="Auto">
+                <FontIcon Glyph="&#xE108;" FontSize="22" FontFamily="Segoe UI Symbol"/>
+            </Button>
+            <TextBlock x:Name="FoodTextBlock" Grid.Column="1" Style="{StaticResource AppBoldTextBlockStyle}">
+                1
+            </TextBlock>
+            <Button x:Name="IncreaseButton" Grid.Column="2" Padding="4" Height="Auto">
+                <FontIcon Glyph="&#xE109;" FontSize="22" FontFamily="Segoe UI Symbol"/>
+            </Button>
+        </Grid>
 
 
         <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -103,6 +209,7 @@
         <Button x:Name="PlayButton" HorizontalAlignment="Right" VerticalAlignment="Top">
             <FontIcon Glyph="&#xE102;" FontSize="32" FontFamily="Segoe UI Symbol"/>
         </Button>
+
 
     </Grid>
 </Page>

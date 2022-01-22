@@ -203,6 +203,12 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Icons\Bacteria.png" />
+    <Content Include="Icons\Cell.png" />
+    <Content Include="Icons\Leukocyte.png" />
+    <Content Include="Icons\Paramecium.png" />
+    <Content Include="Icons\Restricted.png" />
+    <Content Include="Icons\Virus.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -48,6 +48,22 @@ namespace Phagocytosis.Sprites
         }
 
         /// <summary>
+        /// Resize.
+        /// </summary>
+        /// <param name="width"> The width. </param>
+        /// <param name="height"> The height. </param>
+        public void Resize(int width, int height)
+        {
+            this.Restricteds.Resize(width, height);
+
+            base.Clear();
+            for (int i = 0; i < this.Increase; i++)
+            {
+                this.Add();
+            }
+        }
+
+        /// <summary>
         /// Update.
         /// </summary>
         /// <param name="elapsedTime"> The elapsed time. </param>
@@ -87,7 +103,7 @@ namespace Phagocytosis.Sprites
                     }
                 } while (position == Vector2.Zero);
             }
-            this.Add(new Food(position));
+            base.Add(new Food(position));
         }
 
     }

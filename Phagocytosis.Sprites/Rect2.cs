@@ -59,6 +59,8 @@ namespace Phagocytosis.Sprites
             this.Bottom = y + height;
         }
 
+        public Rect2 Offset(Vector2 offset) => new Rect2((int)(this.X + offset.X), (int)(this.Y + offset.Y), this.Width, this.Height);
+        public Vector2 Center() => new Vector2(this.Left + this.Right, this.Top + this.Bottom) / 2;
         public Vector2 LeftTop() => new Vector2(this.Left, this.Top);
         public Vector2 RightBottm() => new Vector2(this.Right, this.Bottom);
 

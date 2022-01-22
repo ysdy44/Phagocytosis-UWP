@@ -35,6 +35,16 @@ namespace Phagocytosis.Sprites
         }
 
         /// <summary>
+        /// Resize.
+        /// </summary>
+        /// <param name="width"> The width. </param>
+        /// <param name="height"> The height. </param>
+        public void Resize(int width, int height)
+        {
+            this.BugMap.Resize(width, height);
+        }
+
+        /// <summary>
         /// Returns a point contained within the range.
         /// </summary>
         /// <param name="point"> The point. </param>

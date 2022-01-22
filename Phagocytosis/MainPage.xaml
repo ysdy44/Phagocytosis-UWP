@@ -248,6 +248,29 @@
         </StackPanel>
 
 
+        <!--Developer-->
+        <Border HorizontalAlignment="Center" VerticalAlignment="Top" 
+                Background="{StaticResource SystemAltLowColor}"
+                MinWidth="100"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <StackPanel Margin="22,0" VerticalAlignment="Center">
+                <TextBlock x:Name="DeveloperModeTextBlock" Style="{StaticResource AppBoldTextBlockStyle}">
+                    开发者态
+                </TextBlock>
+                <TextBlock>
+                    <Run x:Name="Click001Run">点击</Run>                
+                    <Run Text="&#xE17C;" FontFamily="Segoe UI Symbol"/>
+                    <Run x:Name="ToEditRun">以编辑地图</Run>
+                </TextBlock>
+                <TextBlock>
+                    <Run x:Name="Click002Run">点击</Run>                
+                    <Run Text="&#xE188;" FontFamily="Segoe UI Symbol"/>
+                    <Run x:Name="ToOpenRun">以打开地图文件</Run>
+                </TextBlock>
+            </StackPanel>
+        </Border>
+
+
         <Button x:Name="MuteButton" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <Viewbox Width="32" Height="32">
                 <SymbolIcon Symbol="{x:Bind BooleanToMuteConverter(ViewModel.IsMuted), Mode=OneWay}" />

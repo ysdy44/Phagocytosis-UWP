@@ -31,6 +31,7 @@ namespace Phagocytosis
         {
             this.InitializeComponent();
             this.ConstructFlowDirection();
+            this.ConstructStrings();
             base.Loaded += async (s, e) =>
             {
                 if (this.ViewModel.Chapters.Count != 0) return;
@@ -78,6 +79,18 @@ namespace Phagocytosis
             bool isRightToLeft = System.Globalization.CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft;
 
             base.FlowDirection = isRightToLeft ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
+        }
+
+        // Strings
+        private void ConstructStrings()
+        {
+            ResourceLoader resource = ResourceLoader.GetForCurrentView();
+
+            this.DeveloperModeTextBlock.Text = resource.GetString("DeveloperMode");
+            this.Click001Run.Text = resource.GetString("Click");
+            this.ToEditRun.Text = resource.GetString("ToEdit");
+            this.Click002Run.Text = resource.GetString("Click");
+            this.ToOpenRun.Text = resource.GetString("ToOpen");
         }
 
     }

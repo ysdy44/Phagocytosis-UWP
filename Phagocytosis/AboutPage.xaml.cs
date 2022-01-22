@@ -43,12 +43,6 @@ namespace Phagocytosis
             };
             this.DeveloperButton.Click += (s, e) => this.ViewModel.Developer = Visibility.Visible;
             this.DeveloperButton2.Click += (s, e) => this.ViewModel.Developer = Visibility.Collapsed;
-            this.EditButton.Click += (s, e) => base.Frame.Navigate(typeof(EditPage));
-            this.LocalFolderButton.Click += async (s, e) =>
-            {
-                IStorageFolder folder = ApplicationData.Current.LocalFolder;
-                await Launcher.LaunchFolderAsync(folder);
-            };
         }
 
         // FlowDirection

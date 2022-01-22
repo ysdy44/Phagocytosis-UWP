@@ -182,7 +182,7 @@
                 </TextBlock>
                 <TextBlock>
                     <Run x:Name="Click001Run">点击</Run>                
-                    <Run Text="&#xE104;" FontFamily="Segoe UI Symbol"/>
+                    <Run Text="&#xE17C;" FontFamily="Segoe UI Symbol"/>
                     <Run x:Name="ToEditRun">以编辑地图</Run>
                 </TextBlock>
                 <TextBlock>
@@ -201,27 +201,17 @@
 
 
         <!--Developer-->
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
-            <Grid>
-                <Button x:Name="DeveloperButton" Opacity="0.1" >
-                    <Viewbox Width="32" Height="32">
-                        <SymbolIcon Symbol="Emoji2" />
-                    </Viewbox>
-                </Button>
-                <Button x:Name="DeveloperButton2" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-                    <Viewbox Width="32" Height="32">
-                        <SymbolIcon Symbol="Emoji" />
-                    </Viewbox>
-                </Button>
-            </Grid>
-
-            <Button x:Name="EditButton" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-                <FontIcon Glyph="&#xE104;" FontSize="32" FontFamily="Segoe UI Symbol"/>
-            </Button>
-            <Button x:Name="LocalFolderButton" Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
-                <FontIcon Glyph="&#xE188;" FontSize="32" FontFamily="Segoe UI Symbol"/>
-            </Button>
-        </StackPanel>
+        <Button x:Name="DeveloperButton" Opacity="0.1" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Viewbox Width="32" Height="32">
+                <SymbolIcon Symbol="Emoji2" />
+            </Viewbox>
+        </Button>
+        <Button x:Name="DeveloperButton2" HorizontalAlignment="Right" VerticalAlignment="Top"
+                Visibility="{x:Bind ViewModel.Developer, Mode=OneWay}" >
+            <Viewbox Width="32" Height="32">
+                <SymbolIcon Symbol="Emoji" />
+            </Viewbox>
+        </Button>
 
 
     </Grid>

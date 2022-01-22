@@ -82,5 +82,10 @@ namespace Phagocytosis.Elements
         #endregion
 
 
+        public bool IsFullScreenMode => ApplicationTitleBarExtension.View.IsFullScreenMode;
+        public void ExitFullScreenMode() => ApplicationTitleBarExtension.View.ExitFullScreenMode();
+        public bool TryEnterFullScreenMode() => ApplicationTitleBarExtension.View.TryEnterFullScreenMode();
+
+
     }
 }

@@ -62,18 +62,20 @@ namespace Phagocytosis.Elements
         private void Update(int left, int right)
         {
             double width = base.ActualWidth;
+            bool leftIsZero = left <= 0;
+            bool rightIsZero = right <= 0;
 
-            if (left == 0 && right == 0)
+            if (leftIsZero && rightIsZero)
             {
-                this.LeftRectangle.Width = 0;
-                this.RightRectangle.Width = 0;
+                this.LeftRectangle.Width =
+                this.RightRectangle.Width = width / 2;
             }
-            else if (left == 0)
+            else if (leftIsZero)
             {
                 this.LeftRectangle.Width = 0;
                 this.RightRectangle.Width = width;
             }
-            else if (right == 0)
+            else if (rightIsZero)
             {
                 this.LeftRectangle.Width = width;
                 this.RightRectangle.Width = 0;

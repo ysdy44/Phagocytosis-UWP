@@ -22,13 +22,15 @@ namespace Phagocytosis.Controls
                 // Delegate
                 this.Scored?.Invoke(this, new ScoredEventArgs
                 {
-                    FriendSpritesSumLevel = base.FriendSprites.Sum(a => a.Level),
-                    EnemySpritesSumLevel = base.EnemySprites.Sum(a => a.Level)
+                    FriendSpritesSumLevel = base.FriendSprites.Count == 0 ? 0 : base.FriendSprites.Sum(a => a.Level),
+                    EnemySpritesSumLevel = base.EnemySprites.Count == 0 ? 0 : base.EnemySprites.Sum(a => a.Level)
                 });
                 // Delegate
                 this.Record?.Invoke(this, new RecordEventArgs
                 {
-                    FriendSpritesMaxLevel = base.FriendSprites.Max(a => a.Level),
+                    //@Debug
+                    // Get Max when Count is Zero
+                    FriendSpritesMaxLevel = base.FriendSprites.Count == 0 ? 0 : base.FriendSprites.Max(a => a.Level),
                     FriendSpritesCount = base.FriendSprites.Count,
                     TotalTime = this.Stopwatch.TotalTime()
                 });

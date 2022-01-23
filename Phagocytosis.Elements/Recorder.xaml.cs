@@ -213,11 +213,11 @@ namespace Phagocytosis.Elements
             this.ToPlay.Text = resource.GetString("ToPlay");
         }
 
-        public void Record(int level, int count, TimeSpan startingTime)
+        public void Record(int level, int count, TimeSpan duration)
         {
             if (this.MaxLevel < level) this.MaxLevel = level;
             if (this.MaxCount < count) this.MaxCount = count;
-            this.Duration = DateTime.Now.TimeOfDay - startingTime;
+            if (this.Duration < duration) this.Duration = duration;
         }
 
         public void Reset()

@@ -95,7 +95,7 @@ namespace Phagocytosis
             {
                 this.OpenSourceRun.Text = resource.GetString("OpenSource");
                 string githubLink = resource.GetString("$GithubLink");
-                this.OpenSourceHyperlink.NavigateUri = new Uri("mailto:" + githubLink);
+                this.OpenSourceHyperlink.NavigateUri = new Uri(githubLink);
 
                 this.ReferenceRun.Text = resource.GetString("Reference");
 

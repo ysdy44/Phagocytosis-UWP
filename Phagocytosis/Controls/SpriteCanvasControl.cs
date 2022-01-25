@@ -15,6 +15,9 @@ namespace Phagocytosis.Controls
     public sealed class SpriteCanvasControl : UserControl
     {
 
+        //@Abstract
+        public ICanvasResourceCreatorWithDpi ResourceCreator => this.CanvasControl;
+
         //@Converter
         public Vector2 RotateConverter(double angle)
         {
@@ -81,11 +84,11 @@ namespace Phagocytosis.Controls
                 Vector2 position = this.RotateConverter(0);
                 this.Sprites = new Spriter[]
                 {
-                    new Spriter(this.CanvasControl, SpriteType.Cell, position, Spriter.GetLevel(SpriteType.Cell)),
-                    new Spriter(this.CanvasControl, SpriteType.Bacteria, position, Spriter.GetLevel(SpriteType.Bacteria)),
-                    new Spriter(this.CanvasControl, SpriteType.Virus, position, Spriter.GetLevel(SpriteType.Virus)),
-                    new Spriter(this.CanvasControl, SpriteType.Paramecium, position, Spriter.GetLevel(SpriteType.Paramecium)),
-                    new Spriter(this.CanvasControl, SpriteType.Leukocyte, position, Spriter.GetLevel(SpriteType.Leukocyte)),
+                    new Spriter(this.ResourceCreator, SpriteType.Cell, position, Spriter.GetLevel(SpriteType.Cell)),
+                    new Spriter(this.ResourceCreator, SpriteType.Bacteria, position, Spriter.GetLevel(SpriteType.Bacteria)),
+                    new Spriter(this.ResourceCreator, SpriteType.Virus, position, Spriter.GetLevel(SpriteType.Virus)),
+                    new Spriter(this.ResourceCreator, SpriteType.Paramecium, position, Spriter.GetLevel(SpriteType.Paramecium)),
+                    new Spriter(this.ResourceCreator, SpriteType.Leukocyte, position, Spriter.GetLevel(SpriteType.Leukocyte)),
                 };
             };
 

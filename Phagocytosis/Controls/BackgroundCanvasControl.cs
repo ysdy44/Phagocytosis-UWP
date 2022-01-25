@@ -14,6 +14,9 @@ namespace Phagocytosis.Controls
     public sealed class BackgroundCanvasControl : UserControl
     {
 
+        //@Abstract
+        public ICanvasResourceCreatorWithDpi ResourceCreator => this.CanvasControl;
+
         //@Converter
         public Vector2 RotateConverter(double angle) => new Vector2
         {
@@ -55,7 +58,7 @@ namespace Phagocytosis.Controls
 
             this.CanvasControl.CreateResources += (sender, args) =>
             {
-                this.Player = new Spriter(this.CanvasControl, SpriteType.Player, this.RotateConverter(0), 192 * 25 * 5);
+                this.Player = new Spriter(this.ResourceCreator, SpriteType.Player, this.RotateConverter(0), 192 * 25 * 5);
             };
 
 

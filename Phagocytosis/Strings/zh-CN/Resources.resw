@@ -60,7 +60,7 @@
   </resheader>
 <data name='$DisplayName' xml:space='preserve'> <value>胞吞</value> </data>
 <data name='$Version' xml:space='preserve'> <value>1.3.0</value> </data>
-<data name='$GithubLink' xml:space='preserve'> <value>https://gitee.com/ysdy44/phagocytosis-uwp</value> </data>
+<data name='$GithubLink' xml:space='preserve'> <value>https://gitee.com/ysdy44/Phagocytosis-UWP</value> </data>
 <data name='$FeedbackLink' xml:space='preserve'> <value>ysdy44@outlook.com</value> </data>
 <data name='Cell' xml:space='preserve'> <value>细胞 </value> </data>
 <data name='Bacteria' xml:space='preserve'> <value>细菌 </value> </data>

@@ -22,6 +22,7 @@ This is a 2D cell phagocytosis game where enemies include bacteria, viruses, par
 |:-|:-|
 |System requirements| Windows10 Creators Update or upper|
 |Development tool|Visual Studio 2019|
+|Graphics library|Win2D|
 |Programing language|C#|
 |Display language|Chinese and English|
 |Comment language|Chinese|
@@ -31,4 +32,4 @@ This is a 2D cell phagocytosis game where enemies include bacteria, viruses, par
 
 ## Deployment instructions
 
-> Download the whole project, run `Phagocytosis.sln`, start the project `Phagocytosis`, and try to see if it works.
+> Download the whole project, open `Phagocytosis.sln`, start the project `Phagocytosis`, and try to see if it works.

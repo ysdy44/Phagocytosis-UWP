@@ -160,8 +160,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\12710.wav" />
-    <Content Include="Assets\14439.trim.mp3" />
+    <Content Include="Sounds\12710.wav" />
+    <Content Include="Sounds\14439.trim.mp3" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />

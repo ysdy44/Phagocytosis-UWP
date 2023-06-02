@@ -35,14 +35,14 @@ namespace Phagocytosis.ViewModels
         {
             AutoPlay = true,
             IsLoopingEnabled = true,
-            Source = Windows.Media.Core.MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/12710.wav"))
+            Source = Windows.Media.Core.MediaSource.CreateFromUri(new Uri("ms-appx:///Sounds/12710.wav"))
         };
 
         readonly MediaPlayer ForegroundBGM = new MediaPlayer
         {
             AutoPlay = false,
             IsLoopingEnabled = false,
-            Source = Windows.Media.Core.MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/14439.trim.mp3"))
+            Source = Windows.Media.Core.MediaSource.CreateFromUri(new Uri("ms-appx:///Sounds/14439.trim.mp3"))
         };
 
         public void PlayForegroundBGM()

@@ -12,15 +12,19 @@
     Background="{ThemeResource AppLinearGradientBrush}"
     >
 
+    <!--Extension-->
+    <FrameworkElement.Tag>
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
+    </FrameworkElement.Tag>
 
-    <Page.Transitions>
+    <!--Transitions-->
+    <UIElement.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
         </TransitionCollection>
-    </Page.Transitions>
+    </UIElement.Transitions>
 
-
-    <Page.Resources>
+    <FrameworkElement.Resources>
         <!--Storyboard-->
         <Storyboard x:Name="EllipseStoryboard">
             <DoubleAnimation From="0" To="360" Duration="00:00:2" Storyboard.TargetProperty="Angle" Storyboard.TargetName="EllipseTransform" RepeatBehavior="Forever" d:IsOptimized="True"/>
@@ -68,13 +72,9 @@
         <Storyboard x:Name="HideEditStoryboard">
             <DoubleAnimation From="0" To="74" BeginTime="00:00:0.3" Duration="00:00:0.4" Storyboard.TargetProperty="Y" Storyboard.TargetName="EditTransform" d:IsOptimized="True"/>
         </Storyboard>
-    </Page.Resources>
-
+    </FrameworkElement.Resources>
 
     <Grid>
-
-        <!--Extension-->
-        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}" />
 
         <!--CanvasControl-->
         <Border x:Name="LightDismissOverlay" IsHitTestVisible="False" Opacity="0" Background="Black"/>

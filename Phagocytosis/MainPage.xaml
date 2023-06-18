@@ -12,13 +12,17 @@
     Background="{ThemeResource AppLinearGradientBrush}"
     >
 
+    <!--Extension-->
+    <FrameworkElement.Tag>
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}"/>
+    </FrameworkElement.Tag>
 
-    <Page.Transitions>
+    <!--Transitions-->
+    <UIElement.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
         </TransitionCollection>
-    </Page.Transitions>
-
+    </UIElement.Transitions>
 
     <Grid>
 
@@ -70,10 +74,6 @@
 
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-
-
-        <!--Extension-->
-        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}"/>
 
         <!--CanvasControl-->
         <controls:BackgroundCanvasControl x:Name="CanvasControl"
@@ -138,11 +138,12 @@
                                 </Setter>
                             </Style>
                         </Flyout.FlyoutPresenterStyle>
-                        <ListView x:Name="ListView" 
-                                  IsItemClickEnabled="True"                    
-                                  SelectedIndex="{x:Bind ViewModel.SelectedIndex, Mode=TwoWay}"                    
-                                  ItemsSource="{x:Bind ViewModel.Chapters}"                    
-                                  >
+                        <ListView 
+                            x:Name="ListView" 
+                            IsItemClickEnabled="True"                    
+                            SelectedIndex="{x:Bind ViewModel.SelectedIndex, Mode=TwoWay}"                    
+                            ItemsSource="{x:Bind ViewModel.Chapters}"                    
+                            >
 
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>

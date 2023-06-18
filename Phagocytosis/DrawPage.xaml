@@ -11,18 +11,19 @@
     Background="{ThemeResource AppLinearGradientBrush}"
     >
 
+    <!--Extension-->
+    <FrameworkElement.Tag>
+        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}"/>
+    </FrameworkElement.Tag>
 
-    <Page.Transitions>
+    <!--Transitions-->
+    <UIElement.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition DefaultNavigationTransitionInfo="{StaticResource AppSuppressTransition}"/>
         </TransitionCollection>
-    </Page.Transitions>
-
+    </UIElement.Transitions>
 
     <Grid>
-
-        <!--Extension-->
-        <elements:ApplicationTitleBarExtension x:Name="ApplicationView" TitleBarColor="{ThemeResource AppAccentColorLight}"/>
 
         <!--CanvasControl-->
         <controls:MainCanvasControl x:Name="CanvasControl"

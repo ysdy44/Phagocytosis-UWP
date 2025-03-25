@@ -4,7 +4,7 @@
 
  
  Windows 10 应用商店地址: 
-[购置 胞吞 - 微软商店](https://www.microsoft.com/store/productId/9PB1Q6NPWD1V)   
+[购置 胞吞 - 微软商店](https://apps.microsoft.com/detail/9pb1q6npwd1v)   
 
 
 <br/>

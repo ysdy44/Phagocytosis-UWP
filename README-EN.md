@@ -4,7 +4,7 @@
 
  
  Windows 10 app store address: 
-[Bug Phagocytosis - Microsoft Store](https://www.microsoft.com/store/productId/9PB1Q6NPWD1V)   
+[Bug Phagocytosis - Microsoft Store](https://apps.microsoft.com/detail/9pb1q6npwd1v)   
 
 
 <br/>
